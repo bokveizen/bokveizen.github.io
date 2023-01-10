@@ -1,6 +1,6 @@
 @inproceedings{Bu2022FeedbackGD,
   title={Feedback Gradient Descent: Efficient and Stable Optimization with Orthogonality for DNNs},
-  author={Fanchen Bu and Dong Eui Chang},
+  author={Bu, Fanchen and Chang, Dong Eui},
   booktitle={AAAI},
   year={2022}
 }
