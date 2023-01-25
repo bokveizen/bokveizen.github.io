@@ -1,0 +1,6 @@
+@inproceedings{Kim2023SC3,
+  title={Characterization of Simplicial Complexes by Counting Simplets Beyond Four Nodes},
+  author={Kim, Hyunju and Ko, Jihoon and Bu, Fanchen and Shin, Kijung},
+  booktitle={theWebConf (fka WWW)},
+  year={2023}
+}
