@@ -1,0 +1,6 @@
+@inproceedings{Lee2023AEROGNN,
+  title={Towards Deep Attention in Graph Neural Networks: Problems and Remedies},
+  author={Lee, Sooyong and Bu, Fanchen and Yoo, Jaemin and Shin, Kijung},
+  booktitle={ICML},
+  year={2023}
+}
