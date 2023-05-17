@@ -1,0 +1,6 @@
+@inproceedings{Kim2023transitivity,
+  title={How Transitive Are Real-World Group Interactions? - Measurement and Reproduction},
+  author={Kim, Sunwoo and Bu, Fanchen and Choe, Minyoung and Yoo, Jaemin and Shin, Kijung},
+  booktitle={KDD},
+  year={2023}
+}
