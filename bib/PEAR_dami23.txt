@@ -1,0 +1,7 @@
+@article{Bu2023interplay,
+  title={Interplay between topology and edge weights in real-world graphs: concepts, patterns, and an algorithm},
+  author={Bu, Fanchen and Kang, Shinhwan and Shin, Kijung},
+  journal={Data Mining and Knowledge Discovery},
+  year={2023},
+  publisher={Springer}
+}

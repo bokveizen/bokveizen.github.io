@@ -1,0 +1,7 @@
+@article{Bu2023ktHypercore,
+  title={Hypercore Decomposition for Non-Fragile Hyperedges: Concepts, Algorithms, Observations, and Applications},
+  author={Bu, Fanchen and Lee, Geon and Shin, Kijung},
+  journal={Data Mining and Knowledge Discovery},
+  year={2023},
+  publisher={Springer}
+}
