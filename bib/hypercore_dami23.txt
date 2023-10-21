@@ -3,5 +3,7 @@
   author={Bu, Fanchen and Lee, Geon and Shin, Kijung},
   journal={Data Mining and Knowledge Discovery},
   year={2023},
+  volume={37},
+  pages={2389 - 2437},
   publisher={Springer}
 }
