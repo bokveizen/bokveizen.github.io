@@ -1,0 +1,6 @@
+@article{lee2024hgsurvey,
+  title={A Survey on Hypergraph Mining: Patterns, Tools, and Generators}, 
+  author={Geon Lee and Fanchen Bu and Tina Eliassi-Rad and Kijung Shin},  
+  journal={arXiv preprint arXiv:2401.08878},
+  year={2024}
+}
