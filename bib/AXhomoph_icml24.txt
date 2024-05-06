@@ -1,6 +1,6 @@
-@article{lee2024AXhomophily,
+@inproceedings{lee2024AXhomophily,
   title={Feature Distribution on Graph Topology Mediates the Effect of Graph Convolution: Homophily Perspective}, 
   author={Lee, Soo Yong and Kim, Sunwoo and Bu, Fanchen and Yoo, Jaemin and Tang, Jiliang and Shin, Kijung},
-  journal={arXiv:2402.04621},
+  booktitle={ICML},
   year={2024}
 }

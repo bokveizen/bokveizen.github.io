@@ -1,0 +1,6 @@
+@inproceedings{bu2024ucom2,
+  title={Tackling Prevalent Conditions in Unsupervised Combinatorial Optimization: Cardinality, Minimum, Covering, and More},
+  author={Bu, Fanchen and Jo, Hyeonsoo and Lee, Soo Yong and Ahn, Sungsoo and Shin, Kijung},
+  booktitle={ICML},
+  year={2024}
+}
