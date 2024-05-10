@@ -1,682 +1,1339 @@
-<html><head>
+<html>
+
+<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="google-site-verification" content="kwlXUKfNdOxJAEYbMJerUGzWPWJcIAabZrgx9hqg_wI" />
+	<!-- <meta name="google-site-verification" content="kwlXUKfNdOxJAEYbMJerUGzWPWJcIAabZrgx9hqg_wI" /> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>BU, Fanchen卜凡辰</title><style>
-/* cspell:disable-file */
-/* webkit printing magic: print all background colors */
-html {
-	-webkit-print-color-adjust: exact;
-}
-* {
-	box-sizing: border-box;
-	-webkit-print-color-adjust: exact;
-}
-
-html,
-body {
-	margin: 2em;
-	padding: 0;
-}
-@media only screen {
-	body {
-		margin: 2em auto;
-		max-width: 900px;		
-		color: rgb(55, 53, 47);
-	}
-}
-
-body {
-	line-height: 1.5;
-	white-space: pre-wrap;
-}
-
-a,
-a.visited {
-	color: inherit;
-	text-decoration: underline;
-}
-
-.pdf-relative-link-path {
-	font-size: 80%;
-	color: #444;
-}
-
-h1,
-h2,
-h3 {
-	letter-spacing: -0.01em;
-	line-height: 1.2;
-	font-weight: 600;
-	margin-bottom: 0;
-}
-
-.page-title {
-	font-size: 2.2rem;
-	font-weight: 700;
-	margin-top: 0;
-	margin-bottom: 0.75em;
-}
-
-h1 {
-	font-size: 1.875rem;
-	margin-top: 1.875rem;
-}
-
-h2 {
-	font-size: 1.5rem;
-	margin-top: 1.5rem;
-}
-
-h3 {
-	font-size: 1.25rem;
-	margin-top: 1.25rem;
-}
-
-.source {
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	padding: 1.5em;
-	word-break: break-all;
-}
-
-.callout {
-	border-radius: 3px;
-	padding: 1rem;
-}
-
-figure {
-	margin: 1.25em 0;
-	page-break-inside: avoid;
-}
-
-figcaption {
-	opacity: 0.5;
-	font-size: 85%;
-	margin-top: 0.5em;
-}
-
-mark {
-	background-color: transparent;
-}
-
-.indented {
-	padding-left: 1.5em;
-}
-
-hr {
-	background: transparent;
-	display: block;
-	width: 100%;
-	height: 1px;
-	visibility: visible;
-	border: none;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-}
-
-img {
-	max-width: 100%;
-}
-
-@media only print {
-	img {
-		max-height: 100vh;
-		object-fit: contain;
-	}
-}
-
-@page {
-	margin: 1in;
-}
-
-.collection-content {
-	font-size: 0.875rem;
-}
-
-.column-list {
-	display: flex;
-	justify-content: space-between;
-}
-
-.column {
-	padding: 0 1em;
-}
-
-.column:first-child {
-	padding-left: 0;
-}
-
-.column:last-child {
-	padding-right: 0;
-}
-
-.table_of_contents-item {
-	display: block;
-	font-size: 0.875rem;
-	line-height: 1.3;
-	padding: 0.125rem;
-}
-
-.table_of_contents-indent-1 {
-	margin-left: 1.5rem;
-}
-
-.table_of_contents-indent-2 {
-	margin-left: 3rem;
-}
-
-.table_of_contents-indent-3 {
-	margin-left: 4.5rem;
-}
-
-.table_of_contents-link {
-	text-decoration: none;
-	opacity: 0.7;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-}
-
-table,
-th,
-td {
-	border: 1px solid rgba(55, 53, 47, 0.09);
-	border-collapse: collapse;
-}
-
-table {
-	border-left: none;
-	border-right: none;
-}
-
-th,
-td {
-	font-weight: normal;
-	padding: 0.25em 0.5em;
-	line-height: 1.5;
-	min-height: 1.5em;
-	text-align: left;
-}
-
-th {
-	color: rgba(55, 53, 47, 0.6);
-}
-
-ol,
-ul {
-	margin: 0;
-	margin-block-start: 0.6em;
-	margin-block-end: 0.6em;
-}
-
-li > ol:first-child,
-li > ul:first-child {
-	margin-block-start: 0.6em;
-}
-
-ul > li {
-	list-style: disc;
-}
-
-ul.to-do-list {
-	text-indent: -1.7em;
-}
-
-ul.to-do-list > li {
-	list-style: none;
-}
-
-.to-do-children-checked {
-	text-decoration: line-through;
-	opacity: 0.375;
-}
-
-ul.toggle > li {
-	list-style: none;
-}
-
-ul {
-	padding-inline-start: 1.7em;
-}
-
-ul > li {
-	padding-left: 0.1em;
-}
-
-ol {
-	padding-inline-start: 1.6em;
-}
-
-ol > li {
-	padding-left: 0.2em;
-}
-
-.mono ol {
-	padding-inline-start: 2em;
-}
-
-.mono ol > li {
-	text-indent: -0.4em;
-}
-
-.toggle {
-	padding-inline-start: 0em;
-	list-style-type: none;
-}
-
-/* Indent toggle children */
-.toggle > li > details {
-	padding-left: 1.7em;
-}
-
-.toggle > li > details > summary {
-	margin-left: -1.1em;
-}
-
-.selected-value {
-	display: inline-block;
-	padding: 0 0.5em;
-	background: rgba(206, 205, 202, 0.5);
-	border-radius: 3px;
-	margin-right: 0.5em;
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
-	white-space: nowrap;
-}
-
-.collection-title {
-	display: inline-block;
-	margin-right: 1em;
-}
-
-.simple-table {
-	margin-top: 1em;
-	font-size: 0.875rem;
-	empty-cells: show;
-}
-.simple-table td {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table th {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table-header-color {
-	background: rgb(247, 246, 243);
-	color: black;
-}
-.simple-table-header {
-	font-weight: 500;
-}
-
-time {
-	opacity: 0.5;
-}
-
-.icon {
-	display: inline-block;
-	max-width: 1.2em;
-	max-height: 1.2em;
-	text-decoration: none;
-	vertical-align: text-bottom;
-	margin-right: 0.5em;
-}
-
-img.icon {
-	border-radius: 3px;
-}
-
-.user-icon {
-	width: 1.5em;
-	height: 1.5em;
-	border-radius: 100%;
-	margin-right: 0.5rem;
-}
-
-.user-icon-inner {
-	font-size: 0.8em;
-}
-
-.text-icon {
-	border: 1px solid #000;
-	text-align: center;
-}
-
-.page-cover-image {
-	display: block;
-	object-fit: cover;
-	width: 100%;
-	max-height: 30vh;
-}
-
-.page-header-icon {
-	font-size: 3rem;
-	margin-bottom: 1rem;
-}
-
-.page-header-icon-with-cover {
-	margin-top: -0.72em;
-	margin-left: 0.07em;
-}
-
-.page-header-icon img {
-	border-radius: 3px;
-}
-
-.link-to-page {
-	margin: 1em 0;
-	padding: 0;
-	border: none;
-	font-weight: 500;
-}
-
-p > .user {
-	opacity: 0.5;
-}
-
-td > .user,
-td > time {
-	white-space: nowrap;
-}
-
-input[type="checkbox"] {
-	transform: scale(1.5);
-	margin-right: 0.6em;
-	vertical-align: middle;
-}
-
-p {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-}
-
-.image {
-	border: none;
-	margin: 1.5em 0;
-	padding: 0;
-	border-radius: 0;
-	text-align: center;
-}
-
-.code,
-code {
-	background: rgba(135, 131, 120, 0.15);
-	border-radius: 3px;
-	padding: 0.2em 0.4em;
-	border-radius: 3px;
-	font-size: 85%;
-	tab-size: 2;
-}
-
-code {
-	color: #eb5757;
-}
-
-.code {
-	padding: 1.5em 1em;
-}
-
-.code-wrap {
-	white-space: pre-wrap;
-	word-break: break-all;
-}
-
-.code > code {
-	background: none;
-	padding: 0;
-	font-size: 100%;
-	color: inherit;
-}
-
-blockquote {
-	font-size: 1.25em;
-	margin: 1em 0;
-	padding-left: 1em;
-	border-left: 3px solid rgb(55, 53, 47);
-}
-
-.bookmark {
-	text-decoration: none;
-	max-height: 8em;
-	padding: 0;
-	display: flex;
-	width: 100%;
-	align-items: stretch;
-}
-
-.bookmark-title {
-	font-size: 0.85em;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	height: 1.75em;
-	white-space: nowrap;
-}
-
-.bookmark-text {
-	display: flex;
-	flex-direction: column;
-}
-
-.bookmark-info {
-	flex: 4 1 180px;
-	padding: 12px 14px 14px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.bookmark-image {
-	width: 33%;
-	flex: 1 1 180px;
-	display: block;
-	position: relative;
-	object-fit: cover;
-	border-radius: 1px;
-}
-
-.bookmark-description {
-	color: rgba(55, 53, 47, 0.6);
-	font-size: 0.75em;
-	overflow: hidden;
-	max-height: 4.5em;
-	word-break: break-word;
-}
-
-.bookmark-href {
-	font-size: 0.75em;
-	margin-top: 0.25em;
-}
-
-.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
-.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
-.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
-.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
-.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
-.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
-.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
-.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
-.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
-.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
-.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
-.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
-.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.highlight-default {
-	color: rgba(55, 53, 47, 1);
-}
-.highlight-gray {
-	color: rgba(120, 119, 116, 1);
-	fill: rgba(120, 119, 116, 1);
-}
-.highlight-brown {
-	color: rgba(159, 107, 83, 1);
-	fill: rgba(159, 107, 83, 1);
-}
-.highlight-orange {
-	color: rgba(217, 115, 13, 1);
-	fill: rgba(217, 115, 13, 1);
-}
-.highlight-yellow {
-	color: rgba(203, 145, 47, 1);
-	fill: rgba(203, 145, 47, 1);
-}
-.highlight-teal {
-	color: rgba(68, 131, 97, 1);
-	fill: rgba(68, 131, 97, 1);
-}
-.highlight-blue {
-	color: rgba(51, 126, 169, 1);
-	fill: rgba(51, 126, 169, 1);
-}
-.highlight-purple {
-	color: rgba(144, 101, 176, 1);
-	fill: rgba(144, 101, 176, 1);
-}
-.highlight-pink {
-	color: rgba(193, 76, 138, 1);
-	fill: rgba(193, 76, 138, 1);
-}
-.highlight-red {
-	color: rgba(212, 76, 71, 1);
-	fill: rgba(212, 76, 71, 1);
-}
-.highlight-gray_background {
-	background: rgba(241, 241, 239, 1);
-}
-.highlight-brown_background {
-	background: rgba(244, 238, 238, 1);
-}
-.highlight-orange_background {
-	background: rgba(251, 236, 221, 1);
-}
-.highlight-yellow_background {
-	background: rgba(251, 243, 219, 1);
-}
-.highlight-teal_background {
-	background: rgba(237, 243, 236, 1);
-}
-.highlight-blue_background {
-	background: rgba(231, 243, 248, 1);
-}
-.highlight-purple_background {
-	background: rgba(244, 240, 247, 0.8);
-}
-.highlight-pink_background {
-	background: rgba(249, 238, 243, 0.8);
-}
-.highlight-red_background {
-	background: rgba(253, 235, 236, 1);
-}
-.block-color-default {
-	color: inherit;
-	fill: inherit;
-}
-.block-color-gray {
-	color: rgba(120, 119, 116, 1);
-	fill: rgba(120, 119, 116, 1);
-}
-.block-color-brown {
-	color: rgba(159, 107, 83, 1);
-	fill: rgba(159, 107, 83, 1);
-}
-.block-color-orange {
-	color: rgba(217, 115, 13, 1);
-	fill: rgba(217, 115, 13, 1);
-}
-.block-color-yellow {
-	color: rgba(203, 145, 47, 1);
-	fill: rgba(203, 145, 47, 1);
-}
-.block-color-teal {
-	color: rgba(68, 131, 97, 1);
-	fill: rgba(68, 131, 97, 1);
-}
-.block-color-blue {
-	color: rgba(51, 126, 169, 1);
-	fill: rgba(51, 126, 169, 1);
-}
-.block-color-purple {
-	color: rgba(144, 101, 176, 1);
-	fill: rgba(144, 101, 176, 1);
-}
-.block-color-pink {
-	color: rgba(193, 76, 138, 1);
-	fill: rgba(193, 76, 138, 1);
-}
-.block-color-red {
-	color: rgba(212, 76, 71, 1);
-	fill: rgba(212, 76, 71, 1);
-}
-.block-color-gray_background {
-	background: rgba(241, 241, 239, 1);
-}
-.block-color-brown_background {
-	background: rgba(244, 238, 238, 1);
-}
-.block-color-orange_background {
-	background: rgba(251, 236, 221, 1);
-}
-.block-color-yellow_background {
-	background: rgba(251, 243, 219, 1);
-}
-.block-color-teal_background {
-	background: rgba(237, 243, 236, 1);
-}
-.block-color-blue_background {
-	background: rgba(231, 243, 248, 1);
-}
-.block-color-purple_background {
-	background: rgba(244, 240, 247, 0.8);
-}
-.block-color-pink_background {
-	background: rgba(249, 238, 243, 0.8);
-}
-.block-color-red_background {
-	background: rgba(253, 235, 236, 1);
-}
-.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
-.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
-.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
-.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
-.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
-.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
-.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
-.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
-.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
-.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
-
-.checkbox {
-	display: inline-flex;
-	vertical-align: text-bottom;
-	width: 16;
-	height: 16;
-	background-size: 16px;
-	margin-left: 2px;
-	margin-right: 5px;
-}
-
-.checkbox-on {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-
-.checkbox-off {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-
-</style></head><body><article id="34c8c9d9-b57d-46f3-a886-54a83c0be014" class="page sans"><header><h1 class="page-title">BU, Fanchen 卜凡辰</h1><p class="page-description"></p></header><div class="page-body"><figure id="cc0d5e2b-7ba6-487f-92d1-491c1d7ce252" class="image" style="text-align:left"><a href="figs/me_2023a.jpg"><img style="width:384px" src="figs/me_2023a_smaller.jpg"/></a></figure><p id="30d5888e-0725-42f0-a3b4-ca3789f0a29e" class=""><strong>😊 Hi, I am Fanchen (/fantʂʰən/)! You can also call me Vezen (/vezən/).</strong></p><p id="d4296a40-6969-46b1-9373-c106de3600d9" class="">I am a <strong>PhD student </strong>in the <a href="https://sites.google.com/view/kaistdata">Data Mining Lab</a> at KAIST, under <a href="https://kijungs.github.io/">Prof. Shin, Kijung [신기정]</a>. </p><p id="e69beba2-fb9b-43a4-8729-dfee67cb6718" class="">My research interests lie in <strong>graph mining</strong>, <strong>graph algorithms</strong>, and <strong>combinatorial optimization</strong>.</p><p id="147bb31f-c57b-4b46-91a5-e0a71a062f63" class="">Besides research, I like music 🎼, math 📐, thinking 🤔, and exercise 🏋️‍♀️!</p><p id="ac78c8a3-bc80-4977-9d75-83c30a3fc0dc" class=""><strong>過則勿憚改 When you make a mistake, don't be afraid to correct yourself 《論語·學而》</strong></p><p id="07103182-2d4d-4cba-a398-a9123e2f3261" class="">
-</p><h3 id="01be90ee-d7ca-4185-b8d6-61ab3eb657af" class=""><strong>Contact</strong></h3><p id="fa80fa9a-dc32-4686-b9e4-62cfda4478c5" class=""><a href="mailto:boqvezen97@kaist.ac.kr">✉️ Email: boqvezen97@kaist.ac.kr</a></p><p id="ced4dee6-eb4c-42a4-a047-64bfdfc4e0cb" class=""><a href="https://github.com/bokveizen">👾 Github</a></p><p id="70d47121-f9ce-434d-a08a-f9cdf93bf7e2" class=""><a href="https://www.linkedin.com/in/fanchen-bu-1268a1255/">💼 LinkedIn</a></p><p id="5b0f9917-3da8-43a0-92ed-8720fdcd7cf6" class="">
-</p><h1 id="6d1ef24c-d8d9-4d97-a8e0-d5005e923f0f" class="">Education</h1><h3 id="1c023fc0-869f-49df-a8a3-c71ede717d22" class="">Doctor</h3><p id="09c7a5da-d106-401c-8081-d29e67bb91aa" class=""><em>2022.03 – </em> | <strong>Korea Advanced Institute of Science and Technology (KAIST)</strong></p><ul id="ae1aa2b3-06f4-4156-866d-8c4f73b609cc" class="bulleted-list"><li style="list-style-type:disc"><a href="https://sites.google.com/view/kaistdata/home">Data Mining Lab</a> (Supervisor: <a href="https://kijungs.github.io/">Prof. Shin, Kijung [신기정]</a>)</li></ul><ul id="120e56e6-91e7-4396-abac-47b0783c028d" class="bulleted-list"><li style="list-style-type:disc">Electrical Engineering</li></ul><h3 id="7be92054-fde0-43f9-973c-06d2efb12828" class="">Researcher</h3><p id="584fbf87-2b82-41c4-9d53-d4731933a41f" class=""><em>2021.09 – 2022.02</em> | <strong>Korea Advanced Institute of Science and Technology (KAIST)</strong></p><ul id="3a352535-bf96-4073-89b0-7280a4d362d2" class="bulleted-list"><li style="list-style-type:disc"><a href="https://sites.google.com/view/kaistdata/home">Data Mining Lab</a> (Supervisor: <a href="https://kijungs.github.io/">Prof. Shin, Kijung [신기정]</a>)</li></ul><h3 id="04676e6e-c9af-4adf-bc65-7fbbd5853246" class="">Master</h3><p id="f3e6d6bd-4779-461b-986b-23a2ade0f9b2" class=""><em>2019.09 – 2021.08</em> | <strong>Korea Advanced Institute of Science and Technology (KAIST)</strong></p><ul id="6d67194d-1e14-4352-9d25-3d305cbac94e" class="bulleted-list"><li style="list-style-type:disc"><a href="https://control.kaist.ac.kr/home">Control Lab</a> (Supervisor: <a href="https://control.kaist.ac.kr/Professor">Prof. Chang, Dong Eui [장동의]</a>)</li></ul><ul id="b70337f9-f020-4da8-b1e3-5784b73173d0" class="bulleted-list"><li style="list-style-type:disc">Electrical Engineering, GPA: 4.21/4.3</li></ul><ul id="1f995fb0-b3cf-4e26-9933-6db0089c914f" class="bulleted-list"><li style="list-style-type:disc">Thesis: A Novel Optimization Algorithm with Orthogonality for Deep Neural Networks Inspired by Feedback Integrators</li></ul><h3 id="521f304b-d5ac-4a95-9ea0-6ab1a65cc484" class="">Bachelor</h3><p id="6af1b3b6-ef43-4c55-8ba6-711e761d1e41" class=""><em>2015.09 – 2019.08</em> | <strong>University of Chinese Academy of Sciences (UCAS)</strong></p><ul id="46c6c777-a6c4-49be-8dc8-b6aae8799a6c" class="bulleted-list"><li style="list-style-type:disc">Computer Science and Technology, GPA: 3.71/4</li></ul><ul id="b47d71fb-c3b7-44a8-b31a-15254462af88" class="bulleted-list"><li style="list-style-type:disc">Thesis: Vehicle Trajectory Prediction Based on Deep Learning (Supervisor: <a href="http://people.ucas.ac.cn/~0001598?language=en">Prof. Zhao, Dongbin [趙冬斌]</a>)</li></ul><p id="16f98da5-9ab6-43cb-b111-9e23d4c6d09a" class="">
-</p><hr id="bfd5d596-7025-44d9-b336-0754218d6281"/><h1 id="7e43ded4-f3ad-41da-a8b3-71d4f932e7f1" class="">Publications</h1><blockquote id="253c4d19-b778-4add-8d0b-692bc49d9985" class=""><strong>You can also check them on </strong><strong><a href="https://scholar.google.com/citations?user=XjNu7-AAAAAJ">Google Scholar</a></strong><strong> or </strong><strong><a href="https://www.semanticscholar.org/author/Fanchen-Bu/2065674134">Semantic Scholar</a></strong></blockquote><blockquote id="bf8debf1-3203-4990-893a-766d8ffeb97c" class=""><strong>C: conference / J: journal / P: preprint</strong></blockquote><blockquote id="1ec6f3fc-05f2-4d18-a2b7-5fcd2e18accb" class=""><strong>*: equal contribution</strong></blockquote><p id="b9cd8371-62c5-4c27-bc4d-ec668a37cb07" class="">[C10] <strong>Tackling Prevalent Conditions in Unsupervised Combinatorial Optimization: Cardinality, Minimum, Covering, and More</strong></p><ul id="db944478-c4aa-481f-960a-3183dec8c9b2" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Hyeonsoo Jo, Soo Yong Lee, Sungsoo Ahn, and Kijung Shin</li></ul><ul id="0a81f859-6079-4a73-bbfe-426380e2341a" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue">ICML 2024 [ paper | code | </mark></strong><a href="https://bokveizen.github.io/bib/ucom2_icml24.txt"><strong><mark class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue"> ]</mark></strong></li></ul><p id="dbd205c2-f828-4dea-ad9b-254cd228919f" class="">[C9] <strong>Feature Distribution on Graph Topology Mediates the Effect of Graph Convolution: Homophily Perspective</strong></p><ul id="ea89a1ce-e6bb-4da8-87d6-ec3b9b69bafe" class="bulleted-list"><li style="list-style-type:disc">Soo Yong Lee, Sunwoo Kim, <span style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Jaemin Yoo, Jiliang Tang, and Kijung Shin</li></ul><ul id="ced4d58b-63d2-4868-bdcc-e2905206120d" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue">ICML 2024 [ </mark></strong><a href="https://arxiv.org/abs/2402.04621"><strong><mark class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> | code | </mark></strong><a href="https://bokveizen.github.io/bib/AXhomoph_icml24.txt"><strong><mark class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue"> ]</mark></strong></li></ul><p id="a63d77ff-67a0-4eeb-853b-7bf91d76dfda" class="">[P1] <strong>A Survey on Hypergraph Mining: Patterns, Tools, and Generators</strong></p><ul id="11b33634-2cff-4820-8a2c-f082e5b1cf89" class="bulleted-list"><li style="list-style-type:disc">Geon Lee*, <span style="border-bottom:0.05em solid"><strong>Fanchen Bu*</strong></span>, Tina Eliassi-Rad, and Kijung Shin</li></ul><ul id="5a48e037-db41-49a1-a441-8825d7be90de" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue">arXiv 2401.08878 [ </mark></strong><a href="https://arxiv.org/abs/2401.08878"><strong><mark class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> | code | </mark></strong><a href="https://bokveizen.github.io/bib/HGsurvey_csur24.txt"><strong><mark class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue"> ]</mark></strong></li></ul><p id="f7cc1f1e-fb43-4078-ba65-97eff290f8ae" class="">[C8] <strong>HypeBoy: Generative Self-Supervised Representation Learning on Hypergraphs</strong></p><ul id="eba6400e-8b78-4207-a66d-58dcbb35f05a" class="bulleted-list"><li style="list-style-type:disc">Sunwoo Kim, Shinhwan Kang, <span style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Soo Yong Lee, Jaemin Yoo, and Kijung Shin</li></ul><ul id="c3493797-15cb-46f5-87a8-83dc343234b7" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue">ICLR 2024 [ </mark></strong><a href="https://arxiv.org/abs/2404.00638"><strong><mark class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> | </mark></strong><a href="https://github.com/kswoo97/hypeboy"><strong><mark class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue"> | </mark></strong><a href="https://bokveizen.github.io/bib/hypeboy_iclr24.txt"><strong><mark class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue"> ]</mark></strong></li></ul><p id="6bad08a9-8f2a-41cb-ad54-b5cc4da1c61c" class="">[C7] <strong>Robust Graph Clustering via Meta Weighting for Noisy Graphs</strong></p><ul id="4bb21d87-0368-453c-bd9c-0174266b164a" class="bulleted-list"><li style="list-style-type:disc">Hyeonsoo Jo, <span style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, and Kijung Shin</li></ul><ul id="f3056c43-74ea-42f4-81d1-0b3bdcfb5136" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue">CIKM 2023 [ </mark></strong><a href="https://bokveizen.github.io/papers/metaGC_cikm23.pdf"><strong><mark class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> | </mark></strong><a href="https://github.com/HyeonsooJo/MetaGC"><strong><mark class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue"> | </mark></strong><a href="https://bokveizen.github.io/slides/metaGC_cikm23.pdf"><strong><mark class="highlight-blue">slides</mark></strong></a><strong><mark class="highlight-blue"> | </mark></strong><a href="https://bokveizen.github.io/videos/metaGC_cikm23.mp4"><strong><mark class="highlight-blue">video</mark></strong></a><strong><mark class="highlight-blue"> | </mark></strong><a href="https://bokveizen.github.io/bib/metaGC_cikm23.txt"><strong><mark class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue"> ]</mark></strong></li></ul><p id="80c2e003-a8da-48ad-8c88-920960c177d8" class="">[C6] <strong>On Improving the Cohesiveness of Graphs by Merging Nodes: Formulation, Analysis, and Algorithms</strong></p><ul id="642878e4-5a33-4127-875f-991ae7c8ad0a" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span> and Kijung Shin</li></ul><ul id="48170e8f-80cf-4884-8da3-a6dca469bcb3" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue">KDD 2023 [ </mark></strong><a href="https://arxiv.org/abs/2306.06368"><strong><mark class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> | </mark></strong><a href="https://github.com/bokveizen/cohesive-truss-merge"><strong><mark class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue"> | </mark></strong><a href="https://bokveizen.github.io/slides/truss_kdd23.pdf"><strong><mark class="highlight-blue">slides</mark></strong></a><strong><mark class="highlight-blue"> | </mark></strong><a href="https://youtu.be/eqouia5ruvk"><strong><mark class="highlight-blue">video</mark></strong></a><strong><mark class="highlight-blue"> | </mark></strong><a href="https://bokveizen.github.io/bib/merge_kdd23.txt"><strong><mark class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue"> ]</mark></strong></li></ul><p id="783068a7-43e6-44fd-b9a4-fcdb8336ce9e" class="">[C5] <strong>How Transitive Are Real-World Group Interactions? - Measurement and Reproduction</strong></p><ul id="64b2e095-b15b-47ce-9593-af9ba1097884" class="bulleted-list"><li style="list-style-type:disc">Sunwoo Kim, <span style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Minyoung Choe, Jaemin Yoo, and Kijung Shin</li></ul><ul id="d66c3816-849d-4f29-b90f-e73e5c1e4064" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue">KDD 2023 [ </mark></strong><a href="https://arxiv.org/abs/2306.02358"><strong><mark class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> | </mark></strong><a href="https://github.com/kswoo97/hypertrans"><strong><mark class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue"> | </mark></strong><a href="https://bokveizen.github.io/slides/transitivity_kdd23.pdf"><strong><mark class="highlight-blue">slides</mark></strong></a><strong><mark class="highlight-blue"> | </mark></strong><a href="https://youtu.be/u5exUDYi-UE"><strong><mark class="highlight-blue">video</mark></strong></a><strong><mark class="highlight-blue"> | </mark></strong><a href="https://bokveizen.github.io/bib/transitivity_kdd23.txt"><strong><mark class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue"> ]</mark></strong></li></ul><p id="e964dbc3-33de-41f3-9c8d-40c333ce1bef" class="">[J2] <strong>Interplay between Topology and Edge Weights in Real-World Graphs: Concepts, Patterns, and an Algorithm</strong></p><ul id="8d100989-a91f-4827-87fb-e1d05656a3df" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Shinhwan Kang, and Kijung Shin</li></ul><ul id="8a427df7-ba97-4a07-b614-441a4d700056" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue">Data Mining and Knowledge Discovery [ </mark></strong><a href="https://arxiv.org/abs/2305.09083"><strong><mark class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> | </mark></strong><a href="https://github.com/bokveizen/topology-edge-weight-interplay"><strong><mark class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue"> | </mark></strong><a href="https://bokveizen.github.io/slides/pear_dami23.pdf"><strong><mark class="highlight-blue">slides</mark></strong></a><strong><mark class="highlight-blue"> | </mark></strong><a href="https://bokveizen.github.io/bib/PEAR_dami23.txt"><strong><mark class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue"> ]</mark></strong></li></ul><ul id="c8877d62-266b-4e63-b8df-e34b34693df5" class="bulleted-list"><li style="list-style-type:disc"><em><strong><mark class="highlight-blue">(ECML PKDD 2023 Journal Track)</mark></strong></em></li></ul><p id="0b2edf88-5239-41bc-a1e4-cb33bba194ee" class="">[C4] <strong>Towards Deep Attention in Graph Neural Networks: Problems and Remedies</strong></p><ul id="2f613a31-9468-4570-98e2-1c07403746be" class="bulleted-list"><li style="list-style-type:disc">Soo Yong Lee, <span style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Jaemin Yoo, and Kijung Shin</li></ul><ul id="8ecd9c0c-631f-419d-91fd-72f01f800cbe" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue">ICML 2023 [ </mark></strong><a href="https://arxiv.org/abs/2306.02376"><strong><mark class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> | </mark></strong><a href="https://github.com/syleeheal/AERO-GNN"><strong><mark class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue"> | </mark></strong><a href="https://bokveizen.github.io/slides/aero_icml23.pdf"><strong><mark class="highlight-blue">slides</mark></strong></a><strong><mark class="highlight-blue"> | </mark></strong><a href="https://youtu.be/LbTuet6K-so"><strong><mark class="highlight-blue">video</mark></strong></a><strong><mark class="highlight-blue"> | </mark></strong><a href="https://bokveizen.github.io/bib/AEROGNN_icml23.txt"><strong><mark class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue"> ]</mark></strong></li></ul><p id="b0510b4c-569a-4fd9-895c-ca1136611b7c" class="">[C3] <strong>Characterization of Simplicial Complexes by Counting Simplets Beyond Four Nodes</strong></p><ul id="07c24bbe-9d02-4a5a-9fae-a1e6301b0d7f" class="bulleted-list"><li style="list-style-type:disc">Hyunju Kim, Jihoon Ko, <span style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, and Kijung Shin</li></ul><ul id="74bbfffe-b116-4c26-9780-e3df6c9cb53b" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue">TheWebConf (fka WWW) 2023 [ </mark></strong><strong><a href="https://arxiv.org/abs/2302.05505"><mark class="highlight-blue">paper </mark></a></strong><strong><mark class="highlight-blue">| </mark></strong><strong><a href="https://github.com/hhyy0401/SC3"><mark class="highlight-blue">code </mark></a></strong><strong><mark class="highlight-blue">| </mark></strong><a href="https://bokveizen.github.io/slides/simplet_www23.pdf"><strong><mark class="highlight-blue">slides</mark></strong></a><strong><mark class="highlight-blue"> | </mark></strong><a href="https://youtu.be/xIP9lz-UtEI"><strong><mark class="highlight-blue">video</mark></strong></a><strong><mark class="highlight-blue"> | </mark></strong><strong><a href="https://bokveizen.github.io/bib/SC3_www23.txt"><mark class="highlight-blue">bib</mark></a></strong><strong><mark class="highlight-blue"> ]</mark></strong></li></ul><p id="6c18c610-1a33-4366-9c62-3681aeee2dc7" class="">[J1] <strong>Hypercore Decomposition for Non-Fragile Hyperedges: Concepts, Algorithms, Observations, and Applications</strong></p><ul id="7f0bc880-d71c-4bdc-80c1-9878856c8e62" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Geon Lee, and Kijung Shin</li></ul><ul id="e851fc25-a738-4fc9-a26f-b435921202ae" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue">Data Mining and Knowledge Discovery [ </mark></strong><strong><a href="https://arxiv.org/abs/2301.08440"><mark class="highlight-blue">paper</mark></a></strong><strong><mark class="highlight-blue"> | </mark></strong><strong><a href="https://github.com/bokveizen/non-fragile-hypercore"><mark class="highlight-blue">code</mark></a></strong><strong><mark class="highlight-blue"> | </mark></strong><a href="https://bokveizen.github.io/slides/hypercore_dami23.pdf"><strong><mark class="highlight-blue">slides</mark></strong></a><strong><mark class="highlight-blue"> | </mark></strong><a href="https://bokveizen.github.io/bib/hypercore_dami23.txt"><strong><mark class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue"> ]</mark></strong></li></ul><ul id="9d26263c-f81a-4235-a018-3c69dec902fb" class="bulleted-list"><li style="list-style-type:disc"><em><strong><mark class="highlight-blue">(ECML PKDD 2023 Journal Track)</mark></strong></em></li></ul><p id="d5110ff0-90a5-431f-b0e3-08d7fd82aa5e" class="">[C2] <strong>Feedback Gradient Descent: Efficient and Stable Optimization with Orthogonality for DNNs</strong></p><ul id="00f67c3a-0840-49db-bba4-45827bb91154" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span> and Dong Eui Chang</li></ul><ul id="ff405283-ee3b-4865-8986-71f9d23a01c2" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue">AAAI 2022 [ </mark></strong><strong><mark class="highlight-blue"><a href="https://arxiv.org/abs/2205.08385">paper</a></mark></strong><strong><mark class="highlight-blue"> | </mark></strong><strong><mark class="highlight-blue"><a href="https://github.com/bokveizen/Feedback-Gradient-Descent">code</a></mark></strong><strong><mark class="highlight-blue"> | </mark></strong><strong><mark class="highlight-blue"><a href="https://bokveizen.github.io/bib/FGD_aaai22.txt">bib</a></mark></strong><strong><mark class="highlight-blue"> ]</mark></strong></li></ul><p id="634b5f37-7ed0-4298-8dd3-731a896949d2" class="">[C1] <strong>Double Prioritized State Recycled Experience Replay</strong></p><ul id="1000eeaf-055b-4ed6-82e9-c52dd640eaa5" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span> and Dong Eui Chang</li></ul><ul id="5c3b2628-227c-418c-9e67-29b129034b51" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue">ICCE-Asia 2020 [ </mark></strong><strong><a href="https://arxiv.org/abs/2007.03961"><mark class="highlight-blue">paper</mark></a></strong><strong><mark class="highlight-blue"> | </mark></strong><strong><a href="https://github.com/bokveizen/DPSR"><mark class="highlight-blue">code</mark></a></strong><strong><mark class="highlight-blue"> | </mark></strong><strong><a href="https://bokveizen.github.io/bib/DPSR_icceasia20.txt"><mark class="highlight-blue">bib</mark></a></strong><strong><mark class="highlight-blue"> ]</mark></strong></li></ul><p id="af2357e9-c42c-431f-81cc-7bd8adf36ebc" class="">
-</p><hr id="ad21e984-ca23-4fdc-8bcc-791dfd12d93c"/><h1 id="c2f638f9-9cae-4345-aae8-2b10033cd1e0" class="">Languages</h1><h3 id="9a63cefa-827e-4b60-b270-4f08f4b07bee" class="">Chinese</h3><p id="e08cec51-d4e1-4bfb-8b2a-9e3d50889c1c" class="">Native </p><ul id="13fafebf-9d20-4c2a-af43-47854639f228" class="bulleted-list"><li style="list-style-type:disc">Native: <a href="https://en.wikipedia.org/wiki/Mandarin_Chinese">Mandarin [普通話]</a>, <a href="https://en.wikipedia.org/wiki/Wu_Chinese">Wu Chinese [吳語]</a></li></ul><ul id="bc4ff61f-8731-49c7-b55e-81e887918b04" class="bulleted-list"><li style="list-style-type:disc">Intermediate: <a href="https://en.wikipedia.org/wiki/Cantonese">Cantonese [粵語]</a></li></ul><ul id="d5c3e0c9-1b38-408a-8278-6f9b141b39ce" class="bulleted-list"><li style="list-style-type:disc">Elementary: <a href="https://en.wikipedia.org/wiki/Hokkien">Hokkien [閩南語]</a></li></ul><h3 id="298dca36-61fb-4cc9-99ff-3f7f8046a8ae" class="">English</h3><p id="1c2cb69a-4e7c-4ffa-9f54-ebe4cf47c8cd" class="">Advanced</p><ul id="bc7aa1bb-b252-4c59-8c9f-fb9bd9648333" class="bulleted-list"><li style="list-style-type:disc">IELTS 7.5</li></ul><ul id="e71c574f-8a9b-444e-a714-725aef329317" class="bulleted-list"><li style="list-style-type:disc">GRE 333</li></ul><h3 id="9e532d9a-a959-4453-838c-d0757b77e392" class="">Korean</h3><p id="732b800e-a5fa-418c-a3a9-71411a93d2af" class="">Intermediate</p><p id="ebc49b3b-1ba6-45bd-83d3-99ff0a6dc546" class="">
-</p><hr id="91eb6850-1cdf-46f8-81bd-db1cce9d9847"/><h1 id="17a1631e-f5c6-4a50-bdc6-d2d932269097" class=""><strong>Academic Services</strong></h1><h3 id="c74f3122-6e8b-4373-b7e9-a982ab01f906" class="">As a reviewer</h3><ul id="6bf37700-961a-49c2-b725-f341694a78d5" class="bulleted-list"><li style="list-style-type:disc">KDD: 2024</li></ul><p id="c3662805-e206-4d24-9700-47b4a7644cbf" class="">
-</p><hr id="56b29400-b58a-407a-9325-2526f6f99c71"/><h1 id="ea4f17bb-280d-43c6-b700-74c7b2628cdf" class="">Favorite Music</h1><blockquote id="76f91e02-8d64-46a4-bf50-7bfa6b51721e" class=""><strong>The links are on </strong><strong><a href="https://music.youtube.com/">Youtube Music</a></strong></blockquote><ol type="1" id="018b9508-4850-472d-8fda-7a71fa5f85cd" class="numbered-list" start="1"><li><strong>Chopin&#x27;s Nocturnes</strong> by <a href="https://music.youtube.com/playlist?list=OLAK5uy_njigVx4j8DCSJwQ2QwQ2G8fXRmOuRJCms&amp;feature=share">Arthur Rubinstein</a> / <a href="https://music.youtube.com/playlist?list=OLAK5uy_kjRwdC_80zhg7O0WTMDuxGMjH90HUtEXw">Claudio Arrau</a> / <a href="https://music.youtube.com/playlist?list=OLAK5uy_mfk-mWrg5JU5QEBwj-ulZdl_MF9E7ZQmI">Đặng Thái Sơn</a></li></ol><ol type="1" id="59899ad0-1389-4caf-b19e-bace3057956a" class="numbered-list" start="2"><li><strong>Chopin&#x27;s Piano Concertos </strong>by <a href="https://music.youtube.com/playlist?list=OLAK5uy_kiNFojL4XWJLLEIx_8s5iXnnkXLgLkvF4">Arthur Rubinstein</a> / <a href="https://music.youtube.com/playlist?list=OLAK5uy_l7e583MqYElE0cOgO2-WlnWA-uAWMqHBE">Yundi Li [李雲迪]</a> / <a href="https://music.youtube.com/playlist?list=PLCRIIeog3pi50V6_UDLwqQQNnw7sNCdpE">Seong-Jin Cho [조성진]</a></li></ol><ol type="1" id="1b68662b-7a92-4b86-8ee9-602f867f07b3" class="numbered-list" start="3"><li><strong>Chinese traditional music</strong> by <a href="https://music.youtube.com/playlist?list=OLAK5uy_lwb0lZaYIrP9TZ0K_5e_G_1XX7gkksgNc">National Cinema Symphony Orchestra [中國廣播電影交響樂團]</a></li></ol><ol type="1" id="c7aab868-fc8e-470b-a3f7-36722cffe40c" class="numbered-list" start="4"><li><strong>Mandopop </strong>by <a href="https://music.youtube.com/playlist?list=OLAK5uy_k1fdIXUO-P5mOZXdMEwR5Hl4wrlUg1RqA&amp;feature=share">David Tao [陶喆]</a> / <a href="https://music.youtube.com/playlist?list=PLCRIIeog3pi5ldmCWxaDOGPDrelZs3Uy_&amp;feature=share">Jay Chou [周傑倫]</a> / <a href="https://music.youtube.com/playlist?list=PLCRIIeog3pi6foTAJbbYaaaiKzRk9-TLJ">Ronghao Li [李榮浩]</a></li></ol><ol type="1" id="8c0b4b69-1912-4595-861f-801b83bcb25b" class="numbered-list" start="5"><li><strong>Cantopop </strong>by <a href="https://music.youtube.com/playlist?list=OLAK5uy_l5kQRWufWv2yymQSG1zzRZcMZS6NtNjYU">Hins Cheung [張敬軒]</a> / <a href="https://music.youtube.com/playlist?list=OLAK5uy_k2DHaYaBcsv7hU_TuQDCxXdnmlhBnnGY8">Janice Vidal [衛蘭]</a></li></ol><ol type="1" id="005a6ff3-34dd-49f6-a991-c9692bd1929e" class="numbered-list" start="6"><li><strong>Korean ballades </strong>by <a href="https://music.youtube.com/playlist?list=PLuMuHAJh9g_P59QyqoaUCWD3xwav_oadF">Si-Kyung Sung [성시경]</a> / <a href="https://music.youtube.com/playlist?list=OLAK5uy_kdDEJh4IXvrGIVrWxoIxIR1wtwkymcjeQ">Kwang-Seok Kim [김광석]</a></li></ol><ol type="1" id="bc61d16a-b942-41e8-81b9-22174c746874" class="numbered-list" start="7"><li><strong>Japanese Enka</strong> by <a href="https://music.youtube.com/playlist?list=PLCRIIeog3pi43c6cWR4IStxzRs6283q61&amp;feature=share">Teresa Teng [テレサ・テン; 鄧麗君]</a> / <a href="https://music.youtube.com/playlist?list=PLCRIIeog3pi6UetNBgNIzFPc31uh5ffBP">Shinichi Mori [森 進一]</a> / <a href="https://music.youtube.com/playlist?list=OLAK5uy_mFi1wtnwYKHqCUMbfHAyQGdMJMFp4v1TQ">Hibari Misora [美空 ひばり]</a> / <a href="https://music.youtube.com/playlist?list=OLAK5uy_maQ--0JYoNDgPPM4xVA2KabhJxowRUseA">Masako Mori [森 昌子]</a></li></ol><ol type="1" id="5c45637e-a6af-4d13-9eae-78c4fe9fc505" class="numbered-list" start="8"><li><strong>Folk music </strong>by <a href="https://music.youtube.com/playlist?list=OLAK5uy_klRuDFPbKlthV4-NxAy-hblMeneiUf0zA">John Denver</a></li></ol><p id="67a8ddc9-74ad-4cef-a074-752bbadf07c3" class="">
-</p><hr id="d80c8c30-9734-4722-a79d-7f9c7af686e0"/><h1 id="20203e87-3239-4221-935a-e1c1265bac39" class="">Useful Tools and Websites</h1><ol type="1" id="0c38739b-529d-4df6-bbb1-290d676dadc5" class="numbered-list" start="1"><li><a href="https://efotinis.neocities.org/deskpins/">DeskPins</a>: a tool for making a window topmost</li></ol><ol type="1" id="38da0d8c-c67b-45de-b266-1e2c62235c7e" class="numbered-list" start="2"><li><a href="https://github.com/microsoft/PowerToys">Microsoft PowerToys</a>: a set of utilities for power users to tune and streamline their Windows experience for greater productivity</li></ol><ol type="1" id="40610dbe-05dd-47a2-bc05-d948eaea7012" class="numbered-list" start="3"><li><a href="https://www.jam-software.com/treesize_free">TreeSize Free</a>: disk space analyzer</li></ol><ol type="1" id="24d739d3-ed16-4a3a-95d6-4d06c62c8132" class="numbered-list" start="4"><li><a href="https://www.voidtools.com/">Everything</a>: a tool for searching files</li></ol><ol type="1" id="df2002c0-61a0-4579-a72b-bf99bef014fb" class="numbered-list" start="5"><li><a href="https://acronymify.com/">Acronymify</a>: automatic acronym generator</li></ol><ol type="1" id="1251e27e-c2fe-4fe8-bc88-d94ba81e2805" class="numbered-list" start="6"><li><a href="https://search.linggle.com/">Linggle</a>: language reference search engines</li></ol><ol type="1" id="1825ddc5-8428-4cd3-b252-7b3e90ee2cef" class="numbered-list" start="7"><li><a href="https://www.reddit.com/r/AcademicBiblical/">Academic Biblical Studies (Reddit)</a>: a subreddit for discussion of early Judaism and Christianity in a scholarly context</li></ol><ol type="1" id="9135aaab-29a8-415f-b9ba-3417b2edec40" class="numbered-list" start="8"><li><a href="https://chord-chart-studio.netlify.app/app">Chord Chart Studio</a>: an online chord chart rendering platform</li></ol><ol type="1" id="ac663c96-6ef2-42d7-9226-4fcdb1f24d12" class="numbered-list" start="9"><li>Two Youtube channels for classical music analysis and appreciation:<ol type="a" id="bac3a17d-958e-480a-82c6-794b84fe1233" class="numbered-list" start="1"><li><a href="https://www.youtube.com/@gregniemczuk">gregniemczuk_official</a>: Polish pianist Grzegorz Niemczuk</li></ol><ol type="a" id="459a9b0b-35b9-4c1e-bde3-feb1be2972ff" class="numbered-list" start="2"><li><a href="https://www.youtube.com/@SonataSecrets">Sonata Secrets</a>: Swedish pianist Henrik Kilhamn</li></ol></li></ol><ol type="1" id="fbb515b2-ab29-469a-a6f2-846bbee4c3e7" class="numbered-list" start="10"><li><a href="https://www.youtube.com/@MangoldProject">MangoldProject</a>: a Youtube channel teaching piano/keyboard skills with music theory</li></ol><p id="14a9a7f9-7e18-4045-9867-42ff72fa6966" class="">
-</p><hr id="6487828c-b72f-453b-af54-0f9dd63373aa"/><h1 id="3d7c9991-37d1-4009-9640-c3d6c2780de2" class="">Miscellanea</h1><ol type="1" id="1fb75420-458c-46c5-b1ad-f14ee983d76c" class="numbered-list" start="1"><li>I am active on <a href="https://math.stackexchange.com/users/823641/vezen-bu">Mathematics Stack Exchange</a> (a math Q&amp;A cite)</li></ol><ol type="1" id="b442d18f-52fb-4f6b-87e1-742999238bd4" class="numbered-list" start="2"><li>My MBTI is <a href="https://www.16personalities.com/profiles/a1dd0b8a1f27b">Assertive Executive (ESTJ-A)</a></li></ol><ol type="1" id="39be6dc8-59d0-4752-991f-826140716ab1" class="numbered-list" start="3"><li>I play <a href="https://en.wikipedia.org/wiki/League_of_Legends">League of Legends</a> (since Season 2, year 2011)<ol type="a" id="700b8476-d7d5-4870-9c41-cb0d9065662d" class="numbered-list" start="1"><li>My highest tier was solo-rank Master in both Chinese and Korean servers</li></ol></li></ol><ol type="1" id="9b1c4ef3-4bb4-4634-bfe3-2b81d919947d" class="numbered-list" start="4"><li>I play <a href="https://en.wikipedia.org/wiki/Japanese_mahjong">Japanese riichi mahjong</a><ol type="a" id="75ad9f50-8cc1-445d-a8d9-f850ff9238b3" class="numbered-list" start="1"><li>My highest tier was 4-Dan (四段) in Tenhou (天鳳) and Master (雀豪) in Mahjong Soul (雀魂)</li></ol></li></ol><p id="851e455f-b6c0-45f6-a0ac-8100c26516b4" class="">
-</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>	
+	<title>BU, Fanchen卜凡辰</title>
+	<style>
+		/* cspell:disable-file */
+		/* webkit printing magic: print all background colors */
+		html {
+			-webkit-print-color-adjust: exact;
+		}
+
+		* {
+			box-sizing: border-box;
+			-webkit-print-color-adjust: exact;
+		}		
+
+		html,
+		body {
+			margin: 2em;
+			padding: 0;
+		}
+
+		@media only screen {
+			body {
+				margin: 2em auto;
+				max-width: 1000px;
+				color: rgb(55, 53, 47);
+			}
+		}		
+
+		body {
+			line-height: 1.5;
+			white-space: normal;
+		}
+
+		a,
+		a.visited {
+			color: inherit;
+			text-decoration: underline;
+		}
+
+		.pdf-relative-link-path {
+			font-size: 80%;
+			color: #444;
+		}
+
+		h1,
+		h2,
+		h3 {
+			letter-spacing: -0.01em;
+			line-height: 1.2;
+			font-weight: 600;
+			margin-bottom: 0;
+		}
+
+		.page-title {
+			font-size: 2.2rem;
+			font-weight: 700;
+			margin-top: 0;
+			margin-bottom: 0.75em;
+		}
+
+		h1 {
+			font-size: 1.875rem;
+			margin-top: 1.875rem;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+			margin-top: 1.5rem;
+		}
+
+		h3 {
+			font-size: 1.25rem;
+			margin-top: 1.25rem;
+		}
+
+		.source {
+			border: 1px solid #ddd;
+			border-radius: 3px;
+			padding: 1.5em;
+			word-break: break-all;
+		}
+
+		.callout {
+			border-radius: 3px;
+			padding: 1rem;
+		}
+
+		figure {
+			margin: 1.25em 0;
+			page-break-inside: avoid;
+		}
+
+		figcaption {
+			opacity: 0.5;
+			font-size: 85%;
+			margin-top: 0.5em;
+		}
+
+		mark {
+			background-color: transparent;
+		}
+
+		.indented {
+			padding-left: 1.5em;
+		}
+
+		hr {
+			background: transparent;
+			display: block;
+			width: 100%;
+			height: 1px;
+			visibility: visible;
+			border: none;
+			border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		@media only print {
+			img {
+				max-height: 100vh;
+				object-fit: contain;
+			}
+		}
+
+		@page {
+			margin: 1in;
+		}
+
+		.collection-content {
+			font-size: 0.875rem;
+		}
+
+		.column-list {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.column {
+			padding: 0 1em;
+		}
+
+		.column:first-child {
+			padding-left: 0;
+		}
+
+		.column:last-child {
+			padding-right: 0;
+		}
+
+		.table_of_contents-item {
+			display: block;
+			font-size: 0.875rem;
+			line-height: 1.3;
+			padding: 0.125rem;
+		}
+
+		.table_of_contents-indent-1 {
+			margin-left: 1.5rem;
+		}
+
+		.table_of_contents-indent-2 {
+			margin-left: 3rem;
+		}
+
+		.table_of_contents-indent-3 {
+			margin-left: 4.5rem;
+		}
+
+		.table_of_contents-link {
+			text-decoration: none;
+			opacity: 0.7;
+			border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+		}
+
+		table,
+		th,
+		td {
+			border: 1px solid rgba(55, 53, 47, 0.09);
+			border-collapse: collapse;
+		}
+
+		table {
+			border-left: none;
+			border-right: none;
+		}
+
+		th,
+		td {
+			font-weight: normal;
+			padding: 0.25em 0.5em;
+			line-height: 1.5;
+			min-height: 1.5em;
+			text-align: left;
+		}
+
+		th {
+			color: rgba(55, 53, 47, 0.6);
+		}
+
+		ol,
+		ul {
+			margin: 0;
+			margin-block-start: 0.6em;
+			margin-block-end: 0.6em;
+		}
+
+		li>ol:first-child,
+		li>ul:first-child {
+			margin-block-start: 0.6em;
+		}
+
+		ul>li {
+			list-style: disc;
+		}
+
+		ul.to-do-list {
+			text-indent: -1.7em;
+		}
+
+		ul.to-do-list>li {
+			list-style: none;
+		}
+
+		.to-do-children-checked {
+			text-decoration: line-through;
+			opacity: 0.375;
+		}
+
+		ul.toggle>li {
+			list-style: none;
+		}
+
+		ul {
+			padding-inline-start: 1.7em;
+		}
+
+		ul>li {
+			padding-left: 0.1em;
+		}
+
+		ol {
+			padding-inline-start: 1.6em;
+		}
+
+		ol>li {
+			padding-left: 0.2em;
+		}
+
+		.mono ol {
+			padding-inline-start: 2em;
+		}
+
+		.mono ol>li {
+			text-indent: -0.4em;
+		}
+
+		.toggle {
+			padding-inline-start: 0em;
+			list-style-type: none;
+		}
+
+		/* Indent toggle children */
+		.toggle>li>details {
+			padding-left: 1.7em;
+		}
+
+		.toggle>li>details>summary {
+			margin-left: -1.1em;
+		}
+
+		.selected-value {
+			display: inline-block;
+			padding: 0 0.5em;
+			background: rgba(206, 205, 202, 0.5);
+			border-radius: 3px;
+			margin-right: 0.5em;
+			margin-top: 0.3em;
+			margin-bottom: 0.3em;
+			white-space: nowrap;
+		}
+
+		.collection-title {
+			display: inline-block;
+			margin-right: 1em;
+		}
+
+		.simple-table {
+			margin-top: 1em;
+			font-size: 0.875rem;
+			empty-cells: show;
+		}
+
+		.simple-table td {
+			height: 29px;
+			min-width: 120px;
+		}
+
+		.simple-table th {
+			height: 29px;
+			min-width: 120px;
+		}
+
+		.simple-table-header-color {
+			background: rgb(247, 246, 243);
+			color: black;
+		}
+
+		.simple-table-header {
+			font-weight: 500;
+		}
+
+		time {
+			opacity: 0.5;
+		}
+
+		.icon {
+			display: inline-block;
+			max-width: 1.2em;
+			max-height: 1.2em;
+			text-decoration: none;
+			vertical-align: text-bottom;
+			margin-right: 0.5em;
+		}
+
+		img.icon {
+			border-radius: 3px;
+		}
+
+		.user-icon {
+			width: 1.5em;
+			height: 1.5em;
+			border-radius: 100%;
+			margin-right: 0.5rem;
+		}
+
+		.user-icon-inner {
+			font-size: 0.8em;
+		}
+
+		.text-icon {
+			border: 1px solid #000;
+			text-align: center;
+		}
+
+		.page-cover-image {
+			display: block;
+			object-fit: cover;
+			width: 100%;
+			max-height: 30vh;
+		}
+
+		.page-header-icon {
+			font-size: 3rem;
+			margin-bottom: 1rem;
+		}
+
+		.page-header-icon-with-cover {
+			margin-top: -0.72em;
+			margin-left: 0.07em;
+		}
+
+		.page-header-icon img {
+			border-radius: 3px;
+		}
+
+		.link-to-page {
+			margin: 1em 0;
+			padding: 0;
+			border: none;
+			font-weight: 500;
+		}
+
+		p>.user {
+			opacity: 0.5;
+		}
+
+		td>.user,
+		td>time {
+			white-space: nowrap;
+		}
+
+		input[type="checkbox"] {
+			transform: scale(1.5);
+			margin-right: 0.6em;
+			vertical-align: middle;
+		}
+
+		p {
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+
+		.image {
+			border: none;
+			margin: 1.5em 0;
+			padding: 0;
+			border-radius: 0;
+			text-align: center;
+		}
+
+		.code,
+		code {
+			background: rgba(135, 131, 120, 0.15);
+			border-radius: 3px;
+			padding: 0.2em 0.4em;
+			border-radius: 3px;
+			font-size: 85%;
+			tab-size: 2;
+		}
+
+		code {
+			color: #eb5757;
+		}
+
+		.code {
+			padding: 1.5em 1em;
+		}
+
+		.code-wrap {
+			white-space: pre-wrap;
+			word-break: break-all;
+		}
+
+		.code>code {
+			background: none;
+			padding: 0;
+			font-size: 100%;
+			color: inherit;
+		}
+
+		blockquote {
+			font-size: 1.25em;
+			margin: 1em 0;
+			padding-left: 1em;
+			border-left: 3px solid rgb(55, 53, 47);
+		}
+
+		.bookmark {
+			text-decoration: none;
+			max-height: 8em;
+			padding: 0;
+			display: flex;
+			width: 100%;
+			align-items: stretch;
+		}
+
+		.bookmark-title {
+			font-size: 0.85em;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			height: 1.75em;
+			white-space: nowrap;
+		}
+
+		.bookmark-text {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.bookmark-info {
+			flex: 4 1 180px;
+			padding: 12px 14px 14px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		.bookmark-image {
+			width: 33%;
+			flex: 1 1 180px;
+			display: block;
+			position: relative;
+			object-fit: cover;
+			border-radius: 1px;
+		}
+
+		.bookmark-description {
+			color: rgba(55, 53, 47, 0.6);
+			font-size: 0.75em;
+			overflow: hidden;
+			max-height: 4.5em;
+			word-break: break-word;
+		}
+
+		.bookmark-href {
+			font-size: 0.75em;
+			margin-top: 0.25em;
+		}
+
+		.sans {
+			font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+		}		
+
+		.code {
+			font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
+		}
+
+		.serif {
+			font-family: Lyon-Text, Georgia, ui-serif, serif;
+		}
+
+		.mono {
+			font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
+		}
+
+		.pdf .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR';
+		}
+
+		.pdf .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+		}
+
+		.pdf .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR';
+		}
+
+		.pdf .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+		}
+
+		.highlight-default {
+			color: rgba(55, 53, 47, 1);
+		}
+
+		.highlight-gray {
+			color: rgba(120, 119, 116, 1);
+			fill: rgba(120, 119, 116, 1);
+		}
+
+		.highlight-brown {
+			color: rgba(159, 107, 83, 1);
+			fill: rgba(159, 107, 83, 1);
+		}
+
+		.highlight-orange {
+			color: rgba(217, 115, 13, 1);
+			fill: rgba(217, 115, 13, 1);
+		}
+
+		.highlight-yellow {
+			color: rgba(203, 145, 47, 1);
+			fill: rgba(203, 145, 47, 1);
+		}
+
+		.highlight-teal {
+			color: rgba(68, 131, 97, 1);
+			fill: rgba(68, 131, 97, 1);
+		}
+
+		.highlight-blue {
+			color: rgba(51, 126, 169, 1);
+			fill: rgba(51, 126, 169, 1);
+		}
+
+		.highlight-purple {
+			color: rgba(144, 101, 176, 1);
+			fill: rgba(144, 101, 176, 1);
+		}
+
+		.highlight-pink {
+			color: rgba(193, 76, 138, 1);
+			fill: rgba(193, 76, 138, 1);
+		}
+
+		.highlight-red {
+			color: rgba(212, 76, 71, 1);
+			fill: rgba(212, 76, 71, 1);
+		}
+
+		.highlight-gray_background {
+			background: rgba(241, 241, 239, 1);
+		}
+
+		.highlight-brown_background {
+			background: rgba(244, 238, 238, 1);
+		}
+
+		.highlight-orange_background {
+			background: rgba(251, 236, 221, 1);
+		}
+
+		.highlight-yellow_background {
+			background: rgba(251, 243, 219, 1);
+		}
+
+		.highlight-teal_background {
+			background: rgba(237, 243, 236, 1);
+		}
+
+		.highlight-blue_background {
+			background: rgba(231, 243, 248, 1);
+		}
+
+		.highlight-purple_background {
+			background: rgba(244, 240, 247, 0.8);
+		}
+
+		.highlight-pink_background {
+			background: rgba(249, 238, 243, 0.8);
+		}
+
+		.highlight-red_background {
+			background: rgba(253, 235, 236, 1);
+		}
+
+		.block-color-default {
+			color: inherit;
+			fill: inherit;
+		}
+
+		.block-color-gray {
+			color: rgba(120, 119, 116, 1);
+			fill: rgba(120, 119, 116, 1);
+		}
+
+		.block-color-brown {
+			color: rgba(159, 107, 83, 1);
+			fill: rgba(159, 107, 83, 1);
+		}
+
+		.block-color-orange {
+			color: rgba(217, 115, 13, 1);
+			fill: rgba(217, 115, 13, 1);
+		}
+
+		.block-color-yellow {
+			color: rgba(203, 145, 47, 1);
+			fill: rgba(203, 145, 47, 1);
+		}
+
+		.block-color-teal {
+			color: rgba(68, 131, 97, 1);
+			fill: rgba(68, 131, 97, 1);
+		}
+
+		.block-color-blue {
+			color: rgba(51, 126, 169, 1);
+			fill: rgba(51, 126, 169, 1);
+		}
+
+		.block-color-purple {
+			color: rgba(144, 101, 176, 1);
+			fill: rgba(144, 101, 176, 1);
+		}
+
+		.block-color-pink {
+			color: rgba(193, 76, 138, 1);
+			fill: rgba(193, 76, 138, 1);
+		}
+
+		.block-color-red {
+			color: rgba(212, 76, 71, 1);
+			fill: rgba(212, 76, 71, 1);
+		}
+
+		.block-color-gray_background {
+			background: rgba(241, 241, 239, 1);
+		}
+
+		.block-color-brown_background {
+			background: rgba(244, 238, 238, 1);
+		}
+
+		.block-color-orange_background {
+			background: rgba(251, 236, 221, 1);
+		}
+
+		.block-color-yellow_background {
+			background: rgba(251, 243, 219, 1);
+		}
+
+		.block-color-teal_background {
+			background: rgba(237, 243, 236, 1);
+		}
+
+		.block-color-blue_background {
+			background: rgba(231, 243, 248, 1);
+		}
+
+		.block-color-purple_background {
+			background: rgba(244, 240, 247, 0.8);
+		}
+
+		.block-color-pink_background {
+			background: rgba(249, 238, 243, 0.8);
+		}
+
+		.block-color-red_background {
+			background: rgba(253, 235, 236, 1);
+		}
+
+		.select-value-color-pink {
+			background-color: rgba(245, 224, 233, 1);
+		}
+
+		.select-value-color-purple {
+			background-color: rgba(232, 222, 238, 1);
+		}
+
+		.select-value-color-green {
+			background-color: rgba(219, 237, 219, 1);
+		}
+
+		.select-value-color-gray {
+			background-color: rgba(227, 226, 224, 1);
+		}
+
+		.select-value-color-opaquegray {
+			background-color: rgba(255, 255, 255, 0.0375);
+		}
+
+		.select-value-color-orange {
+			background-color: rgba(250, 222, 201, 1);
+		}
+
+		.select-value-color-brown {
+			background-color: rgba(238, 224, 218, 1);
+		}
+
+		.select-value-color-red {
+			background-color: rgba(255, 226, 221, 1);
+		}
+
+		.select-value-color-yellow {
+			background-color: rgba(253, 236, 200, 1);
+		}
+
+		.select-value-color-blue {
+			background-color: rgba(211, 229, 239, 1);
+		}
+
+		.checkbox {
+			display: inline-flex;
+			vertical-align: text-bottom;
+			width: 16;
+			height: 16;
+			background-size: 16px;
+			margin-left: 2px;
+			margin-right: 5px;
+		}
+
+		.checkbox-on {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+		}
+
+		.checkbox-off {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+		}
+
+		.myPhoto {
+			margin-right: 40px;
+			flex: 1 0 135px;
+		}
+		
+		@media screen and (max-width: 600px) {
+			.myPhoto {
+				margin-right: 0;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<article id="34c8c9d9-b57d-46f3-a886-54a83c0be014" class="page sans">
+		<header>
+			<h1 class="page-title">BU, Fanchen 卜凡辰</h1>
+			<p class="page-description"></p>
+		</header>
+		<div class="page-body">
+			<div id="498226b2-532a-4371-b896-6f904ddd55c6" style="display: flex; flex-wrap: wrap; align-items: center;">
+				<div class="myPhoto" id="77ce0ed0-c177-42d0-b0d3-a098aef3f316">
+					<figure id="cc0d5e2b-7ba6-487f-92d1-491c1d7ce252" class="image" style="text-align:left"><a
+							href="figs/me_2024a.jpg"><img style="width:1000px" src="figs/me_2024a_smaller.jpg" /></a>
+					</figure>
+				</div>
+				<div style="flex: 2 0 300px;">
+					<p id="30d5888e-0725-42f0-a3b4-ca3789f0a29e" class=""><strong>😊 Hi, I am Fanchen (/fantʂʰən/)! You
+							can also call me Vezen (/vezən/). </strong></p>
+					<p id="d4296a40-6969-46b1-9373-c106de3600d9" class="">I am a <strong>PhD student </strong>in the <a
+							href="https://sites.google.com/view/kaistdata">Data Mining Lab</a> at KAIST, under <a
+							href="https://kijungs.github.io/">Prof. Shin, Kijung</a>. </p>
+					<p id="e69beba2-fb9b-43a4-8729-dfee67cb6718" class="">My research interests lie in <strong>graph
+							mining</strong>, <strong>graph algorithms</strong>, and <strong>combinatorial
+							optimization</strong>.</p>
+					<p id="147bb31f-c57b-4b46-91a5-e0a71a062f63" class="">Besides research, I like music 🎼, math 📐,
+						thinking 🤔, and exercise 🏋️‍♀️!</p>
+					<p id="ac78c8a3-bc80-4977-9d75-83c30a3fc0dc" class=""><strong>過則勿憚改 When you make a mistake, don’t
+							be afraid to correct yourself<span style="float: right;">——《論語·學而》</span></strong></p>
+					<p id="5aa1cf00-c079-43e2-9355-d454a1ec408d" class=""></p>
+					</p>
+					<br>
+					<h3 id="01be90ee-d7ca-4185-b8d6-61ab3eb657af" class=""><strong>Contact</strong></h3>
+					<p id="fa80fa9a-dc32-4686-b9e4-62cfda4478c5" class=""><a href="mailto:boqvezen97@kaist.ac.kr">✉️
+							Email: boqvezen97@kaist.ac.kr</a></p>
+					<p id="ced4dee6-eb4c-42a4-a047-64bfdfc4e0cb" class=""><a href="https://github.com/bokveizen">👾
+							Github</a></p>
+					<p id="70d47121-f9ce-434d-a08a-f9cdf93bf7e2" class=""><a
+							href="https://www.linkedin.com/in/fanchen-bu-1268a1255/">💼 LinkedIn</a></p>
+					<p id="5b0f9917-3da8-43a0-92ed-8720fdcd7cf6" class=""></p>
+				</div>
+			</div>
+			</p>
+			<h1 id="6d1ef24c-d8d9-4d97-a8e0-d5005e923f0f" class="">Education</h1>
+			<h3 id="1c023fc0-869f-49df-a8a3-c71ede717d22" class="">Doctor</h3>
+			<p id="09c7a5da-d106-401c-8081-d29e67bb91aa" class=""><em>2022.03 – </em> | <strong>Korea Advanced Institute
+					of Science and Technology (KAIST)</strong></p>
+			<ul id="ae1aa2b3-06f4-4156-866d-8c4f73b609cc" class="bulleted-list">
+				<li style="list-style-type:disc"><a href="https://sites.google.com/view/kaistdata/home">Data Mining
+						Lab</a> (Supervisor: <a href="https://kijungs.github.io/">Prof. Shin, Kijung [신기정]</a>)</li>
+			</ul>
+			<ul id="120e56e6-91e7-4396-abac-47b0783c028d" class="bulleted-list">
+				<li style="list-style-type:disc">Electrical Engineering</li>
+			</ul>
+			<h3 id="7be92054-fde0-43f9-973c-06d2efb12828" class="">Researcher</h3>
+			<p id="584fbf87-2b82-41c4-9d53-d4731933a41f" class=""><em>2021.09 – 2022.02</em> | <strong>Korea Advanced
+					Institute of Science and Technology (KAIST)</strong></p>
+			<ul id="3a352535-bf96-4073-89b0-7280a4d362d2" class="bulleted-list">
+				<li style="list-style-type:disc"><a href="https://sites.google.com/view/kaistdata/home">Data Mining
+						Lab</a> (Supervisor: <a href="https://kijungs.github.io/">Prof. Shin, Kijung [신기정]</a>)</li>
+			</ul>
+			<h3 id="04676e6e-c9af-4adf-bc65-7fbbd5853246" class="">Master</h3>
+			<p id="f3e6d6bd-4779-461b-986b-23a2ade0f9b2" class=""><em>2019.09 – 2021.08</em> | <strong>Korea Advanced
+					Institute of Science and Technology (KAIST)</strong></p>
+			<ul id="6d67194d-1e14-4352-9d25-3d305cbac94e" class="bulleted-list">
+				<li style="list-style-type:disc"><a href="https://control.kaist.ac.kr/home">Control Lab</a> (Supervisor:
+					<a href="https://control.kaist.ac.kr/Professor">Prof. Chang, Dong Eui [장동의]</a>)</li>
+			</ul>
+			<ul id="b70337f9-f020-4da8-b1e3-5784b73173d0" class="bulleted-list">
+				<li style="list-style-type:disc">Electrical Engineering, GPA: 4.21/4.3</li>
+			</ul>
+			<ul id="1f995fb0-b3cf-4e26-9933-6db0089c914f" class="bulleted-list">
+				<li style="list-style-type:disc">Thesis: A Novel Optimization Algorithm with Orthogonality for Deep
+					Neural Networks Inspired by Feedback Integrators</li>
+			</ul>
+			<h3 id="521f304b-d5ac-4a95-9ea0-6ab1a65cc484" class="">Bachelor</h3>
+			<p id="6af1b3b6-ef43-4c55-8ba6-711e761d1e41" class=""><em>2015.09 – 2019.08</em> | <strong>University of
+					Chinese Academy of Sciences (UCAS)</strong></p>
+			<ul id="46c6c777-a6c4-49be-8dc8-b6aae8799a6c" class="bulleted-list">
+				<li style="list-style-type:disc">Computer Science and Technology, GPA: 3.71/4</li>
+			</ul>
+			<ul id="b47d71fb-c3b7-44a8-b31a-15254462af88" class="bulleted-list">
+				<li style="list-style-type:disc">Thesis: Vehicle Trajectory Prediction Based on Deep Learning
+					(Supervisor: <a href="http://people.ucas.ac.cn/~0001598?language=en">Prof. Zhao, Dongbin [趙冬斌]</a>)
+				</li>
+			</ul>
+			<p id="16f98da5-9ab6-43cb-b111-9e23d4c6d09a" class="">
+			</p>
+			<hr id="bfd5d596-7025-44d9-b336-0754218d6281" />
+			<h1 id="7e43ded4-f3ad-41da-a8b3-71d4f932e7f1" class="">Publications</h1>
+			<blockquote id="253c4d19-b778-4add-8d0b-692bc49d9985" class=""><strong>You can also check them on
+				</strong><strong><a href="https://scholar.google.com/citations?user=XjNu7-AAAAAJ">Google
+						Scholar</a></strong><strong> or </strong><strong><a
+						href="https://www.semanticscholar.org/author/Fanchen-Bu/2065674134">Semantic
+						Scholar</a></strong></blockquote>
+			<blockquote id="bf8debf1-3203-4990-893a-766d8ffeb97c" class=""><strong>C: conference / J: journal / P:
+					preprint</strong></blockquote>
+			<blockquote id="1ec6f3fc-05f2-4d18-a2b7-5fcd2e18accb" class=""><strong>*: equal contribution</strong>
+			</blockquote>
+			<p id="b9cd8371-62c5-4c27-bc4d-ec668a37cb07" class="">[C10] <strong>Tackling Prevalent Conditions in
+					Unsupervised Combinatorial Optimization: Cardinality, Minimum, Covering, and More</strong></p>
+			<ul id="db944478-c4aa-481f-960a-3183dec8c9b2" class="bulleted-list">
+				<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen
+							Bu</strong></span>, Hyeonsoo Jo, Soo Yong Lee, Sungsoo Ahn, and Kijung Shin</li>
+			</ul>
+			<ul id="0a81f859-6079-4a73-bbfe-426380e2341a" class="bulleted-list">
+				<li style="list-style-type:disc"><strong><mark class="highlight-blue">ICML 2024 [ paper | code |
+						</mark></strong><a href="https://bokveizen.github.io/bib/ucom2_icml24.txt"><strong><mark
+								class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
+							]</mark></strong></li>
+			</ul>
+			<p id="dbd205c2-f828-4dea-ad9b-254cd228919f" class="">[C9] <strong>Feature Distribution on Graph Topology
+					Mediates the Effect of Graph Convolution: Homophily Perspective</strong></p>
+			<ul id="ea89a1ce-e6bb-4da8-87d6-ec3b9b69bafe" class="bulleted-list">
+				<li style="list-style-type:disc">Soo Yong Lee, Sunwoo Kim, <span
+						style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Jaemin Yoo, Jiliang Tang,
+					and Kijung Shin</li>
+			</ul>
+			<ul id="ced4d58b-63d2-4868-bdcc-e2905206120d" class="bulleted-list">
+				<li style="list-style-type:disc"><strong><mark class="highlight-blue">ICML 2024 [ </mark></strong><a
+						href="https://arxiv.org/abs/2402.04621"><strong><mark
+								class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> |
+							code | </mark></strong><a
+						href="https://bokveizen.github.io/bib/AXhomoph_icml24.txt"><strong><mark
+								class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
+							]</mark></strong></li>
+			</ul>
+			<p id="a63d77ff-67a0-4eeb-853b-7bf91d76dfda" class="">[P1] <strong>A Survey on Hypergraph Mining: Patterns,
+					Tools, and Generators</strong></p>
+			<ul id="11b33634-2cff-4820-8a2c-f082e5b1cf89" class="bulleted-list">
+				<li style="list-style-type:disc">Geon Lee*, <span style="border-bottom:0.05em solid"><strong>Fanchen
+							Bu*</strong></span>, Tina Eliassi-Rad, and Kijung Shin</li>
+			</ul>
+			<ul id="5a48e037-db41-49a1-a441-8825d7be90de" class="bulleted-list">
+				<li style="list-style-type:disc"><strong><mark class="highlight-blue">arXiv 2401.08878 [
+						</mark></strong><a href="https://arxiv.org/abs/2401.08878"><strong><mark
+								class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> |
+							code | </mark></strong><a
+						href="https://bokveizen.github.io/bib/HGsurvey_csur24.txt"><strong><mark
+								class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
+							]</mark></strong></li>
+			</ul>
+			<p id="f7cc1f1e-fb43-4078-ba65-97eff290f8ae" class="">[C8] <strong>HypeBoy: Generative Self-Supervised
+					Representation Learning on Hypergraphs</strong></p>
+			<ul id="eba6400e-8b78-4207-a66d-58dcbb35f05a" class="bulleted-list">
+				<li style="list-style-type:disc">Sunwoo Kim, Shinhwan Kang, <span
+						style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Soo Yong Lee, Jaemin Yoo,
+					and Kijung Shin</li>
+			</ul>
+			<ul id="c3493797-15cb-46f5-87a8-83dc343234b7" class="bulleted-list">
+				<li style="list-style-type:disc"><strong><mark class="highlight-blue">ICLR 2024 [ </mark></strong><a
+						href="https://arxiv.org/abs/2404.00638"><strong><mark
+								class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> |
+						</mark></strong><a href="https://github.com/kswoo97/hypeboy"><strong><mark
+								class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue"> |
+						</mark></strong><a href="https://bokveizen.github.io/bib/hypeboy_iclr24.txt"><strong><mark
+								class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
+							]</mark></strong></li>
+			</ul>
+			<p id="6bad08a9-8f2a-41cb-ad54-b5cc4da1c61c" class="">[C7] <strong>Robust Graph Clustering via Meta
+					Weighting for Noisy Graphs</strong></p>
+			<ul id="4bb21d87-0368-453c-bd9c-0174266b164a" class="bulleted-list">
+				<li style="list-style-type:disc">Hyeonsoo Jo, <span style="border-bottom:0.05em solid"><strong>Fanchen
+							Bu</strong></span>, and Kijung Shin</li>
+			</ul>
+			<ul id="f3056c43-74ea-42f4-81d1-0b3bdcfb5136" class="bulleted-list">
+				<li style="list-style-type:disc"><strong><mark class="highlight-blue">CIKM 2023 [ </mark></strong><a
+						href="https://bokveizen.github.io/papers/metaGC_cikm23.pdf"><strong><mark
+								class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> |
+						</mark></strong><a href="https://github.com/HyeonsooJo/MetaGC"><strong><mark
+								class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue"> |
+						</mark></strong><a href="https://bokveizen.github.io/slides/metaGC_cikm23.pdf"><strong><mark
+								class="highlight-blue">slides</mark></strong></a><strong><mark class="highlight-blue"> |
+						</mark></strong><a href="https://bokveizen.github.io/videos/metaGC_cikm23.mp4"><strong><mark
+								class="highlight-blue">video</mark></strong></a><strong><mark class="highlight-blue"> |
+						</mark></strong><a href="https://bokveizen.github.io/bib/metaGC_cikm23.txt"><strong><mark
+								class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
+							]</mark></strong></li>
+			</ul>
+			<p id="80c2e003-a8da-48ad-8c88-920960c177d8" class="">[C6] <strong>On Improving the Cohesiveness of Graphs
+					by Merging Nodes: Formulation, Analysis, and Algorithms</strong></p>
+			<ul id="642878e4-5a33-4127-875f-991ae7c8ad0a" class="bulleted-list">
+				<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen
+							Bu</strong></span> and Kijung Shin</li>
+			</ul>
+			<ul id="48170e8f-80cf-4884-8da3-a6dca469bcb3" class="bulleted-list">
+				<li style="list-style-type:disc"><strong><mark class="highlight-blue">KDD 2023 [ </mark></strong><a
+						href="https://arxiv.org/abs/2306.06368"><strong><mark
+								class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> |
+						</mark></strong><a href="https://github.com/bokveizen/cohesive-truss-merge"><strong><mark
+								class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue"> |
+						</mark></strong><a href="https://bokveizen.github.io/slides/truss_kdd23.pdf"><strong><mark
+								class="highlight-blue">slides</mark></strong></a><strong><mark class="highlight-blue"> |
+						</mark></strong><a href="https://youtu.be/eqouia5ruvk"><strong><mark
+								class="highlight-blue">video</mark></strong></a><strong><mark class="highlight-blue"> |
+						</mark></strong><a href="https://bokveizen.github.io/bib/merge_kdd23.txt"><strong><mark
+								class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
+							]</mark></strong></li>
+			</ul>
+			<p id="783068a7-43e6-44fd-b9a4-fcdb8336ce9e" class="">[C5] <strong>How Transitive Are Real-World Group
+					Interactions? - Measurement and Reproduction</strong></p>
+			<ul id="64b2e095-b15b-47ce-9593-af9ba1097884" class="bulleted-list">
+				<li style="list-style-type:disc">Sunwoo Kim, <span style="border-bottom:0.05em solid"><strong>Fanchen
+							Bu</strong></span>, Minyoung Choe, Jaemin Yoo, and Kijung Shin</li>
+			</ul>
+			<ul id="d66c3816-849d-4f29-b90f-e73e5c1e4064" class="bulleted-list">
+				<li style="list-style-type:disc"><strong><mark class="highlight-blue">KDD 2023 [ </mark></strong><a
+						href="https://arxiv.org/abs/2306.02358"><strong><mark
+								class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> |
+						</mark></strong><a href="https://github.com/kswoo97/hypertrans"><strong><mark
+								class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue"> |
+						</mark></strong><a
+						href="https://bokveizen.github.io/slides/transitivity_kdd23.pdf"><strong><mark
+								class="highlight-blue">slides</mark></strong></a><strong><mark class="highlight-blue"> |
+						</mark></strong><a href="https://youtu.be/u5exUDYi-UE"><strong><mark
+								class="highlight-blue">video</mark></strong></a><strong><mark class="highlight-blue"> |
+						</mark></strong><a href="https://bokveizen.github.io/bib/transitivity_kdd23.txt"><strong><mark
+								class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
+							]</mark></strong></li>
+			</ul>
+			<p id="e964dbc3-33de-41f3-9c8d-40c333ce1bef" class="">[J2] <strong>Interplay between Topology and Edge
+					Weights in Real-World Graphs: Concepts, Patterns, and an Algorithm</strong></p>
+			<ul id="8d100989-a91f-4827-87fb-e1d05656a3df" class="bulleted-list">
+				<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen
+							Bu</strong></span>, Shinhwan Kang, and Kijung Shin</li>
+			</ul>
+			<ul id="8a427df7-ba97-4a07-b614-441a4d700056" class="bulleted-list">
+				<li style="list-style-type:disc"><strong><mark class="highlight-blue">Data Mining and Knowledge
+							Discovery [ </mark></strong><a href="https://arxiv.org/abs/2305.09083"><strong><mark
+								class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> |
+						</mark></strong><a
+						href="https://github.com/bokveizen/topology-edge-weight-interplay"><strong><mark
+								class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue"> |
+						</mark></strong><a href="https://bokveizen.github.io/slides/pear_dami23.pdf"><strong><mark
+								class="highlight-blue">slides</mark></strong></a><strong><mark class="highlight-blue"> |
+						</mark></strong><a href="https://bokveizen.github.io/bib/PEAR_dami23.txt"><strong><mark
+								class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
+							]</mark></strong></li>
+			</ul>
+			<ul id="c8877d62-266b-4e63-b8df-e34b34693df5" class="bulleted-list">
+				<li style="list-style-type:disc"><em><strong><mark class="highlight-blue">(ECML PKDD 2023 Journal
+								Track)</mark></strong></em></li>
+			</ul>
+			<p id="0b2edf88-5239-41bc-a1e4-cb33bba194ee" class="">[C4] <strong>Towards Deep Attention in Graph Neural
+					Networks: Problems and Remedies</strong></p>
+			<ul id="2f613a31-9468-4570-98e2-1c07403746be" class="bulleted-list">
+				<li style="list-style-type:disc">Soo Yong Lee, <span style="border-bottom:0.05em solid"><strong>Fanchen
+							Bu</strong></span>, Jaemin Yoo, and Kijung Shin</li>
+			</ul>
+			<ul id="8ecd9c0c-631f-419d-91fd-72f01f800cbe" class="bulleted-list">
+				<li style="list-style-type:disc"><strong><mark class="highlight-blue">ICML 2023 [ </mark></strong><a
+						href="https://arxiv.org/abs/2306.02376"><strong><mark
+								class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> |
+						</mark></strong><a href="https://github.com/syleeheal/AERO-GNN"><strong><mark
+								class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue"> |
+						</mark></strong><a href="https://bokveizen.github.io/slides/aero_icml23.pdf"><strong><mark
+								class="highlight-blue">slides</mark></strong></a><strong><mark class="highlight-blue"> |
+						</mark></strong><a href="https://youtu.be/LbTuet6K-so"><strong><mark
+								class="highlight-blue">video</mark></strong></a><strong><mark class="highlight-blue"> |
+						</mark></strong><a href="https://bokveizen.github.io/bib/AEROGNN_icml23.txt"><strong><mark
+								class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
+							]</mark></strong></li>
+			</ul>
+			<p id="b0510b4c-569a-4fd9-895c-ca1136611b7c" class="">[C3] <strong>Characterization of Simplicial Complexes
+					by Counting Simplets Beyond Four Nodes</strong></p>
+			<ul id="07c24bbe-9d02-4a5a-9fae-a1e6301b0d7f" class="bulleted-list">
+				<li style="list-style-type:disc">Hyunju Kim, Jihoon Ko, <span
+						style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, and Kijung Shin</li>
+			</ul>
+			<ul id="74bbfffe-b116-4c26-9780-e3df6c9cb53b" class="bulleted-list">
+				<li style="list-style-type:disc"><strong><mark class="highlight-blue">TheWebConf (fka WWW) 2023 [
+						</mark></strong><strong><a href="https://arxiv.org/abs/2302.05505"><mark
+								class="highlight-blue">paper </mark></a></strong><strong><mark class="highlight-blue">|
+						</mark></strong><strong><a href="https://github.com/hhyy0401/SC3"><mark
+								class="highlight-blue">code </mark></a></strong><strong><mark class="highlight-blue">|
+						</mark></strong><a href="https://bokveizen.github.io/slides/simplet_www23.pdf"><strong><mark
+								class="highlight-blue">slides</mark></strong></a><strong><mark class="highlight-blue"> |
+						</mark></strong><a href="https://youtu.be/xIP9lz-UtEI"><strong><mark
+								class="highlight-blue">video</mark></strong></a><strong><mark class="highlight-blue"> |
+						</mark></strong><strong><a href="https://bokveizen.github.io/bib/SC3_www23.txt"><mark
+								class="highlight-blue">bib</mark></a></strong><strong><mark class="highlight-blue">
+							]</mark></strong></li>
+			</ul>
+			<p id="6c18c610-1a33-4366-9c62-3681aeee2dc7" class="">[J1] <strong>Hypercore Decomposition for Non-Fragile
+					Hyperedges: Concepts, Algorithms, Observations, and Applications</strong></p>
+			<ul id="7f0bc880-d71c-4bdc-80c1-9878856c8e62" class="bulleted-list">
+				<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen
+							Bu</strong></span>, Geon Lee, and Kijung Shin</li>
+			</ul>
+			<ul id="e851fc25-a738-4fc9-a26f-b435921202ae" class="bulleted-list">
+				<li style="list-style-type:disc"><strong><mark class="highlight-blue">Data Mining and Knowledge
+							Discovery [ </mark></strong><strong><a href="https://arxiv.org/abs/2301.08440"><mark
+								class="highlight-blue">paper</mark></a></strong><strong><mark class="highlight-blue"> |
+						</mark></strong><strong><a href="https://github.com/bokveizen/non-fragile-hypercore"><mark
+								class="highlight-blue">code</mark></a></strong><strong><mark class="highlight-blue"> |
+						</mark></strong><a href="https://bokveizen.github.io/slides/hypercore_dami23.pdf"><strong><mark
+								class="highlight-blue">slides</mark></strong></a><strong><mark class="highlight-blue"> |
+						</mark></strong><a href="https://bokveizen.github.io/bib/hypercore_dami23.txt"><strong><mark
+								class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
+							]</mark></strong></li>
+			</ul>
+			<ul id="9d26263c-f81a-4235-a018-3c69dec902fb" class="bulleted-list">
+				<li style="list-style-type:disc"><em><strong><mark class="highlight-blue">(ECML PKDD 2023 Journal
+								Track)</mark></strong></em></li>
+			</ul>
+			<p id="d5110ff0-90a5-431f-b0e3-08d7fd82aa5e" class="">[C2] <strong>Feedback Gradient Descent: Efficient and
+					Stable Optimization with Orthogonality for DNNs</strong></p>
+			<ul id="00f67c3a-0840-49db-bba4-45827bb91154" class="bulleted-list">
+				<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen
+							Bu</strong></span> and Dong Eui Chang</li>
+			</ul>
+			<ul id="ff405283-ee3b-4865-8986-71f9d23a01c2" class="bulleted-list">
+				<li style="list-style-type:disc"><strong><mark class="highlight-blue">AAAI 2022 [
+						</mark></strong><strong><mark class="highlight-blue"><a
+								href="https://arxiv.org/abs/2205.08385">paper</a></mark></strong><strong><mark
+							class="highlight-blue"> | </mark></strong><strong><mark class="highlight-blue"><a
+								href="https://github.com/bokveizen/Feedback-Gradient-Descent">code</a></mark></strong><strong><mark
+							class="highlight-blue"> | </mark></strong><strong><mark class="highlight-blue"><a
+								href="https://bokveizen.github.io/bib/FGD_aaai22.txt">bib</a></mark></strong><strong><mark
+							class="highlight-blue"> ]</mark></strong></li>
+			</ul>
+			<p id="634b5f37-7ed0-4298-8dd3-731a896949d2" class="">[C1] <strong>Double Prioritized State Recycled
+					Experience Replay</strong></p>
+			<ul id="1000eeaf-055b-4ed6-82e9-c52dd640eaa5" class="bulleted-list">
+				<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen
+							Bu</strong></span> and Dong Eui Chang</li>
+			</ul>
+			<ul id="5c3b2628-227c-418c-9e67-29b129034b51" class="bulleted-list">
+				<li style="list-style-type:disc"><strong><mark class="highlight-blue">ICCE-Asia 2020 [
+						</mark></strong><strong><a href="https://arxiv.org/abs/2007.03961"><mark
+								class="highlight-blue">paper</mark></a></strong><strong><mark class="highlight-blue"> |
+						</mark></strong><strong><a href="https://github.com/bokveizen/DPSR"><mark
+								class="highlight-blue">code</mark></a></strong><strong><mark class="highlight-blue"> |
+						</mark></strong><strong><a href="https://bokveizen.github.io/bib/DPSR_icceasia20.txt"><mark
+								class="highlight-blue">bib</mark></a></strong><strong><mark class="highlight-blue">
+							]</mark></strong></li>
+			</ul>
+			<p id="af2357e9-c42c-431f-81cc-7bd8adf36ebc" class="">
+			</p>
+			<hr id="ad21e984-ca23-4fdc-8bcc-791dfd12d93c" />
+			<h1 id="c2f638f9-9cae-4345-aae8-2b10033cd1e0" class="">Languages</h1>
+			<h3 id="9a63cefa-827e-4b60-b270-4f08f4b07bee" class="">Chinese</h3>
+			<p id="e08cec51-d4e1-4bfb-8b2a-9e3d50889c1c" class="">Native </p>
+			<ul id="13fafebf-9d20-4c2a-af43-47854639f228" class="bulleted-list">
+				<li style="list-style-type:disc">Native: <a
+						href="https://en.wikipedia.org/wiki/Mandarin_Chinese">Mandarin [普通話]</a>, <a
+						href="https://en.wikipedia.org/wiki/Wu_Chinese">Wu Chinese [吳語]</a></li>
+			</ul>
+			<ul id="bc4ff61f-8731-49c7-b55e-81e887918b04" class="bulleted-list">
+				<li style="list-style-type:disc">Intermediate: <a
+						href="https://en.wikipedia.org/wiki/Cantonese">Cantonese [粵語]</a></li>
+			</ul>
+			<ul id="d5c3e0c9-1b38-408a-8278-6f9b141b39ce" class="bulleted-list">
+				<li style="list-style-type:disc">Elementary: <a href="https://en.wikipedia.org/wiki/Hokkien">Hokkien
+						[閩南語]</a></li>
+			</ul>
+			<h3 id="298dca36-61fb-4cc9-99ff-3f7f8046a8ae" class="">English</h3>
+			<p id="1c2cb69a-4e7c-4ffa-9f54-ebe4cf47c8cd" class="">Advanced</p>
+			<ul id="bc7aa1bb-b252-4c59-8c9f-fb9bd9648333" class="bulleted-list">
+				<li style="list-style-type:disc">IELTS 7.5</li>
+			</ul>
+			<ul id="e71c574f-8a9b-444e-a714-725aef329317" class="bulleted-list">
+				<li style="list-style-type:disc">GRE 333</li>
+			</ul>
+			<h3 id="9e532d9a-a959-4453-838c-d0757b77e392" class="">Korean</h3>
+			<p id="732b800e-a5fa-418c-a3a9-71411a93d2af" class="">Intermediate</p>
+			<p id="ebc49b3b-1ba6-45bd-83d3-99ff0a6dc546" class="">
+			</p>
+			<hr id="91eb6850-1cdf-46f8-81bd-db1cce9d9847" />
+			<h1 id="17a1631e-f5c6-4a50-bdc6-d2d932269097" class=""><strong>Academic Services</strong></h1>
+			<h3 id="c74f3122-6e8b-4373-b7e9-a982ab01f906" class="">As a reviewer</h3>
+			<ul id="6bf37700-961a-49c2-b725-f341694a78d5" class="bulleted-list">
+				<li style="list-style-type:disc">KDD: 2024</li>
+			</ul>
+			<p id="c3662805-e206-4d24-9700-47b4a7644cbf" class="">
+			</p>
+			<hr id="56b29400-b58a-407a-9325-2526f6f99c71" />
+			<h1 id="ea4f17bb-280d-43c6-b700-74c7b2628cdf" class="">Favorite Music</h1>
+			<blockquote id="76f91e02-8d64-46a4-bf50-7bfa6b51721e" class=""><strong>The links are on </strong><strong><a
+						href="https://music.youtube.com/">Youtube Music</a></strong></blockquote>
+			<ol type="1" id="018b9508-4850-472d-8fda-7a71fa5f85cd" class="numbered-list" start="1">
+				<li><strong>Chopin&#x27;s Nocturnes</strong> by <a
+						href="https://music.youtube.com/playlist?list=OLAK5uy_njigVx4j8DCSJwQ2QwQ2G8fXRmOuRJCms&amp;feature=share">Arthur
+						Rubinstein</a> / <a
+						href="https://music.youtube.com/playlist?list=OLAK5uy_kjRwdC_80zhg7O0WTMDuxGMjH90HUtEXw">Claudio
+						Arrau</a> / <a
+						href="https://music.youtube.com/playlist?list=OLAK5uy_mfk-mWrg5JU5QEBwj-ulZdl_MF9E7ZQmI">Đặng
+						Thái Sơn</a></li>
+			</ol>
+			<ol type="1" id="59899ad0-1389-4caf-b19e-bace3057956a" class="numbered-list" start="2">
+				<li><strong>Chopin&#x27;s Piano Concertos </strong>by <a
+						href="https://music.youtube.com/playlist?list=OLAK5uy_kiNFojL4XWJLLEIx_8s5iXnnkXLgLkvF4">Arthur
+						Rubinstein</a> / <a
+						href="https://music.youtube.com/playlist?list=OLAK5uy_l7e583MqYElE0cOgO2-WlnWA-uAWMqHBE">Yundi
+						Li [李雲迪]</a> / <a
+						href="https://music.youtube.com/playlist?list=PLCRIIeog3pi50V6_UDLwqQQNnw7sNCdpE">Seong-Jin Cho
+						[조성진]</a></li>
+			</ol>
+			<ol type="1" id="1b68662b-7a92-4b86-8ee9-602f867f07b3" class="numbered-list" start="3">
+				<li><strong>Chinese traditional music</strong> by <a
+						href="https://music.youtube.com/playlist?list=OLAK5uy_lwb0lZaYIrP9TZ0K_5e_G_1XX7gkksgNc">National
+						Cinema Symphony Orchestra [中國廣播電影交響樂團]</a></li>
+			</ol>
+			<ol type="1" id="c7aab868-fc8e-470b-a3f7-36722cffe40c" class="numbered-list" start="4">
+				<li><strong>Mandopop </strong>by <a
+						href="https://music.youtube.com/playlist?list=OLAK5uy_k1fdIXUO-P5mOZXdMEwR5Hl4wrlUg1RqA&amp;feature=share">David
+						Tao [陶喆]</a> / <a
+						href="https://music.youtube.com/playlist?list=PLCRIIeog3pi5ldmCWxaDOGPDrelZs3Uy_&amp;feature=share">Jay
+						Chou [周傑倫]</a> / <a
+						href="https://music.youtube.com/playlist?list=PLCRIIeog3pi6foTAJbbYaaaiKzRk9-TLJ">Ronghao Li
+						[李榮浩]</a></li>
+			</ol>
+			<ol type="1" id="8c0b4b69-1912-4595-861f-801b83bcb25b" class="numbered-list" start="5">
+				<li><strong>Cantopop </strong>by <a
+						href="https://music.youtube.com/playlist?list=OLAK5uy_l5kQRWufWv2yymQSG1zzRZcMZS6NtNjYU">Hins
+						Cheung [張敬軒]</a> / <a
+						href="https://music.youtube.com/playlist?list=OLAK5uy_k2DHaYaBcsv7hU_TuQDCxXdnmlhBnnGY8">Janice
+						Vidal [衛蘭]</a></li>
+			</ol>
+			<ol type="1" id="005a6ff3-34dd-49f6-a991-c9692bd1929e" class="numbered-list" start="6">
+				<li><strong>Korean ballades </strong>by <a
+						href="https://music.youtube.com/playlist?list=PLuMuHAJh9g_P59QyqoaUCWD3xwav_oadF">Si-Kyung Sung
+						[성시경]</a> / <a
+						href="https://music.youtube.com/playlist?list=OLAK5uy_kdDEJh4IXvrGIVrWxoIxIR1wtwkymcjeQ">Kwang-Seok
+						Kim [김광석]</a></li>
+			</ol>
+			<ol type="1" id="bc61d16a-b942-41e8-81b9-22174c746874" class="numbered-list" start="7">
+				<li><strong>Japanese Enka</strong> by <a
+						href="https://music.youtube.com/playlist?list=PLCRIIeog3pi43c6cWR4IStxzRs6283q61&amp;feature=share">Teresa
+						Teng [テレサ・テン; 鄧麗君]</a> / <a
+						href="https://music.youtube.com/playlist?list=PLCRIIeog3pi6UetNBgNIzFPc31uh5ffBP">Shinichi Mori
+						[森 進一]</a> / <a
+						href="https://music.youtube.com/playlist?list=OLAK5uy_mFi1wtnwYKHqCUMbfHAyQGdMJMFp4v1TQ">Hibari
+						Misora [美空 ひばり]</a> / <a
+						href="https://music.youtube.com/playlist?list=OLAK5uy_maQ--0JYoNDgPPM4xVA2KabhJxowRUseA">Masako
+						Mori [森 昌子]</a></li>
+			</ol>
+			<ol type="1" id="5c45637e-a6af-4d13-9eae-78c4fe9fc505" class="numbered-list" start="8">
+				<li><strong>Folk music </strong>by <a
+						href="https://music.youtube.com/playlist?list=OLAK5uy_klRuDFPbKlthV4-NxAy-hblMeneiUf0zA">John
+						Denver</a></li>
+			</ol>
+			<p id="67a8ddc9-74ad-4cef-a074-752bbadf07c3" class="">
+			</p>
+			<hr id="d80c8c30-9734-4722-a79d-7f9c7af686e0" />
+			<h1 id="20203e87-3239-4221-935a-e1c1265bac39" class="">Useful Tools and Websites</h1>
+			<ol type="1" id="0c38739b-529d-4df6-bbb1-290d676dadc5" class="numbered-list" start="1">
+				<li><a href="https://efotinis.neocities.org/deskpins/">DeskPins</a>: a tool for making a window topmost
+				</li>
+			</ol>
+			<ol type="1" id="38da0d8c-c67b-45de-b266-1e2c62235c7e" class="numbered-list" start="2">
+				<li><a href="https://github.com/microsoft/PowerToys">Microsoft PowerToys</a>: a set of utilities for
+					power users to tune and streamline their Windows experience for greater productivity</li>
+			</ol>
+			<ol type="1" id="40610dbe-05dd-47a2-bc05-d948eaea7012" class="numbered-list" start="3">
+				<li><a href="https://www.jam-software.com/treesize_free">TreeSize Free</a>: disk space analyzer</li>
+			</ol>
+			<ol type="1" id="24d739d3-ed16-4a3a-95d6-4d06c62c8132" class="numbered-list" start="4">
+				<li><a href="https://www.voidtools.com/">Everything</a>: a tool for searching files</li>
+			</ol>
+			<ol type="1" id="df2002c0-61a0-4579-a72b-bf99bef014fb" class="numbered-list" start="5">
+				<li><a href="https://acronymify.com/">Acronymify</a>: automatic acronym generator</li>
+			</ol>
+			<ol type="1" id="1251e27e-c2fe-4fe8-bc88-d94ba81e2805" class="numbered-list" start="6">
+				<li><a href="https://search.linggle.com/">Linggle</a>: language reference search engines</li>
+			</ol>
+			<ol type="1" id="1825ddc5-8428-4cd3-b252-7b3e90ee2cef" class="numbered-list" start="7">
+				<li><a href="https://www.reddit.com/r/AcademicBiblical/">Academic Biblical Studies (Reddit)</a>: a
+					subreddit for discussion of early Judaism and Christianity in a scholarly context</li>
+			</ol>
+			<ol type="1" id="9135aaab-29a8-415f-b9ba-3417b2edec40" class="numbered-list" start="8">
+				<li><a href="https://chord-chart-studio.netlify.app/app">Chord Chart Studio</a>: an online chord chart
+					rendering platform</li>
+			</ol>
+			<ol type="1" id="ac663c96-6ef2-42d7-9226-4fcdb1f24d12" class="numbered-list" start="9">
+				<li>Two Youtube channels for classical music analysis and appreciation:<ol type="a"
+						id="bac3a17d-958e-480a-82c6-794b84fe1233" class="numbered-list" start="1">
+						<li><a href="https://www.youtube.com/@gregniemczuk">gregniemczuk_official</a>: Polish pianist
+							Grzegorz Niemczuk</li>
+					</ol>
+					<ol type="a" id="459a9b0b-35b9-4c1e-bde3-feb1be2972ff" class="numbered-list" start="2">
+						<li><a href="https://www.youtube.com/@SonataSecrets">Sonata Secrets</a>: Swedish pianist Henrik
+							Kilhamn</li>
+					</ol>
+				</li>
+			</ol>
+			<ol type="1" id="fbb515b2-ab29-469a-a6f2-846bbee4c3e7" class="numbered-list" start="10">
+				<li><a href="https://www.youtube.com/@MangoldProject">MangoldProject</a>: a Youtube channel teaching
+					piano/keyboard skills with music theory</li>
+			</ol>
+			<p id="14a9a7f9-7e18-4045-9867-42ff72fa6966" class="">
+			</p>
+			<hr id="6487828c-b72f-453b-af54-0f9dd63373aa" />
+			<h1 id="3d7c9991-37d1-4009-9640-c3d6c2780de2" class="">Miscellanea</h1>
+			<ol type="1" id="1fb75420-458c-46c5-b1ad-f14ee983d76c" class="numbered-list" start="1">
+				<li>I am active on <a href="https://math.stackexchange.com/users/823641/vezen-bu">Mathematics Stack
+						Exchange</a> (a math Q&amp;A cite)</li>
+			</ol>
+			<ol type="1" id="b442d18f-52fb-4f6b-87e1-742999238bd4" class="numbered-list" start="2">
+				<li>My MBTI is <a href="https://www.16personalities.com/profiles/a1dd0b8a1f27b">Assertive Executive
+						(ESTJ-A)</a></li>
+			</ol>
+			<ol type="1" id="39be6dc8-59d0-4752-991f-826140716ab1" class="numbered-list" start="3">
+				<li>I play <a href="https://en.wikipedia.org/wiki/League_of_Legends">League of Legends</a> (since Season
+					2, year 2011)<ol type="a" id="700b8476-d7d5-4870-9c41-cb0d9065662d" class="numbered-list" start="1">
+						<li>My highest tier was solo-rank Master in both Chinese and Korean servers</li>
+					</ol>
+				</li>
+			</ol>
+			<ol type="1" id="9b1c4ef3-4bb4-4634-bfe3-2b81d919947d" class="numbered-list" start="4">
+				<li>I play <a href="https://en.wikipedia.org/wiki/Japanese_mahjong">Japanese riichi mahjong</a>
+					<ol type="a" id="75ad9f50-8cc1-445d-a8d9-f850ff9238b3" class="numbered-list" start="1">
+						<li>My highest tier was 4-Dan (四段) in Tenhou (天鳳) and Master (雀豪) in Mahjong Soul (雀魂)</li>
+					</ol>
+				</li>
+			</ol>
+			<p id="851e455f-b6c0-45f6-a0ac-8100c26516b4" class="">
+			</p>
+		</div>
+	</article><span class="sans" style="font-size:14px;padding-top:2em"></span>
+</body>
+
+</html>
