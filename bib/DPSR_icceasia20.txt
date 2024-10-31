@@ -1,4 +1,4 @@
-@inproceedings{bu2020dpsr,
+@inproceedings{Bu2020DPSR,
   title={Double prioritized state recycled experience replay},
   author={Bu, Fanchen and Chang, Dong Eui},
   booktitle={2020 IEEE International Conference on Consumer Electronics-Asia (ICCE-Asia)},

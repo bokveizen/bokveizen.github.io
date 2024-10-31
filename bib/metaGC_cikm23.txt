@@ -1,4 +1,4 @@
-@inproceedings{Jo2023robust,
+@inproceedings{Jo2023RobustClustering,
   title={Robust Graph Clustering via Meta Weighting for Noisy Graphs},
   author={Jo, Hyeonsoo and Bu, Fanchen and Shin, Kijung},
   booktitle={CIKM},

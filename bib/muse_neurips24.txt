@@ -1,4 +1,4 @@
-@inproceedings{Kim2024muse,
+@inproceedings{Kim2024MUSE,
   title={Rethinking Reconstruction-based Graph-Level Anomaly Detection: Limitations and a Simple Remedy},
   author={Kim, Sunwoo and Lee, Soo Yong and Bu, Fanchen and Kang, Shinhwan and Kim, Kyungho and Yoo, Jaemin and Shin, Kijung},
   booktitle={NeurIPS},

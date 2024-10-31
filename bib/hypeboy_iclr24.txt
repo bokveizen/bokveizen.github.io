@@ -1,4 +1,4 @@
-@inproceedings{Kim2024hypeboy,
+@inproceedings{Kim2024HypeBoy,
   title={{H}ype{B}oy: Generative Self-Supervised Representation Learning on Hypergraphs},
   author={Kim, Sunwoo and Kang, Shinhwan and Bu, Fanchen and Lee, Soo Yong and Yoo, Jaemin and Shin, Kijung},
   booktitle={ICLR},

@@ -1,4 +1,4 @@
-@inproceedings{Bu2023merge,
+@inproceedings{Bu2023TrussMerge,
   title={On Improving the Cohesiveness of Graphs by Merging Nodes: Formulation, Analysis, and Algorithms},
   author={Bu, Fanchen and Shin, Kijung},
   booktitle={KDD},
