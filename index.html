@@ -1,11 +1,196 @@
 <html>
-
 <head>
+	<meta name="description" content="Personal homepage of Fanchen Bu">
+	<link rel="preload" as="image" href="figs/me_2024b_smaller.jpg">
+
+	<!-- Add more meta tags -->
+	<meta name="keywords" content="Fanchen Bu, KAIST, Data Mining, Graph Mining, Computer Science">
+	<meta name="author" content="Fanchen Bu">
+	<meta property="og:title" content="BU, Fanchen (卜凡辰)">
+	<meta property="og:description" content="Personal homepage of Fanchen Bu">
+	<meta property="og:image" content="figs/me_2024b_smaller.jpg">
+	<meta property="og:type" content="website">
+
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<!-- <meta name="google-site-verification" content="kwlXUKfNdOxJAEYbMJerUGzWPWJcIAabZrgx9hqg_wI" /> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="preload" as="image" href="figs/me_2024b_smaller.jpg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+
+	<!-- Add cache control -->
+	<meta http-equiv="Cache-Control" content="max-age=31536000">
+
+	<!-- Add expires header -->
+	<meta http-equiv="Expires" content="31536000">
+
 	<title>BU, Fanchen卜凡辰</title>
 	<style>
+		#header h1{
+			margin:0px;
+		}
+
+		body{
+			margin:0;
+		}
+
+		/* Dark mode styles */
+		[data-theme="dark"] {
+			--bg-color: #1a1a1a;
+			--text-color: #ffffff;
+			/* Brighter white for better contrast */
+			--link-color: #66b3ff;
+			/* Lighter blue for links */
+			--border-color: rgba(255, 255, 255, 0.2);
+			/* Lighter border color */
+			--highlight-color: #4a90e2;
+			/* Keep highlight color consistent */
+		}
+
+		/* Update highlighted link styles for dark mode */
+		[data-theme="dark"] mark.highlight-blue {
+			color: #8cc7ff;
+			/* Lighter blue for highlighted links */
+			background-color: rgba(74, 144, 226, 0.2);
+			/* Semi-transparent highlight */
+		}
+
+		/* Update blockquote styles for dark mode */
+		[data-theme="dark"] blockquote {
+			border-left-color: rgba(255, 255, 255, 0.3);
+		}
+
+		/* Update table header styles for dark mode */
+		[data-theme="dark"] th {
+			color: rgba(255, 255, 255, 0.8);
+			/* Brighter color for table headers */
+		}
+
+		/* Update opacity styles for dark mode */
+		[data-theme="dark"] time,
+		[data-theme="dark"] figcaption,
+		[data-theme="dark"] .bookmark-description {
+			opacity: 0.8;
+			/* Increase opacity for better visibility */
+		}
+
+		nav {
+			/* Existing styles */
+			background: var(--bg-color);
+			padding: 15px;
+			z-index: 1000;
+			border-bottom: 1px solid var(--border-color);
+			backdrop-filter: blur(10px);			
+		}
+
+		nav a {
+			color: var(--text-color);
+			text-decoration: none;
+			padding: 5px 10px;
+			border-radius: 5px;
+			transition: background-color 0.3s;
+			/* Make text smaller on mobile */
+			font-size: 0.9rem;
+		}
+
+		/* Theme button styles */
+		.theme-button {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			z-index: 1001;
+			/* Higher than nav's z-index */
+			padding: 8px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		.menu-icon {
+			display: none;
+			cursor: pointer;
+			font-size: 24px;
+			margin-right: auto;
+		}
+
+		@media screen and (max-width: 600px) {
+			 nav {
+				justify-content: space-between;
+			}
+
+			.menu-links {
+				display: none;
+				flex-direction: column;
+				width: 100%;
+			}
+
+			.menu-links a {
+				padding: 10px 0;
+			}
+
+			.menu-icon {
+				display: block;
+			}
+		}
+
+		/* Adjust navbar height on mobile devices */
+		@media (max-width: 600px) {
+			.navbar {
+				height: 30px;
+				/* Set the desired height */
+				padding: 0;				
+			}
+		}		
+
+		nav a:hover {
+			background-color: rgba(74, 144, 226, 0.1);
+		}
+
+		/* Dark mode specific styles */
+		[data-theme="dark"] nav {
+			background: rgba(26, 26, 26, 0.8);
+		}
+
+		[data-theme="dark"] nav a {
+			color: #ffffff;
+		}
+
+		:root {
+			--nav-height: 60px;
+			/* Adjust this value based on your nav bar height */
+		}
+
+		section {
+			scroll-margin-top: var(--nav-height);
+		}
+
+		/* Light mode styles */
+		[data-theme="light"] {
+			--bg-color: #ffffff;
+			--text-color: rgb(55, 53, 47);
+			--link-color: inherit;
+			--border-color: rgba(55, 53, 47, 0.09);
+			--highlight-color: #4a90e2;
+		}
+
+		body {
+			background-color: var(--bg-color);
+			color: var(--text-color);
+		}
+
+		a {
+			color: var(--link-color);
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		/* Add hover effects */
+		a:hover {
+			color: #4a90e2;
+			transition: color 0.3s ease;
+		}
+
 		/* cspell:disable-file */
 		/* webkit printing magic: print all background colors */
 		html {
@@ -27,7 +212,8 @@
 			body {
 				margin: 2em auto;
 				max-width: 1000px;
-				color: rgb(55, 53, 47);
+				color: var(--text-color);
+				/* Use the theme variable instead of hardcoded color */
 			}
 		}
 
@@ -817,6 +1003,99 @@
 	</style>
 </head>
 
+<nav style="position: sticky;
+            top: 0;
+            background: var(--bg-color);
+            padding: 10px;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;">
+	<div class="menu-icon" onclick="toggleMenu()">☰</div>
+	<div class="menu-links" id="menuLinks">
+		<a href="#education">Education</a>
+		<a href="#publications">Publications</a>
+		<a href="#languages">Languages</a>
+		<a href="#academic-services">Academic Services</a>
+		<a href="#favorite-music">Others</a>
+	</div>
+</nav>
+<!-- JavaScript to Toggle Menu -->
+<script>
+    function toggleMenu() {
+        const menuLinks = document.getElementById('menuLinks');
+        if (menuLinks.style.display === 'flex') {
+            menuLinks.style.display = 'none';
+        } else {
+            menuLinks.style.display = 'flex';
+        }
+    }
+
+    // Collapse the menu after clicking a link on mobile devices
+    const menuItems = document.querySelectorAll('#menuLinks a');
+    menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            if (window.innerWidth <= 768) { // Adjust the breakpoint as needed
+                const menuLinks = document.getElementById('menuLinks');
+                menuLinks.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+<!-- Add theme toggle button -->
+<div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+	<button onclick="toggleTheme()" class="theme-button" style="padding: 8px; border-radius: 5px; cursor: pointer;">
+		🌓 Theme
+	</button>
+</div>
+
+<script>
+	function toggleTheme() {
+		const body = document.body;
+		const currentTheme = body.getAttribute('data-theme');
+		const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+		body.setAttribute('data-theme', newTheme);
+		localStorage.setItem('theme', newTheme);
+	}
+
+	// Initialize theme
+	const savedTheme = localStorage.getItem('theme') || 'light';
+	document.body.setAttribute('data-theme', savedTheme);
+</script>
+
+<button onclick="topFunction()" id="backToTop" style="position: fixed;
+               bottom: 20px;
+               right: 20px;
+               display: none;
+               padding: 10px;
+               border-radius: 5px;
+               cursor: pointer;
+               z-index: 1000;">
+	↑ Top
+</button>
+
+<script>
+	// Back to top button
+	window.onscroll = function () { scrollFunction() };
+
+	function scrollFunction() {
+		const button = document.getElementById("backToTop");
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			button.style.display = "block";
+		} else {
+			button.style.display = "none";
+		}
+	}
+
+	function topFunction() {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
+</script>
+
 <body>
 	<article id="34c8c9d9-b57d-46f3-a886-54a83c0be014" class="page sans">
 		<header>
@@ -827,8 +1106,13 @@
 			<div id="498226b2-532a-4371-b896-6f904ddd55c6" style="display: flex; flex-wrap: wrap; align-items: center;">
 				<div class="myPhoto" id="77ce0ed0-c177-42d0-b0d3-a098aef3f316">
 					<figure id="cc0d5e2b-7ba6-487f-92d1-491c1d7ce252" class="image" style="text-align:left"><a
-							href="figs/me_2024b_full.jpg"><img style="width:1000px"
-								src="figs/me_2024b_smaller.jpg" /></a>
+							href="figs/me_2024b_full.jpg">
+							<!-- <img style="width:1000px"
+								src="figs/me_2024b_smaller.jpg" /> -->
+							<img loading="lazy" src="figs/me_2024b_smaller.jpg" alt="Fanchen Bu - KAIST PhD Student"
+								style="width:100%; max-width:1000px;" srcset="figs/me_2024b_smaller.jpg 300w,
+											figs/me_2024b_full.jpg 1000w" sizes="(max-width: 600px) 300px, 1000px">
+						</a>
 					</figure>
 				</div>
 				<div style="flex: 2 0 300px;">
@@ -858,549 +1142,632 @@
 				</div>
 			</div>
 			</p>
-			<h1 id="6d1ef24c-d8d9-4d97-a8e0-d5005e923f0f" class="">Education</h1>
-			<h3 id="1c023fc0-869f-49df-a8a3-c71ede717d22" class="">Doctor</h3>
-			<p id="09c7a5da-d106-401c-8081-d29e67bb91aa" class=""><em>2022.03 - </em> | <strong>Korea Advanced Institute
-					of Science and Technology (KAIST)</strong></p>
-			<ul id="ae1aa2b3-06f4-4156-866d-8c4f73b609cc" class="bulleted-list">
-				<li style="list-style-type:disc"><a href="https://sites.google.com/view/kaistdata/home">Data Mining
-						Lab</a> (Supervisor: <a href="https://kijungs.github.io/">Prof. Shin, Kijung [신기정]</a>)</li>
-			</ul>
-			<ul id="120e56e6-91e7-4396-abac-47b0783c028d" class="bulleted-list">
-				<li style="list-style-type:disc">Electrical Engineering</li>
-			</ul>
-			<h3 id="7be92054-fde0-43f9-973c-06d2efb12828" class="">Researcher</h3>
-			<p id="584fbf87-2b82-41c4-9d53-d4731933a41f" class=""><em>2021.09 - 2022.02</em> | <strong>Korea Advanced
-					Institute of Science and Technology (KAIST)</strong></p>
-			<ul id="3a352535-bf96-4073-89b0-7280a4d362d2" class="bulleted-list">
-				<li style="list-style-type:disc"><a href="https://sites.google.com/view/kaistdata/home">Data Mining
-						Lab</a> (Supervisor: <a href="https://kijungs.github.io/">Prof. Shin, Kijung [신기정]</a>)</li>
-			</ul>
-			<h3 id="04676e6e-c9af-4adf-bc65-7fbbd5853246" class="">Master</h3>
-			<p id="f3e6d6bd-4779-461b-986b-23a2ade0f9b2" class=""><em>2019.09 - 2021.08</em> | <strong>Korea Advanced
-					Institute of Science and Technology (KAIST)</strong></p>
-			<ul id="6d67194d-1e14-4352-9d25-3d305cbac94e" class="bulleted-list">
-				<li style="list-style-type:disc"><a href="https://control.kaist.ac.kr/home">Control Lab</a> (Supervisor:
-					<a href="https://control.kaist.ac.kr/Professor">Prof. Chang, Dong Eui [장동의]</a>)
-				</li>
-			</ul>
-			<ul id="b70337f9-f020-4da8-b1e3-5784b73173d0" class="bulleted-list">
-				<li style="list-style-type:disc">Electrical Engineering, GPA: 4.21/4.3</li>
-			</ul>
-			<ul id="1f995fb0-b3cf-4e26-9933-6db0089c914f" class="bulleted-list">
-				<li style="list-style-type:disc">Thesis: A Novel Optimization Algorithm with Orthogonality for Deep
-					Neural Networks Inspired by Feedback Integrators</li>
-			</ul>
-			<h3 id="521f304b-d5ac-4a95-9ea0-6ab1a65cc484" class="">Bachelor</h3>
-			<p id="6af1b3b6-ef43-4c55-8ba6-711e761d1e41" class=""><em>2015.09 - 2019.08</em> | <strong>University of
-					Chinese Academy of Sciences (UCAS)</strong></p>
-			<ul id="46c6c777-a6c4-49be-8dc8-b6aae8799a6c" class="bulleted-list">
-				<li style="list-style-type:disc">Computer Science and Technology, GPA: 3.71/4</li>
-			</ul>
-			<ul id="b47d71fb-c3b7-44a8-b31a-15254462af88" class="bulleted-list">
-				<li style="list-style-type:disc">Thesis: Vehicle Trajectory Prediction Based on Deep Learning
-					(Supervisor: <a href="http://people.ucas.ac.cn/~0001598?language=en">Prof. Zhao, Dongbin [趙冬斌]</a>)
-				</li>
-			</ul>
-			<p id="16f98da5-9ab6-43cb-b111-9e23d4c6d09a" class="">
-			</p>
-			<hr id="bfd5d596-7025-44d9-b336-0754218d6281" />
-			<h1 id="7e43ded4-f3ad-41da-a8b3-71d4f932e7f1" class="">Publications</h1>
-			<blockquote id="253c4d19-b778-4add-8d0b-692bc49d9985" class=""><strong>You can also check them on
-				</strong><strong><a href="https://scholar.google.com/citations?user=XjNu7-AAAAAJ">Google
-						Scholar</a></strong><strong> or </strong><strong><a
-						href="https://www.semanticscholar.org/author/Fanchen-Bu/2065674134">Semantic
-						Scholar</a></strong></blockquote>
-			<blockquote id="bf8debf1-3203-4990-893a-766d8ffeb97c" class=""><strong>C: conference / J: journal / P:
-					preprint</strong></blockquote>
-			<blockquote id="1ec6f3fc-05f2-4d18-a2b7-5fcd2e18accb" class=""><strong>*: equal contribution</strong>
-			</blockquote>
-			<p class="">[C12] <strong>On Measuring Unnoticeability of Graph Adversarial Attacks: Observations, New Measure, and Applications</strong></p>
-			<ul class="bulleted-list">				
-				<li style="list-style-type:disc">Hyeonsoo Jo*, Hyunjin Hwang*, <span
-						style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Soo Yong Lee, Chanyoung Park, and Kijung Shin</li>
-			</ul>
-			<ul class="bulleted-list">
-				<li style="list-style-type:disc"><mark class="highlight-blue"><strong>KDD 2025
-					[ </strong></mark><a href=""><mark
-					class="highlight-blue"><strong>paper</strong></mark></a><mark
-				class="highlight-blue"><strong> | </strong></mark><a href=""><mark
-					class="highlight-blue"><strong>code</strong></mark></a><mark class="highlight-blue"><strong>
-					| </strong></mark><a href="https://bokveizen.github.io/bib/hidenseek_kdd25.txt"><mark
-					class="highlight-blue"><strong>bib</strong></mark></a><mark class="highlight-blue"><strong>
-					]</strong></mark></li>
-			</ul>
-			<p class="">[C11] <strong>Rethinking Reconstruction-based Graph-Level Anomaly Detection: Limitations and a
-					Simple Remedy</strong></p>
-			<ul class="bulleted-list">
-				<li style="list-style-type:disc">Sunwoo Kim, Soo Yong Lee, <span
-						style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Shinhwan Kang, Kyungho
-					Kim, Jaemin Yoo,
-					and Kijung Shin</li>
-			</ul>
-			<ul class="bulleted-list">				
-				<li style="list-style-type:disc"><mark class="highlight-blue"><strong>NeurIPS 2024
-					[ </strong></mark><a href="https://arxiv.org/abs/2410.20366"><mark
-					class="highlight-blue"><strong>paper</strong></mark></a><mark
-				class="highlight-blue"><strong> | </strong></mark><a href="https://github.com/kswoo97/GLAD_MUSE"><mark
-					class="highlight-blue"><strong>code</strong></mark></a><mark class="highlight-blue"><strong>
-					| </strong></mark><a href="https://bokveizen.github.io/bib/muse_neurips24.txt"><mark
-					class="highlight-blue"><strong>bib</strong></mark></a><mark class="highlight-blue"><strong>
-					]</strong></mark></li>
-			</ul>
-			<p class="">[P3] <strong>RL4CO: an Extensive Reinforcement
-					Learning for Combinatorial Optimization Benchmark</strong></p>
-			<ul class="bulleted-list">
-				<!-- <li style="list-style-type:disc">Federico Berto*, Chuanbo Hua*, Junyoung Park*, Laurin Luttmann*, Yining
+			<section id="education">
+				<h1 id="6d1ef24c-d8d9-4d97-a8e0-d5005e923f0f" class="">Education</h1>
+				<h3 id="1c023fc0-869f-49df-a8a3-c71ede717d22" class="">Doctor</h3>
+				<p id="09c7a5da-d106-401c-8081-d29e67bb91aa" class=""><em>2022.03 - </em> | <strong>Korea Advanced
+						Institute
+						of Science and Technology (KAIST)</strong></p>
+				<ul id="ae1aa2b3-06f4-4156-866d-8c4f73b609cc" class="bulleted-list">
+					<li style="list-style-type:disc"><a href="https://sites.google.com/view/kaistdata/home">Data Mining
+							Lab</a> (Supervisor: <a href="https://kijungs.github.io/">Prof. Shin, Kijung [신기정]</a>)</li>
+				</ul>
+				<ul id="120e56e6-91e7-4396-abac-47b0783c028d" class="bulleted-list">
+					<li style="list-style-type:disc">Electrical Engineering</li>
+				</ul>
+				<h3 id="7be92054-fde0-43f9-973c-06d2efb12828" class="">Researcher</h3>
+				<p id="584fbf87-2b82-41c4-9d53-d4731933a41f" class=""><em>2021.09 - 2022.02</em> | <strong>Korea
+						Advanced
+						Institute of Science and Technology (KAIST)</strong></p>
+				<ul id="3a352535-bf96-4073-89b0-7280a4d362d2" class="bulleted-list">
+					<li style="list-style-type:disc"><a href="https://sites.google.com/view/kaistdata/home">Data Mining
+							Lab</a> (Supervisor: <a href="https://kijungs.github.io/">Prof. Shin, Kijung [신기정]</a>)</li>
+				</ul>
+				<h3 id="04676e6e-c9af-4adf-bc65-7fbbd5853246" class="">Master</h3>
+				<p id="f3e6d6bd-4779-461b-986b-23a2ade0f9b2" class=""><em>2019.09 - 2021.08</em> | <strong>Korea
+						Advanced
+						Institute of Science and Technology (KAIST)</strong></p>
+				<ul id="6d67194d-1e14-4352-9d25-3d305cbac94e" class="bulleted-list">
+					<li style="list-style-type:disc"><a href="https://control.kaist.ac.kr/home">Control Lab</a>
+						(Supervisor:
+						<a href="https://control.kaist.ac.kr/Professor">Prof. Chang, Dong Eui [장동의]</a>)
+					</li>
+				</ul>
+				<ul id="b70337f9-f020-4da8-b1e3-5784b73173d0" class="bulleted-list">
+					<li style="list-style-type:disc">Electrical Engineering, GPA: 4.21/4.3</li>
+				</ul>
+				<ul id="1f995fb0-b3cf-4e26-9933-6db0089c914f" class="bulleted-list">
+					<li style="list-style-type:disc">Thesis: A Novel Optimization Algorithm with Orthogonality for Deep
+						Neural Networks Inspired by Feedback Integrators</li>
+				</ul>
+				<h3 id="521f304b-d5ac-4a95-9ea0-6ab1a65cc484" class="">Bachelor</h3>
+				<p id="6af1b3b6-ef43-4c55-8ba6-711e761d1e41" class=""><em>2015.09 - 2019.08</em> | <strong>University of
+						Chinese Academy of Sciences (UCAS)</strong></p>
+				<ul id="46c6c777-a6c4-49be-8dc8-b6aae8799a6c" class="bulleted-list">
+					<li style="list-style-type:disc">Computer Science and Technology, GPA: 3.71/4</li>
+				</ul>
+				<ul id="b47d71fb-c3b7-44a8-b31a-15254462af88" class="bulleted-list">
+					<li style="list-style-type:disc">Thesis: Vehicle Trajectory Prediction Based on Deep Learning
+						(Supervisor: <a href="http://people.ucas.ac.cn/~0001598?language=en">Prof. Zhao, Dongbin
+							[趙冬斌]</a>)
+					</li>
+				</ul>
+				<p id="16f98da5-9ab6-43cb-b111-9e23d4c6d09a" class="">
+				</p>
+				<hr id="bfd5d596-7025-44d9-b336-0754218d6281" />
+			</section>
+			<section id="publications">
+				<h1 id="7e43ded4-f3ad-41da-a8b3-71d4f932e7f1" class="">Publications</h1>
+				<blockquote id="253c4d19-b778-4add-8d0b-692bc49d9985" class=""><strong>You can also check them on
+					</strong><strong><a href="https://scholar.google.com/citations?user=XjNu7-AAAAAJ">Google
+							Scholar</a></strong><strong> or </strong><strong><a
+							href="https://www.semanticscholar.org/author/Fanchen-Bu/2065674134">Semantic
+							Scholar</a></strong></blockquote>
+				<blockquote id="bf8debf1-3203-4990-893a-766d8ffeb97c" class=""><strong>C: conference / J: journal / P:
+						preprint</strong></blockquote>
+				<blockquote id="1ec6f3fc-05f2-4d18-a2b7-5fcd2e18accb" class=""><strong>*: equal contribution</strong>
+				</blockquote>
+				<p class="">[C12] <strong>On Measuring Unnoticeability of Graph Adversarial Attacks: Observations, New
+						Measure, and Applications</strong></p>
+				<ul class="bulleted-list">
+					<li style="list-style-type:disc">Hyeonsoo Jo*, Hyunjin Hwang*, <span
+							style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Soo Yong Lee,
+						Chanyoung
+						Park, and Kijung Shin</li>
+				</ul>
+				<ul class="bulleted-list">
+					<li style="list-style-type:disc"><mark class="highlight-blue"><strong>KDD 2025
+								[ </strong></mark><a href=""><mark
+								class="highlight-blue"><strong>paper</strong></mark></a><mark
+							class="highlight-blue"><strong> | </strong></mark><a href=""><mark
+								class="highlight-blue"><strong>code</strong></mark></a><mark
+							class="highlight-blue"><strong>
+								| </strong></mark><a href="https://bokveizen.github.io/bib/hidenseek_kdd25.txt"><mark
+								class="highlight-blue"><strong>bib</strong></mark></a><mark
+							class="highlight-blue"><strong>
+								]</strong></mark></li>
+				</ul>
+				<p class="">[C11] <strong>Rethinking Reconstruction-based Graph-Level Anomaly Detection: Limitations and
+						a
+						Simple Remedy</strong></p>
+				<ul class="bulleted-list">
+					<li style="list-style-type:disc">Sunwoo Kim, Soo Yong Lee, <span
+							style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Shinhwan Kang,
+						Kyungho
+						Kim, Jaemin Yoo,
+						and Kijung Shin</li>
+				</ul>
+				<ul class="bulleted-list">
+					<li style="list-style-type:disc"><mark class="highlight-blue"><strong>NeurIPS 2024
+								[ </strong></mark><a href="https://arxiv.org/abs/2410.20366"><mark
+								class="highlight-blue"><strong>paper</strong></mark></a><mark
+							class="highlight-blue"><strong> | </strong></mark><a
+							href="https://github.com/kswoo97/GLAD_MUSE"><mark
+								class="highlight-blue"><strong>code</strong></mark></a><mark
+							class="highlight-blue"><strong>
+								| </strong></mark><a href="https://bokveizen.github.io/bib/muse_neurips24.txt"><mark
+								class="highlight-blue"><strong>bib</strong></mark></a><mark
+							class="highlight-blue"><strong>
+								]</strong></mark></li>
+				</ul>
+				<p class="">[P3] <strong>RL4CO: an Extensive Reinforcement
+						Learning for Combinatorial Optimization Benchmark</strong></p>
+				<ul class="bulleted-list">
+					<!-- <li style="list-style-type:disc">Federico Berto*, Chuanbo Hua*, Junyoung Park*, Laurin Luttmann*, Yining
 					Ma, <span style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Jiarui Wang, Haoran
 					Ye, Minsu Kim, Sanghyeok Choi, Zepeda Gast, Andre Hottung, Jianan Zhou, Jieyi Bi, Yu Hu, Fei Liu,
 					Hyeonah Kim, Jiwoo Son, Haeyeon Kim, Davide Angioni, Wouter Kool, Zhiguang Cao, Jie Zhang, Kijung
 					Shin, Cathy Wu, Sungsoo Ahn, Guojie Song, Changhyun Kwon, Lin Xie, and Jinkyoo Park</li> -->
-				<li style="list-style-type:disc">
-					Federico Berto*, Chuanbo Hua*, Junyoung Park*, Laurin Luttmann*, Yining Ma, <span
-						style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Jiarui Wang, Haoran
-					Ye,
-					<span class="more-authors"></span>
-					<span class="hidden-authors" style="display: none;">
-						Minsu Kim, Sanghyeok Choi, Zepeda Gast, Andre Hottung, Jianan Zhou, Jieyi Bi, Yu Hu, Fei
-						Liu, Hyeonah Kim, Jiwoo Son, Haeyeon Kim, Davide Angioni, Wouter Kool, Zhiguang Cao, Jie Zhang,
-						Kijung Shin, Cathy Wu, Sungsoo Ahn, Guojie Song, Changhyun Kwon, Lin Xie, and Jinkyoo Park
-					</span>
-					<button class="show-more-button" onclick="showMoreLess()">and 22 other authors</button>
-				</li>
+					<li style="list-style-type:disc">
+						Federico Berto*, Chuanbo Hua*, Junyoung Park*, Laurin Luttmann*, Yining Ma, <span
+							style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Jiarui Wang, Haoran
+						Ye,
+						<span class="more-authors"></span>
+						<span class="hidden-authors" style="display: none;">
+							Minsu Kim, Sanghyeok Choi, Zepeda Gast, Andre Hottung, Jianan Zhou, Jieyi Bi, Yu Hu, Fei
+							Liu, Hyeonah Kim, Jiwoo Son, Haeyeon Kim, Davide Angioni, Wouter Kool, Zhiguang Cao, Jie
+							Zhang,
+							Kijung Shin, Cathy Wu, Sungsoo Ahn, Guojie Song, Changhyun Kwon, Lin Xie, and Jinkyoo Park
+						</span>
+						<button class="show-more-button" onclick="showMoreLess()">and 22 other authors</button>
+					</li>
 
-				<script>
-					function showMoreLess() {
-						var hiddenAuthors = document.querySelector('.hidden-authors');
-						var moreAuthors = document.querySelector('.more-authors');
-						var button = document.querySelector('.show-more-button');
+					<script>
+						function showMoreLess() {
+							var hiddenAuthors = document.querySelector('.hidden-authors');
+							var moreAuthors = document.querySelector('.more-authors');
+							var button = document.querySelector('.show-more-button');
 
-						if (hiddenAuthors.style.display === "none") {
-							hiddenAuthors.style.display = "inline";
-							moreAuthors.style.display = "none";
-							button.textContent = "Show less";
-						} else {
-							hiddenAuthors.style.display = "none";
-							moreAuthors.style.display = "none";
-							button.textContent = "and 22 other authors";
+							if (hiddenAuthors.style.display === "none") {
+								hiddenAuthors.style.display = "inline";
+								moreAuthors.style.display = "none";
+								button.textContent = "Show less";
+							} else {
+								hiddenAuthors.style.display = "none";
+								moreAuthors.style.display = "none";
+								button.textContent = "and 22 other authors";
+							}
 						}
-					}
-				</script>
-			</ul>
-			<ul class="bulleted-list">
-				<li style="list-style-type:disc"><mark class="highlight-blue"><strong>arXiv 2306.17100
-							[ </strong></mark><a href="https://arxiv.org/abs/2306.17100"><mark
-							class="highlight-blue"><strong>paper</strong></mark></a><mark
-						class="highlight-blue"><strong> | </strong></mark><a href="https://github.com/ai4co/rl4co"><mark
-							class="highlight-blue"><strong>code</strong></mark></a><mark class="highlight-blue"><strong>
-							| </strong></mark><a href="https://bokveizen.github.io/bib/rl4co_arxiv23.txt"><mark
-							class="highlight-blue"><strong>bib</strong></mark></a><mark class="highlight-blue"><strong>
-							]</strong></mark></li>
-			</ul>
-			<p class="">[P2] <strong>Exploring Edge Probability Graph Models Beyond Edge
-					Independency: Concepts, Analyses, and Algorithms</strong></p>
-			<ul class="bulleted-list">
-				<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen
-							Bu</strong></span>, Ruochen Yang, Paul Bogdan, and Kijung Shin</li>
-			</ul>
-			<ul class="bulleted-list">
-				<li style="list-style-type:disc"><strong><mark class="highlight-blue">arXiv 2405.16726 [
-						</mark></strong><a href="https://arxiv.org/abs/2405.16726"><strong><mark
-								class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://anonymous.4open.science/r/epgm-7EBE"><strong><mark
-								class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://bokveizen.github.io/bib/epgm_arxiv24.txt"><strong><mark
-								class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
-							]</mark></strong></li>
-			</ul>
-			<p id="b9cd8371-62c5-4c27-bc4d-ec668a37cb07" class="">[C10] <strong>Tackling Prevalent Conditions in
-					Unsupervised Combinatorial Optimization: Cardinality, Minimum, Covering, and More</strong></p>
-			<ul id="db944478-c4aa-481f-960a-3183dec8c9b2" class="bulleted-list">
-				<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen
-							Bu</strong></span>, Hyeonsoo Jo, Soo Yong Lee, Sungsoo Ahn, and Kijung Shin</li>
-			</ul>
-			<ul id="0a81f859-6079-4a73-bbfe-426380e2341a" class="bulleted-list">
-				<li style="list-style-type:disc"><strong><mark class="highlight-blue">ICML 2024 [ </mark></strong><a
-						href="https://arxiv.org/abs/2405.08424"><strong><mark
-								class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://github.com/ai4co/unsupervised-CO-ucom2"><strong><mark
-								class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://bokveizen.github.io/bib/ucom2_icml24.txt"><strong><mark
-								class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
-							]</mark></strong></li>
-			</ul>
-			<p id="dbd205c2-f828-4dea-ad9b-254cd228919f" class="">[C9] <strong>Feature Distribution on Graph Topology
-					Mediates the Effect of Graph Convolution: Homophily Perspective</strong></p>
-			<ul id="ea89a1ce-e6bb-4da8-87d6-ec3b9b69bafe" class="bulleted-list">
-				<li style="list-style-type:disc">Soo Yong Lee, Sunwoo Kim, <span
-						style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Jaemin Yoo, Jiliang Tang,
-					and Kijung Shin</li>
-			</ul>
-			<ul id="ced4d58b-63d2-4868-bdcc-e2905206120d" class="bulleted-list">				
-				<li style="list-style-type:disc"><strong><mark class="highlight-blue">ICML 2024 [ </mark></strong><a
-					href="https://arxiv.org/abs/2402.04621"><strong><mark
-							class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> |
-					</mark></strong><a href="https://github.com/syleeheal/AX-Dependence-Mediate-Graph-Conv"><strong><mark
-							class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue"> |
-					</mark></strong><a href="https://bokveizen.github.io/bib/AXhomoph_icml24.txt"><strong><mark
-							class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
-						]</mark></strong></li>
-			</ul>
-			<p id="a63d77ff-67a0-4eeb-853b-7bf91d76dfda" class="">[P1] <strong>A Survey on Hypergraph Mining: Patterns,
-					Tools, and Generators</strong></p>
-			<ul id="11b33634-2cff-4820-8a2c-f082e5b1cf89" class="bulleted-list">
-				<li style="list-style-type:disc">Geon Lee*, <span style="border-bottom:0.05em solid"><strong>Fanchen
-							Bu*</strong></span>, Tina Eliassi-Rad, and Kijung Shin</li>
-			</ul>
-			<ul id="5a48e037-db41-49a1-a441-8825d7be90de" class="bulleted-list">
-				<li style="list-style-type:disc"><strong><mark class="highlight-blue">arXiv 2401.08878 [
-						</mark></strong><a href="https://arxiv.org/abs/2401.08878"><strong><mark
-								class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> |
-							code | </mark></strong><a
-						href="https://bokveizen.github.io/bib/HGsurvey_csur24.txt"><strong><mark
-								class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
-							]</mark></strong></li>
-			</ul>
-			<p id="f7cc1f1e-fb43-4078-ba65-97eff290f8ae" class="">[C8] <strong>HypeBoy: Generative Self-Supervised
-					Representation Learning on Hypergraphs</strong></p>
-			<ul id="eba6400e-8b78-4207-a66d-58dcbb35f05a" class="bulleted-list">
-				<li style="list-style-type:disc">Sunwoo Kim, Shinhwan Kang, <span
-						style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Soo Yong Lee, Jaemin Yoo,
-					and Kijung Shin</li>
-			</ul>
-			<ul id="c3493797-15cb-46f5-87a8-83dc343234b7" class="bulleted-list">
-				<li style="list-style-type:disc"><strong><mark class="highlight-blue">ICLR 2024 [ </mark></strong><a
-						href="https://arxiv.org/abs/2404.00638"><strong><mark
-								class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://github.com/kswoo97/hypeboy"><strong><mark
-								class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://bokveizen.github.io/bib/hypeboy_iclr24.txt"><strong><mark
-								class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
-							]</mark></strong></li>
-			</ul>
-			<p id="6bad08a9-8f2a-41cb-ad54-b5cc4da1c61c" class="">[C7] <strong>Robust Graph Clustering via Meta
-					Weighting for Noisy Graphs</strong></p>
-			<ul id="4bb21d87-0368-453c-bd9c-0174266b164a" class="bulleted-list">
-				<li style="list-style-type:disc">Hyeonsoo Jo, <span style="border-bottom:0.05em solid"><strong>Fanchen
-							Bu</strong></span>, and Kijung Shin</li>
-			</ul>
-			<ul id="f3056c43-74ea-42f4-81d1-0b3bdcfb5136" class="bulleted-list">
-				<li style="list-style-type:disc"><strong><mark class="highlight-blue">CIKM 2023 [ </mark></strong><a
-						href="https://bokveizen.github.io/papers/metaGC_cikm23.pdf"><strong><mark
-								class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://github.com/HyeonsooJo/MetaGC"><strong><mark
-								class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://bokveizen.github.io/slides/metaGC_cikm23.pdf"><strong><mark
-								class="highlight-blue">slides</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://bokveizen.github.io/videos/metaGC_cikm23.mp4"><strong><mark
-								class="highlight-blue">video</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://bokveizen.github.io/bib/metaGC_cikm23.txt"><strong><mark
-								class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
-							]</mark></strong></li>
-			</ul>
-			<p id="80c2e003-a8da-48ad-8c88-920960c177d8" class="">[C6] <strong>On Improving the Cohesiveness of Graphs
-					by Merging Nodes: Formulation, Analysis, and Algorithms</strong></p>
-			<ul id="642878e4-5a33-4127-875f-991ae7c8ad0a" class="bulleted-list">
-				<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen
-							Bu</strong></span> and Kijung Shin</li>
-			</ul>
-			<ul id="48170e8f-80cf-4884-8da3-a6dca469bcb3" class="bulleted-list">
-				<li style="list-style-type:disc"><strong><mark class="highlight-blue">KDD 2023 [ </mark></strong><a
-						href="https://arxiv.org/abs/2306.06368"><strong><mark
-								class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://github.com/bokveizen/cohesive-truss-merge"><strong><mark
-								class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://bokveizen.github.io/slides/truss_kdd23.pdf"><strong><mark
-								class="highlight-blue">slides</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://youtu.be/eqouia5ruvk"><strong><mark
-								class="highlight-blue">video</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://bokveizen.github.io/bib/merge_kdd23.txt"><strong><mark
-								class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
-							]</mark></strong></li>
-			</ul>
-			<p id="783068a7-43e6-44fd-b9a4-fcdb8336ce9e" class="">[C5] <strong>How Transitive Are Real-World Group
-					Interactions? - Measurement and Reproduction</strong></p>
-			<ul id="64b2e095-b15b-47ce-9593-af9ba1097884" class="bulleted-list">
-				<li style="list-style-type:disc">Sunwoo Kim, <span style="border-bottom:0.05em solid"><strong>Fanchen
-							Bu</strong></span>, Minyoung Choe, Jaemin Yoo, and Kijung Shin</li>
-			</ul>
-			<ul id="d66c3816-849d-4f29-b90f-e73e5c1e4064" class="bulleted-list">
-				<li style="list-style-type:disc"><strong><mark class="highlight-blue">KDD 2023 [ </mark></strong><a
-						href="https://arxiv.org/abs/2306.02358"><strong><mark
-								class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://github.com/kswoo97/hypertrans"><strong><mark
-								class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a
-						href="https://bokveizen.github.io/slides/transitivity_kdd23.pdf"><strong><mark
-								class="highlight-blue">slides</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://youtu.be/u5exUDYi-UE"><strong><mark
-								class="highlight-blue">video</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://bokveizen.github.io/bib/transitivity_kdd23.txt"><strong><mark
-								class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
-							]</mark></strong></li>
-			</ul>
-			<p id="e964dbc3-33de-41f3-9c8d-40c333ce1bef" class="">[J2] <strong>Interplay between Topology and Edge
-					Weights in Real-World Graphs: Concepts, Patterns, and an Algorithm</strong></p>
-			<ul id="8d100989-a91f-4827-87fb-e1d05656a3df" class="bulleted-list">
-				<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen
-							Bu</strong></span>, Shinhwan Kang, and Kijung Shin</li>
-			</ul>
-			<ul id="8a427df7-ba97-4a07-b614-441a4d700056" class="bulleted-list">
-				<li style="list-style-type:disc"><strong><mark class="highlight-blue">Data Mining and Knowledge
-							Discovery [ </mark></strong><a href="https://arxiv.org/abs/2305.09083"><strong><mark
-								class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a
-						href="https://github.com/bokveizen/topology-edge-weight-interplay"><strong><mark
-								class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://bokveizen.github.io/slides/pear_dami23.pdf"><strong><mark
-								class="highlight-blue">slides</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://bokveizen.github.io/bib/PEAR_dami23.txt"><strong><mark
-								class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
-							]</mark></strong></li>
-			</ul>
-			<ul id="c8877d62-266b-4e63-b8df-e34b34693df5" class="bulleted-list">
-				<li style="list-style-type:disc"><em><strong><mark class="highlight-blue">(ECML PKDD 2023 Journal
-								Track)</mark></strong></em></li>
-			</ul>
-			<p id="0b2edf88-5239-41bc-a1e4-cb33bba194ee" class="">[C4] <strong>Towards Deep Attention in Graph Neural
-					Networks: Problems and Remedies</strong></p>
-			<ul id="2f613a31-9468-4570-98e2-1c07403746be" class="bulleted-list">
-				<li style="list-style-type:disc">Soo Yong Lee, <span style="border-bottom:0.05em solid"><strong>Fanchen
-							Bu</strong></span>, Jaemin Yoo, and Kijung Shin</li>
-			</ul>
-			<ul id="8ecd9c0c-631f-419d-91fd-72f01f800cbe" class="bulleted-list">
-				<li style="list-style-type:disc"><strong><mark class="highlight-blue">ICML 2023 [ </mark></strong><a
-						href="https://arxiv.org/abs/2306.02376"><strong><mark
-								class="highlight-blue">paper</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://github.com/syleeheal/AERO-GNN"><strong><mark
-								class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://bokveizen.github.io/slides/aero_icml23.pdf"><strong><mark
-								class="highlight-blue">slides</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://youtu.be/LbTuet6K-so"><strong><mark
-								class="highlight-blue">video</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://bokveizen.github.io/bib/AEROGNN_icml23.txt"><strong><mark
-								class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
-							]</mark></strong></li>
-			</ul>
-			<p id="b0510b4c-569a-4fd9-895c-ca1136611b7c" class="">[C3] <strong>Characterization of Simplicial Complexes
-					by Counting Simplets Beyond Four Nodes</strong></p>
-			<ul id="07c24bbe-9d02-4a5a-9fae-a1e6301b0d7f" class="bulleted-list">
-				<li style="list-style-type:disc">Hyunju Kim, Jihoon Ko, <span
-						style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, and Kijung Shin</li>
-			</ul>
-			<ul id="74bbfffe-b116-4c26-9780-e3df6c9cb53b" class="bulleted-list">
-				<li style="list-style-type:disc"><strong><mark class="highlight-blue">TheWebConf (fka WWW) 2023 [
-						</mark></strong><strong><a href="https://arxiv.org/abs/2302.05505"><mark
-								class="highlight-blue">paper </mark></a></strong><strong><mark class="highlight-blue">|
-						</mark></strong><strong><a href="https://github.com/hhyy0401/SC3"><mark
-								class="highlight-blue">code </mark></a></strong><strong><mark class="highlight-blue">|
-						</mark></strong><a href="https://bokveizen.github.io/slides/simplet_www23.pdf"><strong><mark
-								class="highlight-blue">slides</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://youtu.be/xIP9lz-UtEI"><strong><mark
-								class="highlight-blue">video</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><strong><a href="https://bokveizen.github.io/bib/SC3_www23.txt"><mark
-								class="highlight-blue">bib</mark></a></strong><strong><mark class="highlight-blue">
-							]</mark></strong></li>
-			</ul>
-			<p id="6c18c610-1a33-4366-9c62-3681aeee2dc7" class="">[J1] <strong>Hypercore Decomposition for Non-Fragile
-					Hyperedges: Concepts, Algorithms, Observations, and Applications</strong></p>
-			<ul id="7f0bc880-d71c-4bdc-80c1-9878856c8e62" class="bulleted-list">
-				<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen
-							Bu</strong></span>, Geon Lee, and Kijung Shin</li>
-			</ul>
-			<ul id="e851fc25-a738-4fc9-a26f-b435921202ae" class="bulleted-list">
-				<li style="list-style-type:disc"><strong><mark class="highlight-blue">Data Mining and Knowledge
-							Discovery [ </mark></strong><strong><a href="https://arxiv.org/abs/2301.08440"><mark
-								class="highlight-blue">paper</mark></a></strong><strong><mark class="highlight-blue"> |
-						</mark></strong><strong><a href="https://github.com/bokveizen/non-fragile-hypercore"><mark
-								class="highlight-blue">code</mark></a></strong><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://bokveizen.github.io/slides/hypercore_dami23.pdf"><strong><mark
-								class="highlight-blue">slides</mark></strong></a><strong><mark class="highlight-blue"> |
-						</mark></strong><a href="https://bokveizen.github.io/bib/hypercore_dami23.txt"><strong><mark
-								class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
-							]</mark></strong></li>
-			</ul>
-			<ul id="9d26263c-f81a-4235-a018-3c69dec902fb" class="bulleted-list">
-				<li style="list-style-type:disc"><em><strong><mark class="highlight-blue">(ECML PKDD 2023 Journal
-								Track)</mark></strong></em></li>
-			</ul>
-			<p id="d5110ff0-90a5-431f-b0e3-08d7fd82aa5e" class="">[C2] <strong>Feedback Gradient Descent: Efficient and
-					Stable Optimization with Orthogonality for DNNs</strong></p>
-			<ul id="00f67c3a-0840-49db-bba4-45827bb91154" class="bulleted-list">
-				<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen
-							Bu</strong></span> and Dong Eui Chang</li>
-			</ul>
-			<ul id="ff405283-ee3b-4865-8986-71f9d23a01c2" class="bulleted-list">
-				<li style="list-style-type:disc"><strong><mark class="highlight-blue">AAAI 2022 [
-						</mark></strong><strong><mark class="highlight-blue"><a
-								href="https://arxiv.org/abs/2205.08385">paper</a></mark></strong><strong><mark
-							class="highlight-blue"> | </mark></strong><strong><mark class="highlight-blue"><a
-								href="https://github.com/bokveizen/Feedback-Gradient-Descent">code</a></mark></strong><strong><mark
-							class="highlight-blue"> | </mark></strong><strong><mark class="highlight-blue"><a
-								href="https://bokveizen.github.io/bib/FGD_aaai22.txt">bib</a></mark></strong><strong><mark
-							class="highlight-blue"> ]</mark></strong></li>
-			</ul>
-			<p id="634b5f37-7ed0-4298-8dd3-731a896949d2" class="">[C1] <strong>Double Prioritized State Recycled
-					Experience Replay</strong></p>
-			<ul id="1000eeaf-055b-4ed6-82e9-c52dd640eaa5" class="bulleted-list">
-				<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen
-							Bu</strong></span> and Dong Eui Chang</li>
-			</ul>
-			<ul id="5c3b2628-227c-418c-9e67-29b129034b51" class="bulleted-list">
-				<li style="list-style-type:disc"><strong><mark class="highlight-blue">ICCE-Asia 2020 [
-						</mark></strong><strong><a href="https://arxiv.org/abs/2007.03961"><mark
-								class="highlight-blue">paper</mark></a></strong><strong><mark class="highlight-blue"> |
-						</mark></strong><strong><a href="https://github.com/bokveizen/DPSR"><mark
-								class="highlight-blue">code</mark></a></strong><strong><mark class="highlight-blue"> |
-						</mark></strong><strong><a href="https://bokveizen.github.io/bib/DPSR_icceasia20.txt"><mark
-								class="highlight-blue">bib</mark></a></strong><strong><mark class="highlight-blue">
-							]</mark></strong></li>
-			</ul>
-			<p id="af2357e9-c42c-431f-81cc-7bd8adf36ebc" class="">
-			</p>
-			<hr id="ad21e984-ca23-4fdc-8bcc-791dfd12d93c" />
-			<h1 id="c2f638f9-9cae-4345-aae8-2b10033cd1e0" class="">Languages</h1>
-			<h3 id="9a63cefa-827e-4b60-b270-4f08f4b07bee" class="">Chinese</h3>
-			<p id="e08cec51-d4e1-4bfb-8b2a-9e3d50889c1c" class="">Native </p>
-			<ul id="13fafebf-9d20-4c2a-af43-47854639f228" class="bulleted-list">
-				<li style="list-style-type:disc">Native: <a
-						href="https://en.wikipedia.org/wiki/Mandarin_Chinese">Mandarin [普通話]</a>, <a
-						href="https://en.wikipedia.org/wiki/Wu_Chinese">Wu Chinese [吳語]</a></li>
-			</ul>
-			<ul id="bc4ff61f-8731-49c7-b55e-81e887918b04" class="bulleted-list">
-				<li style="list-style-type:disc">Intermediate: <a
-						href="https://en.wikipedia.org/wiki/Cantonese">Cantonese [粵語]</a></li>
-			</ul>
-			<ul id="d5c3e0c9-1b38-408a-8278-6f9b141b39ce" class="bulleted-list">
-				<li style="list-style-type:disc">Elementary: <a href="https://en.wikipedia.org/wiki/Hokkien">Hokkien
-						[閩南語]</a></li>
-			</ul>
-			<h3 id="298dca36-61fb-4cc9-99ff-3f7f8046a8ae" class="">English</h3>
-			<p id="1c2cb69a-4e7c-4ffa-9f54-ebe4cf47c8cd" class="">Advanced</p>
-			<ul id="bc7aa1bb-b252-4c59-8c9f-fb9bd9648333" class="bulleted-list">
-				<li style="list-style-type:disc">IELTS 7.5</li>
-			</ul>
-			<ul id="e71c574f-8a9b-444e-a714-725aef329317" class="bulleted-list">
-				<li style="list-style-type:disc">GRE 333</li>
-			</ul>
-			<h3 id="9e532d9a-a959-4453-838c-d0757b77e392" class="">Korean</h3>
-			<p id="732b800e-a5fa-418c-a3a9-71411a93d2af" class="">Intermediate</p>
-			<p id="ebc49b3b-1ba6-45bd-83d3-99ff0a6dc546" class="">
-			</p>
-			<hr id="" />
-			<h1 id="" class="">Academic Services</h1>
-			<p id="" class="">[J4] <strong>International Journal of Machine Learning and Cybernetics</strong></p>
-			<ul id="" class="bulleted-list">
-				<li style="list-style-type:disc">Reviewer: 2024</li>
-			</ul>
-			<p id="" class="">[J3] <strong>IEEE Transactions on Network Science and Engineering</strong></p>
-			<ul id="" class="bulleted-list">
-				<li style="list-style-type:disc">Reviewer: 2024</li>
-			</ul>
-			<p id="" class="">[J2] <strong>The Journal of Supercomputing</strong></p>
-			<ul id="" class="bulleted-list">
-				<li style="list-style-type:disc">Reviewer: 2024</li>
-			</ul>
-			<p id="" class="">[J1] <strong>Big Data Research</strong></p>
-			<ul id="" class="bulleted-list">
-				<li style="list-style-type:disc">Reviewer: 2024</li>
-			</ul>
-			<p id="" class="">[C5] <strong>The ACM Web Conference
-					(TheWebConf/WWW)</strong></p>
-			<ul id="" class="bulleted-list">
-				<li style="list-style-type:disc">Reviewer: 2025</li>
-			</ul>
-			<p id="" class="">[C4] <strong>Learning on Graphs Conference
-					(LoG)</strong></p>
-			<ul id="" class="bulleted-list">
-				<li style="list-style-type:disc">Reviewer: 2024 </li>
-				<li style="list-style-type:disc">Note: Selected as one of the top reviewers in LoG 2024 </li>
-			</ul>
-			<p id="" class="">[C3] <strong>European Conference on Machine Learning and Principles and Practice of
-					Knowledge Discovery in Databases
-					(ECML PKDD)</strong></p>
-			<ul id="" class="bulleted-list">
-				<li style="list-style-type:disc">Reviewer: 2024</li>
-			</ul>
-			<p id="" class="">[C2] <strong>Asian Conference on Machine Learning
-					(ACML)</strong></p>
-			<ul id="" class="bulleted-list">
-				<li style="list-style-type:disc">Reviewer: 2024</li>
-			</ul>
-			<p id="" class="">[C1] <strong>ACM SIGKDD International Conference on
-					Knowledge Discovery and Data Mining (KDD)</strong></p>
-			<ul id="" class="bulleted-list">
-				<li style="list-style-type:disc">Reviewer: 2024 - 2025</li>
-			</ul>
-			<hr id="56b29400-b58a-407a-9325-2526f6f99c71" />
-			<h1 id="ea4f17bb-280d-43c6-b700-74c7b2628cdf" class="">Favorite Music</h1>
-			<blockquote id="76f91e02-8d64-46a4-bf50-7bfa6b51721e" class=""><strong>The links are on </strong><strong><a
-						href="https://music.youtube.com/">Youtube Music</a></strong></blockquote>
-			<ol type="1" id="018b9508-4850-472d-8fda-7a71fa5f85cd" class="numbered-list" start="1">
-				<li><strong>Chopin&#x27;s Nocturnes</strong> by <a
-						href="https://music.youtube.com/playlist?list=OLAK5uy_njigVx4j8DCSJwQ2QwQ2G8fXRmOuRJCms&amp;feature=share">Arthur
-						Rubinstein</a> / <a
-						href="https://music.youtube.com/playlist?list=OLAK5uy_kjRwdC_80zhg7O0WTMDuxGMjH90HUtEXw">Claudio
-						Arrau</a> / <a
-						href="https://music.youtube.com/playlist?list=OLAK5uy_mfk-mWrg5JU5QEBwj-ulZdl_MF9E7ZQmI">Đặng
-						Thái Sơn</a></li>
-			</ol>
-			<ol type="1" id="59899ad0-1389-4caf-b19e-bace3057956a" class="numbered-list" start="2">
-				<li><strong>Chopin&#x27;s Piano Concertos </strong>by <a
-						href="https://music.youtube.com/playlist?list=OLAK5uy_kiNFojL4XWJLLEIx_8s5iXnnkXLgLkvF4">Arthur
-						Rubinstein</a> / <a
-						href="https://music.youtube.com/playlist?list=OLAK5uy_l7e583MqYElE0cOgO2-WlnWA-uAWMqHBE">Yundi
-						Li [李雲迪]</a> / <a
-						href="https://music.youtube.com/playlist?list=PLCRIIeog3pi50V6_UDLwqQQNnw7sNCdpE">Seong-Jin Cho
-						[조성진]</a></li>
-			</ol>
-			<ol type="1" id="1b68662b-7a92-4b86-8ee9-602f867f07b3" class="numbered-list" start="3">
-				<li><strong>Chinese traditional music</strong> by <a
-						href="https://music.youtube.com/playlist?list=OLAK5uy_lwb0lZaYIrP9TZ0K_5e_G_1XX7gkksgNc">National
-						Cinema Symphony Orchestra [中國廣播電影交響樂團]</a></li>
-			</ol>
-			<ol type="1" id="c7aab868-fc8e-470b-a3f7-36722cffe40c" class="numbered-list" start="4">
-				<li><strong>Mandopop </strong>by <a
-						href="https://music.youtube.com/playlist?list=OLAK5uy_k1fdIXUO-P5mOZXdMEwR5Hl4wrlUg1RqA&amp;feature=share">David
-						Tao [陶喆]</a> / <a
-						href="https://music.youtube.com/playlist?list=PLCRIIeog3pi5ldmCWxaDOGPDrelZs3Uy_&amp;feature=share">Jay
-						Chou [周傑倫]</a> / <a
-						href="https://music.youtube.com/playlist?list=PLCRIIeog3pi6foTAJbbYaaaiKzRk9-TLJ">Ronghao Li
-						[李榮浩]</a></li>
-			</ol>
-			<ol type="1" id="8c0b4b69-1912-4595-861f-801b83bcb25b" class="numbered-list" start="5">
-				<li><strong>Cantopop </strong>by <a
-						href="https://music.youtube.com/playlist?list=OLAK5uy_l5kQRWufWv2yymQSG1zzRZcMZS6NtNjYU">Hins
-						Cheung [張敬軒]</a> / <a
-						href="https://music.youtube.com/playlist?list=OLAK5uy_k2DHaYaBcsv7hU_TuQDCxXdnmlhBnnGY8">Janice
-						Vidal [衛蘭]</a></li>
-			</ol>
-			<ol type="1" id="005a6ff3-34dd-49f6-a991-c9692bd1929e" class="numbered-list" start="6">
-				<li><strong>Korean ballades </strong>by <a
-						href="https://music.youtube.com/playlist?list=PLuMuHAJh9g_P59QyqoaUCWD3xwav_oadF">Si-Kyung Sung
-						[성시경]</a> / <a
-						href="https://music.youtube.com/playlist?list=OLAK5uy_kdDEJh4IXvrGIVrWxoIxIR1wtwkymcjeQ">Kwang-Seok
-						Kim [김광석]</a></li>
-			</ol>
-			<ol type="1" id="bc61d16a-b942-41e8-81b9-22174c746874" class="numbered-list" start="7">
-				<li><strong>Japanese Enka</strong> by
-					<a
-						href="https://music.youtube.com/playlist?list=PLCRIIeog3pi43c6cWR4IStxzRs6283q61&amp;feature=share">
-						Teresa Teng [テレサ・テン; 鄧麗君]</a> / <a
-						href="https://music.youtube.com/playlist?list=PLCRIIeog3pi6UetNBgNIzFPc31uh5ffBP">
-						Shinichi Mori [森 進一]</a> / <a
-						href="https://music.youtube.com/playlist?list=OLAK5uy_maQ--0JYoNDgPPM4xVA2KabhJxowRUseA">
-						Masako Mori [森 昌子]</a>
-				</li>
-			</ol>
-			<ol type="1" id="5c45637e-a6af-4d13-9eae-78c4fe9fc505" class="numbered-list" start="8">
-				<li><strong>Folk music </strong>by <a
-						href="https://music.youtube.com/playlist?list=OLAK5uy_klRuDFPbKlthV4-NxAy-hblMeneiUf0zA">John
-						Denver</a></li>
-			</ol>
-			<p id="67a8ddc9-74ad-4cef-a074-752bbadf07c3" class="">
-			</p>
-			<hr id="d80c8c30-9734-4722-a79d-7f9c7af686e0" />
+					</script>
+				</ul>
+				<ul class="bulleted-list">
+					<li style="list-style-type:disc"><mark class="highlight-blue"><strong>arXiv 2306.17100
+								[ </strong></mark><a href="https://arxiv.org/abs/2306.17100"><mark
+								class="highlight-blue"><strong>paper</strong></mark></a><mark
+							class="highlight-blue"><strong> | </strong></mark><a
+							href="https://github.com/ai4co/rl4co"><mark
+								class="highlight-blue"><strong>code</strong></mark></a><mark
+							class="highlight-blue"><strong>
+								| </strong></mark><a href="https://bokveizen.github.io/bib/rl4co_arxiv23.txt"><mark
+								class="highlight-blue"><strong>bib</strong></mark></a><mark
+							class="highlight-blue"><strong>
+								]</strong></mark></li>
+				</ul>
+				<p class="">[P2] <strong>Exploring Edge Probability Graph Models Beyond Edge
+						Independency: Concepts, Analyses, and Algorithms</strong></p>
+				<ul class="bulleted-list">
+					<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen
+								Bu</strong></span>, Ruochen Yang, Paul Bogdan, and Kijung Shin</li>
+				</ul>
+				<ul class="bulleted-list">
+					<li style="list-style-type:disc"><strong><mark class="highlight-blue">arXiv 2405.16726 [
+							</mark></strong><a href="https://arxiv.org/abs/2405.16726"><strong><mark
+									class="highlight-blue">paper</mark></strong></a><strong><mark
+								class="highlight-blue"> |
+							</mark></strong><a href="https://anonymous.4open.science/r/epgm-7EBE"><strong><mark
+									class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue">
+								|
+							</mark></strong><a href="https://bokveizen.github.io/bib/epgm_arxiv24.txt"><strong><mark
+									class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
+								]</mark></strong></li>
+				</ul>
+				<p id="b9cd8371-62c5-4c27-bc4d-ec668a37cb07" class="">[C10] <strong>Tackling Prevalent Conditions in
+						Unsupervised Combinatorial Optimization: Cardinality, Minimum, Covering, and More</strong></p>
+				<ul id="db944478-c4aa-481f-960a-3183dec8c9b2" class="bulleted-list">
+					<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen
+								Bu</strong></span>, Hyeonsoo Jo, Soo Yong Lee, Sungsoo Ahn, and Kijung Shin</li>
+				</ul>
+				<ul id="0a81f859-6079-4a73-bbfe-426380e2341a" class="bulleted-list">
+					<li style="list-style-type:disc"><strong><mark class="highlight-blue">ICML 2024 [ </mark></strong><a
+							href="https://arxiv.org/abs/2405.08424"><strong><mark
+									class="highlight-blue">paper</mark></strong></a><strong><mark
+								class="highlight-blue"> |
+							</mark></strong><a href="https://github.com/ai4co/unsupervised-CO-ucom2"><strong><mark
+									class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue">
+								|
+							</mark></strong><a href="https://bokveizen.github.io/bib/ucom2_icml24.txt"><strong><mark
+									class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
+								]</mark></strong></li>
+				</ul>
+				<p id="dbd205c2-f828-4dea-ad9b-254cd228919f" class="">[C9] <strong>Feature Distribution on Graph
+						Topology
+						Mediates the Effect of Graph Convolution: Homophily Perspective</strong></p>
+				<ul id="ea89a1ce-e6bb-4da8-87d6-ec3b9b69bafe" class="bulleted-list">
+					<li style="list-style-type:disc">Soo Yong Lee, Sunwoo Kim, <span
+							style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Jaemin Yoo, Jiliang
+						Tang,
+						and Kijung Shin</li>
+				</ul>
+				<ul id="ced4d58b-63d2-4868-bdcc-e2905206120d" class="bulleted-list">
+					<li style="list-style-type:disc"><strong><mark class="highlight-blue">ICML 2024 [ </mark></strong><a
+							href="https://arxiv.org/abs/2402.04621"><strong><mark
+									class="highlight-blue">paper</mark></strong></a><strong><mark
+								class="highlight-blue"> |
+							</mark></strong><a
+							href="https://github.com/syleeheal/AX-Dependence-Mediate-Graph-Conv"><strong><mark
+									class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue">
+								|
+							</mark></strong><a href="https://bokveizen.github.io/bib/AXhomoph_icml24.txt"><strong><mark
+									class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
+								]</mark></strong></li>
+				</ul>
+				<p id="a63d77ff-67a0-4eeb-853b-7bf91d76dfda" class="">[P1] <strong>A Survey on Hypergraph Mining:
+						Patterns,
+						Tools, and Generators</strong></p>
+				<ul id="11b33634-2cff-4820-8a2c-f082e5b1cf89" class="bulleted-list">
+					<li style="list-style-type:disc">Geon Lee*, <span style="border-bottom:0.05em solid"><strong>Fanchen
+								Bu*</strong></span>, Tina Eliassi-Rad, and Kijung Shin</li>
+				</ul>
+				<ul id="5a48e037-db41-49a1-a441-8825d7be90de" class="bulleted-list">
+					<li style="list-style-type:disc"><strong><mark class="highlight-blue">arXiv 2401.08878 [
+							</mark></strong><a href="https://arxiv.org/abs/2401.08878"><strong><mark
+									class="highlight-blue">paper</mark></strong></a><strong><mark
+								class="highlight-blue"> |
+								code | </mark></strong><a
+							href="https://bokveizen.github.io/bib/HGsurvey_csur24.txt"><strong><mark
+									class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
+								]</mark></strong></li>
+				</ul>
+				<p id="f7cc1f1e-fb43-4078-ba65-97eff290f8ae" class="">[C8] <strong>HypeBoy: Generative Self-Supervised
+						Representation Learning on Hypergraphs</strong></p>
+				<ul id="eba6400e-8b78-4207-a66d-58dcbb35f05a" class="bulleted-list">
+					<li style="list-style-type:disc">Sunwoo Kim, Shinhwan Kang, <span
+							style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Soo Yong Lee, Jaemin
+						Yoo,
+						and Kijung Shin</li>
+				</ul>
+				<ul id="c3493797-15cb-46f5-87a8-83dc343234b7" class="bulleted-list">
+					<li style="list-style-type:disc"><strong><mark class="highlight-blue">ICLR 2024 [ </mark></strong><a
+							href="https://arxiv.org/abs/2404.00638"><strong><mark
+									class="highlight-blue">paper</mark></strong></a><strong><mark
+								class="highlight-blue"> |
+							</mark></strong><a href="https://github.com/kswoo97/hypeboy"><strong><mark
+									class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue">
+								|
+							</mark></strong><a href="https://bokveizen.github.io/bib/hypeboy_iclr24.txt"><strong><mark
+									class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
+								]</mark></strong></li>
+				</ul>
+				<p id="6bad08a9-8f2a-41cb-ad54-b5cc4da1c61c" class="">[C7] <strong>Robust Graph Clustering via Meta
+						Weighting for Noisy Graphs</strong></p>
+				<ul id="4bb21d87-0368-453c-bd9c-0174266b164a" class="bulleted-list">
+					<li style="list-style-type:disc">Hyeonsoo Jo, <span
+							style="border-bottom:0.05em solid"><strong>Fanchen
+								Bu</strong></span>, and Kijung Shin</li>
+				</ul>
+				<ul id="f3056c43-74ea-42f4-81d1-0b3bdcfb5136" class="bulleted-list">
+					<li style="list-style-type:disc"><strong><mark class="highlight-blue">CIKM 2023 [ </mark></strong><a
+							href="https://bokveizen.github.io/papers/metaGC_cikm23.pdf"><strong><mark
+									class="highlight-blue">paper</mark></strong></a><strong><mark
+								class="highlight-blue"> |
+							</mark></strong><a href="https://github.com/HyeonsooJo/MetaGC"><strong><mark
+									class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue">
+								|
+							</mark></strong><a href="https://bokveizen.github.io/slides/metaGC_cikm23.pdf"><strong><mark
+									class="highlight-blue">slides</mark></strong></a><strong><mark
+								class="highlight-blue"> |
+							</mark></strong><a href="https://bokveizen.github.io/videos/metaGC_cikm23.mp4"><strong><mark
+									class="highlight-blue">video</mark></strong></a><strong><mark
+								class="highlight-blue"> |
+							</mark></strong><a href="https://bokveizen.github.io/bib/metaGC_cikm23.txt"><strong><mark
+									class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
+								]</mark></strong></li>
+				</ul>
+				<p id="80c2e003-a8da-48ad-8c88-920960c177d8" class="">[C6] <strong>On Improving the Cohesiveness of
+						Graphs
+						by Merging Nodes: Formulation, Analysis, and Algorithms</strong></p>
+				<ul id="642878e4-5a33-4127-875f-991ae7c8ad0a" class="bulleted-list">
+					<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen
+								Bu</strong></span> and Kijung Shin</li>
+				</ul>
+				<ul id="48170e8f-80cf-4884-8da3-a6dca469bcb3" class="bulleted-list">
+					<li style="list-style-type:disc"><strong><mark class="highlight-blue">KDD 2023 [ </mark></strong><a
+							href="https://arxiv.org/abs/2306.06368"><strong><mark
+									class="highlight-blue">paper</mark></strong></a><strong><mark
+								class="highlight-blue"> |
+							</mark></strong><a href="https://github.com/bokveizen/cohesive-truss-merge"><strong><mark
+									class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue">
+								|
+							</mark></strong><a href="https://bokveizen.github.io/slides/truss_kdd23.pdf"><strong><mark
+									class="highlight-blue">slides</mark></strong></a><strong><mark
+								class="highlight-blue"> |
+							</mark></strong><a href="https://youtu.be/eqouia5ruvk"><strong><mark
+									class="highlight-blue">video</mark></strong></a><strong><mark
+								class="highlight-blue"> |
+							</mark></strong><a href="https://bokveizen.github.io/bib/merge_kdd23.txt"><strong><mark
+									class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
+								]</mark></strong></li>
+				</ul>
+				<p id="783068a7-43e6-44fd-b9a4-fcdb8336ce9e" class="">[C5] <strong>How Transitive Are Real-World Group
+						Interactions? - Measurement and Reproduction</strong></p>
+				<ul id="64b2e095-b15b-47ce-9593-af9ba1097884" class="bulleted-list">
+					<li style="list-style-type:disc">Sunwoo Kim, <span
+							style="border-bottom:0.05em solid"><strong>Fanchen
+								Bu</strong></span>, Minyoung Choe, Jaemin Yoo, and Kijung Shin</li>
+				</ul>
+				<ul id="d66c3816-849d-4f29-b90f-e73e5c1e4064" class="bulleted-list">
+					<li style="list-style-type:disc"><strong><mark class="highlight-blue">KDD 2023 [ </mark></strong><a
+							href="https://arxiv.org/abs/2306.02358"><strong><mark
+									class="highlight-blue">paper</mark></strong></a><strong><mark
+								class="highlight-blue"> |
+							</mark></strong><a href="https://github.com/kswoo97/hypertrans"><strong><mark
+									class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue">
+								|
+							</mark></strong><a
+							href="https://bokveizen.github.io/slides/transitivity_kdd23.pdf"><strong><mark
+									class="highlight-blue">slides</mark></strong></a><strong><mark
+								class="highlight-blue"> |
+							</mark></strong><a href="https://youtu.be/u5exUDYi-UE"><strong><mark
+									class="highlight-blue">video</mark></strong></a><strong><mark
+								class="highlight-blue"> |
+							</mark></strong><a
+							href="https://bokveizen.github.io/bib/transitivity_kdd23.txt"><strong><mark
+									class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
+								]</mark></strong></li>
+				</ul>
+				<p id="e964dbc3-33de-41f3-9c8d-40c333ce1bef" class="">[J2] <strong>Interplay between Topology and Edge
+						Weights in Real-World Graphs: Concepts, Patterns, and an Algorithm</strong></p>
+				<ul id="8d100989-a91f-4827-87fb-e1d05656a3df" class="bulleted-list">
+					<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen
+								Bu</strong></span>, Shinhwan Kang, and Kijung Shin</li>
+				</ul>
+				<ul id="8a427df7-ba97-4a07-b614-441a4d700056" class="bulleted-list">
+					<li style="list-style-type:disc"><strong><mark class="highlight-blue">Data Mining and Knowledge
+								Discovery [ </mark></strong><a href="https://arxiv.org/abs/2305.09083"><strong><mark
+									class="highlight-blue">paper</mark></strong></a><strong><mark
+								class="highlight-blue"> |
+							</mark></strong><a
+							href="https://github.com/bokveizen/topology-edge-weight-interplay"><strong><mark
+									class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue">
+								|
+							</mark></strong><a href="https://bokveizen.github.io/slides/pear_dami23.pdf"><strong><mark
+									class="highlight-blue">slides</mark></strong></a><strong><mark
+								class="highlight-blue"> |
+							</mark></strong><a href="https://bokveizen.github.io/bib/PEAR_dami23.txt"><strong><mark
+									class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
+								]</mark></strong></li>
+				</ul>
+				<ul id="c8877d62-266b-4e63-b8df-e34b34693df5" class="bulleted-list">
+					<li style="list-style-type:disc"><em><strong><mark class="highlight-blue">(ECML PKDD 2023 Journal
+									Track)</mark></strong></em></li>
+				</ul>
+				<p id="0b2edf88-5239-41bc-a1e4-cb33bba194ee" class="">[C4] <strong>Towards Deep Attention in Graph
+						Neural
+						Networks: Problems and Remedies</strong></p>
+				<ul id="2f613a31-9468-4570-98e2-1c07403746be" class="bulleted-list">
+					<li style="list-style-type:disc">Soo Yong Lee, <span
+							style="border-bottom:0.05em solid"><strong>Fanchen
+								Bu</strong></span>, Jaemin Yoo, and Kijung Shin</li>
+				</ul>
+				<ul id="8ecd9c0c-631f-419d-91fd-72f01f800cbe" class="bulleted-list">
+					<li style="list-style-type:disc"><strong><mark class="highlight-blue">ICML 2023 [ </mark></strong><a
+							href="https://arxiv.org/abs/2306.02376"><strong><mark
+									class="highlight-blue">paper</mark></strong></a><strong><mark
+								class="highlight-blue"> |
+							</mark></strong><a href="https://github.com/syleeheal/AERO-GNN"><strong><mark
+									class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue">
+								|
+							</mark></strong><a href="https://bokveizen.github.io/slides/aero_icml23.pdf"><strong><mark
+									class="highlight-blue">slides</mark></strong></a><strong><mark
+								class="highlight-blue"> |
+							</mark></strong><a href="https://youtu.be/LbTuet6K-so"><strong><mark
+									class="highlight-blue">video</mark></strong></a><strong><mark
+								class="highlight-blue"> |
+							</mark></strong><a href="https://bokveizen.github.io/bib/AEROGNN_icml23.txt"><strong><mark
+									class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
+								]</mark></strong></li>
+				</ul>
+				<p id="b0510b4c-569a-4fd9-895c-ca1136611b7c" class="">[C3] <strong>Characterization of Simplicial
+						Complexes
+						by Counting Simplets Beyond Four Nodes</strong></p>
+				<ul id="07c24bbe-9d02-4a5a-9fae-a1e6301b0d7f" class="bulleted-list">
+					<li style="list-style-type:disc">Hyunju Kim, Jihoon Ko, <span
+							style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, and Kijung Shin</li>
+				</ul>
+				<ul id="74bbfffe-b116-4c26-9780-e3df6c9cb53b" class="bulleted-list">
+					<li style="list-style-type:disc"><strong><mark class="highlight-blue">TheWebConf (fka WWW) 2023 [
+							</mark></strong><strong><a href="https://arxiv.org/abs/2302.05505"><mark
+									class="highlight-blue">paper </mark></a></strong><strong><mark
+								class="highlight-blue">|
+							</mark></strong><strong><a href="https://github.com/hhyy0401/SC3"><mark
+									class="highlight-blue">code </mark></a></strong><strong><mark
+								class="highlight-blue">|
+							</mark></strong><a href="https://bokveizen.github.io/slides/simplet_www23.pdf"><strong><mark
+									class="highlight-blue">slides</mark></strong></a><strong><mark
+								class="highlight-blue"> |
+							</mark></strong><a href="https://youtu.be/xIP9lz-UtEI"><strong><mark
+									class="highlight-blue">video</mark></strong></a><strong><mark
+								class="highlight-blue"> |
+							</mark></strong><strong><a href="https://bokveizen.github.io/bib/SC3_www23.txt"><mark
+									class="highlight-blue">bib</mark></a></strong><strong><mark class="highlight-blue">
+								]</mark></strong></li>
+				</ul>
+				<p id="6c18c610-1a33-4366-9c62-3681aeee2dc7" class="">[J1] <strong>Hypercore Decomposition for
+						Non-Fragile
+						Hyperedges: Concepts, Algorithms, Observations, and Applications</strong></p>
+				<ul id="7f0bc880-d71c-4bdc-80c1-9878856c8e62" class="bulleted-list">
+					<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen
+								Bu</strong></span>, Geon Lee, and Kijung Shin</li>
+				</ul>
+				<ul id="e851fc25-a738-4fc9-a26f-b435921202ae" class="bulleted-list">
+					<li style="list-style-type:disc"><strong><mark class="highlight-blue">Data Mining and Knowledge
+								Discovery [ </mark></strong><strong><a href="https://arxiv.org/abs/2301.08440"><mark
+									class="highlight-blue">paper</mark></a></strong><strong><mark
+								class="highlight-blue"> |
+							</mark></strong><strong><a href="https://github.com/bokveizen/non-fragile-hypercore"><mark
+									class="highlight-blue">code</mark></a></strong><strong><mark class="highlight-blue">
+								|
+							</mark></strong><a
+							href="https://bokveizen.github.io/slides/hypercore_dami23.pdf"><strong><mark
+									class="highlight-blue">slides</mark></strong></a><strong><mark
+								class="highlight-blue"> |
+							</mark></strong><a href="https://bokveizen.github.io/bib/hypercore_dami23.txt"><strong><mark
+									class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
+								]</mark></strong></li>
+				</ul>
+				<ul id="9d26263c-f81a-4235-a018-3c69dec902fb" class="bulleted-list">
+					<li style="list-style-type:disc"><em><strong><mark class="highlight-blue">(ECML PKDD 2023 Journal
+									Track)</mark></strong></em></li>
+				</ul>
+				<p id="d5110ff0-90a5-431f-b0e3-08d7fd82aa5e" class="">[C2] <strong>Feedback Gradient Descent: Efficient
+						and
+						Stable Optimization with Orthogonality for DNNs</strong></p>
+				<ul id="00f67c3a-0840-49db-bba4-45827bb91154" class="bulleted-list">
+					<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen
+								Bu</strong></span> and Dong Eui Chang</li>
+				</ul>
+				<ul id="ff405283-ee3b-4865-8986-71f9d23a01c2" class="bulleted-list">
+					<li style="list-style-type:disc"><strong><mark class="highlight-blue">AAAI 2022 [
+							</mark></strong><strong><mark class="highlight-blue"><a
+									href="https://arxiv.org/abs/2205.08385">paper</a></mark></strong><strong><mark
+								class="highlight-blue"> | </mark></strong><strong><mark class="highlight-blue"><a
+									href="https://github.com/bokveizen/Feedback-Gradient-Descent">code</a></mark></strong><strong><mark
+								class="highlight-blue"> | </mark></strong><strong><mark class="highlight-blue"><a
+									href="https://bokveizen.github.io/bib/FGD_aaai22.txt">bib</a></mark></strong><strong><mark
+								class="highlight-blue"> ]</mark></strong></li>
+				</ul>
+				<p id="634b5f37-7ed0-4298-8dd3-731a896949d2" class="">[C1] <strong>Double Prioritized State Recycled
+						Experience Replay</strong></p>
+				<ul id="1000eeaf-055b-4ed6-82e9-c52dd640eaa5" class="bulleted-list">
+					<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen
+								Bu</strong></span> and Dong Eui Chang</li>
+				</ul>
+				<ul id="5c3b2628-227c-418c-9e67-29b129034b51" class="bulleted-list">
+					<li style="list-style-type:disc"><strong><mark class="highlight-blue">ICCE-Asia 2020 [
+							</mark></strong><strong><a href="https://arxiv.org/abs/2007.03961"><mark
+									class="highlight-blue">paper</mark></a></strong><strong><mark
+								class="highlight-blue"> |
+							</mark></strong><strong><a href="https://github.com/bokveizen/DPSR"><mark
+									class="highlight-blue">code</mark></a></strong><strong><mark class="highlight-blue">
+								|
+							</mark></strong><strong><a href="https://bokveizen.github.io/bib/DPSR_icceasia20.txt"><mark
+									class="highlight-blue">bib</mark></a></strong><strong><mark class="highlight-blue">
+								]</mark></strong></li>
+				</ul>
+				<p id="af2357e9-c42c-431f-81cc-7bd8adf36ebc" class="">
+				</p>
+				<hr id="ad21e984-ca23-4fdc-8bcc-791dfd12d93c" />
+			</section>
+			<section id="languages">
+				<h1 id="c2f638f9-9cae-4345-aae8-2b10033cd1e0" class="">Languages</h1>
+				<h3 id="9a63cefa-827e-4b60-b270-4f08f4b07bee" class="">Chinese</h3>
+				<p id="e08cec51-d4e1-4bfb-8b2a-9e3d50889c1c" class="">Native </p>
+				<ul id="13fafebf-9d20-4c2a-af43-47854639f228" class="bulleted-list">
+					<li style="list-style-type:disc">Native: <a
+							href="https://en.wikipedia.org/wiki/Mandarin_Chinese">Mandarin [普通話]</a>, <a
+							href="https://en.wikipedia.org/wiki/Wu_Chinese">Wu Chinese [吳語]</a></li>
+				</ul>
+				<ul id="bc4ff61f-8731-49c7-b55e-81e887918b04" class="bulleted-list">
+					<li style="list-style-type:disc">Intermediate: <a
+							href="https://en.wikipedia.org/wiki/Cantonese">Cantonese [粵語]</a></li>
+				</ul>
+				<ul id="d5c3e0c9-1b38-408a-8278-6f9b141b39ce" class="bulleted-list">
+					<li style="list-style-type:disc">Elementary: <a href="https://en.wikipedia.org/wiki/Hokkien">Hokkien
+							[閩南語]</a></li>
+				</ul>
+				<h3 id="298dca36-61fb-4cc9-99ff-3f7f8046a8ae" class="">English</h3>
+				<p id="1c2cb69a-4e7c-4ffa-9f54-ebe4cf47c8cd" class="">Advanced</p>
+				<ul id="bc7aa1bb-b252-4c59-8c9f-fb9bd9648333" class="bulleted-list">
+					<li style="list-style-type:disc">IELTS 7.5</li>
+				</ul>
+				<ul id="e71c574f-8a9b-444e-a714-725aef329317" class="bulleted-list">
+					<li style="list-style-type:disc">GRE 333</li>
+				</ul>
+				<h3 id="9e532d9a-a959-4453-838c-d0757b77e392" class="">Korean</h3>
+				<p id="732b800e-a5fa-418c-a3a9-71411a93d2af" class="">Intermediate</p>
+				<p id="ebc49b3b-1ba6-45bd-83d3-99ff0a6dc546" class="">
+				</p>
+				<hr id="" />
+			</section>
+			<section id="academic-services">
+				<h1 id="" class="">Academic Services</h1>
+				<p id="" class="">[J4] <strong>International Journal of Machine Learning and Cybernetics</strong></p>
+				<ul id="" class="bulleted-list">
+					<li style="list-style-type:disc">Reviewer: 2024</li>
+				</ul>
+				<p id="" class="">[J3] <strong>IEEE Transactions on Network Science and Engineering</strong></p>
+				<ul id="" class="bulleted-list">
+					<li style="list-style-type:disc">Reviewer: 2024</li>
+				</ul>
+				<p id="" class="">[J2] <strong>The Journal of Supercomputing</strong></p>
+				<ul id="" class="bulleted-list">
+					<li style="list-style-type:disc">Reviewer: 2024</li>
+				</ul>
+				<p id="" class="">[J1] <strong>Big Data Research</strong></p>
+				<ul id="" class="bulleted-list">
+					<li style="list-style-type:disc">Reviewer: 2024</li>
+				</ul>
+				<p id="" class="">[C5] <strong>The ACM Web Conference
+						(TheWebConf/WWW)</strong></p>
+				<ul id="" class="bulleted-list">
+					<li style="list-style-type:disc">Reviewer: 2025</li>
+				</ul>
+				<p id="" class="">[C4] <strong>Learning on Graphs Conference
+						(LoG)</strong></p>
+				<ul id="" class="bulleted-list">
+					<li style="list-style-type:disc">Reviewer: 2024 </li>
+					<li style="list-style-type:disc">Note: Selected as one of the top reviewers in LoG 2024 </li>
+				</ul>
+				<p id="" class="">[C3] <strong>European Conference on Machine Learning and Principles and Practice of
+						Knowledge Discovery in Databases
+						(ECML PKDD)</strong></p>
+				<ul id="" class="bulleted-list">
+					<li style="list-style-type:disc">Reviewer: 2024</li>
+				</ul>
+				<p id="" class="">[C2] <strong>Asian Conference on Machine Learning
+						(ACML)</strong></p>
+				<ul id="" class="bulleted-list">
+					<li style="list-style-type:disc">Reviewer: 2024</li>
+				</ul>
+				<p id="" class="">[C1] <strong>ACM SIGKDD International Conference on
+						Knowledge Discovery and Data Mining (KDD)</strong></p>
+				<ul id="" class="bulleted-list">
+					<li style="list-style-type:disc">Reviewer: 2024 - 2025</li>
+				</ul>
+				<hr id="56b29400-b58a-407a-9325-2526f6f99c71" />
+			</section>
+			<section id="favorite-music">
+				<h1 id="ea4f17bb-280d-43c6-b700-74c7b2628cdf" class="">Favorite Music</h1>
+				<blockquote id="76f91e02-8d64-46a4-bf50-7bfa6b51721e" class=""><strong>The links are on
+					</strong><strong><a href="https://music.youtube.com/">Youtube Music</a></strong></blockquote>
+				<ol type="1" id="018b9508-4850-472d-8fda-7a71fa5f85cd" class="numbered-list" start="1">
+					<li><strong>Chopin&#x27;s Nocturnes</strong> by <a
+							href="https://music.youtube.com/playlist?list=OLAK5uy_njigVx4j8DCSJwQ2QwQ2G8fXRmOuRJCms&amp;feature=share">Arthur
+							Rubinstein</a> / <a
+							href="https://music.youtube.com/playlist?list=OLAK5uy_kjRwdC_80zhg7O0WTMDuxGMjH90HUtEXw">Claudio
+							Arrau</a> / <a
+							href="https://music.youtube.com/playlist?list=OLAK5uy_mfk-mWrg5JU5QEBwj-ulZdl_MF9E7ZQmI">Đặng
+							Thái Sơn</a></li>
+				</ol>
+				<ol type="1" id="59899ad0-1389-4caf-b19e-bace3057956a" class="numbered-list" start="2">
+					<li><strong>Chopin&#x27;s Piano Concertos </strong>by <a
+							href="https://music.youtube.com/playlist?list=OLAK5uy_kiNFojL4XWJLLEIx_8s5iXnnkXLgLkvF4">Arthur
+							Rubinstein</a> / <a
+							href="https://music.youtube.com/playlist?list=OLAK5uy_l7e583MqYElE0cOgO2-WlnWA-uAWMqHBE">Yundi
+							Li [李雲迪]</a> / <a
+							href="https://music.youtube.com/playlist?list=PLCRIIeog3pi50V6_UDLwqQQNnw7sNCdpE">Seong-Jin
+							Cho
+							[조성진]</a></li>
+				</ol>
+				<ol type="1" id="1b68662b-7a92-4b86-8ee9-602f867f07b3" class="numbered-list" start="3">
+					<li><strong>Chinese traditional music</strong> by <a
+							href="https://music.youtube.com/playlist?list=OLAK5uy_lwb0lZaYIrP9TZ0K_5e_G_1XX7gkksgNc">National
+							Cinema Symphony Orchestra [中國廣播電影交響樂團]</a></li>
+				</ol>
+				<ol type="1" id="c7aab868-fc8e-470b-a3f7-36722cffe40c" class="numbered-list" start="4">
+					<li><strong>Mandopop </strong>by <a
+							href="https://music.youtube.com/playlist?list=OLAK5uy_k1fdIXUO-P5mOZXdMEwR5Hl4wrlUg1RqA&amp;feature=share">David
+							Tao [陶喆]</a> / <a
+							href="https://music.youtube.com/playlist?list=PLCRIIeog3pi5ldmCWxaDOGPDrelZs3Uy_&amp;feature=share">Jay
+							Chou [周傑倫]</a> / <a
+							href="https://music.youtube.com/playlist?list=PLCRIIeog3pi6foTAJbbYaaaiKzRk9-TLJ">Ronghao Li
+							[李榮浩]</a></li>
+				</ol>
+				<ol type="1" id="8c0b4b69-1912-4595-861f-801b83bcb25b" class="numbered-list" start="5">
+					<li><strong>Cantopop </strong>by <a
+							href="https://music.youtube.com/playlist?list=OLAK5uy_l5kQRWufWv2yymQSG1zzRZcMZS6NtNjYU">Hins
+							Cheung [張敬軒]</a> / <a
+							href="https://music.youtube.com/playlist?list=OLAK5uy_k2DHaYaBcsv7hU_TuQDCxXdnmlhBnnGY8">Janice
+							Vidal [衛蘭]</a></li>
+				</ol>
+				<ol type="1" id="005a6ff3-34dd-49f6-a991-c9692bd1929e" class="numbered-list" start="6">
+					<li><strong>Korean ballades </strong>by <a
+							href="https://music.youtube.com/playlist?list=PLuMuHAJh9g_P59QyqoaUCWD3xwav_oadF">Si-Kyung
+							Sung
+							[성시경]</a> / <a
+							href="https://music.youtube.com/playlist?list=OLAK5uy_kdDEJh4IXvrGIVrWxoIxIR1wtwkymcjeQ">Kwang-Seok
+							Kim [김광석]</a></li>
+				</ol>
+				<ol type="1" id="bc61d16a-b942-41e8-81b9-22174c746874" class="numbered-list" start="7">
+					<li><strong>Japanese Enka</strong> by
+						<a
+							href="https://music.youtube.com/playlist?list=PLCRIIeog3pi43c6cWR4IStxzRs6283q61&amp;feature=share">
+							Teresa Teng [テレサ・テン; 鄧麗君]</a> / <a
+							href="https://music.youtube.com/playlist?list=PLCRIIeog3pi6UetNBgNIzFPc31uh5ffBP">
+							Shinichi Mori [森 進一]</a> / <a
+							href="https://music.youtube.com/playlist?list=OLAK5uy_maQ--0JYoNDgPPM4xVA2KabhJxowRUseA">
+							Masako Mori [森 昌子]</a>
+					</li>
+				</ol>
+				<ol type="1" id="5c45637e-a6af-4d13-9eae-78c4fe9fc505" class="numbered-list" start="8">
+					<li><strong>Folk music </strong>by <a
+							href="https://music.youtube.com/playlist?list=OLAK5uy_klRuDFPbKlthV4-NxAy-hblMeneiUf0zA">John
+							Denver</a></li>
+				</ol>
+				<p id="67a8ddc9-74ad-4cef-a074-752bbadf07c3" class="">
+				</p>
+				<hr id="d80c8c30-9734-4722-a79d-7f9c7af686e0" />
+			</section>
 			<h1 id="20203e87-3239-4221-935a-e1c1265bac39" class="">Useful Tools and Websites</h1>
 			<ol type="1" id="0c38739b-529d-4df6-bbb1-290d676dadc5" class="numbered-list" start="1">
 				<li><a href="https://efotinis.neocities.org/deskpins/">DeskPins</a>: a tool for making a window topmost
