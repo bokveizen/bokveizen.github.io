@@ -1,0 +1,200 @@
+/* Root Variables */
+:root {
+    /* Colors */
+    --color-primary: #4a90e2;
+    --color-text-light: rgb(55, 53, 47);
+    --color-text-dark: #ffffff;
+    --color-bg-light: #ffffff;
+    --color-bg-dark: #1a1a1a;
+    --color-border-light: rgba(55, 53, 47, 0.09);
+    --color-border-dark: rgba(255, 255, 255, 0.2);
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    
+    /* Layout */
+    --max-width: 1000px;
+    --nav-height: 60px;
+    
+    /* Typography */
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 1.875rem;
+    
+    /* Transitions */
+    --transition-fast: 0.2s;
+    --transition-base: 0.3s;
+  }
+  
+  /* Theme Colors */
+  [data-theme="light"] {
+    --color-bg: var(--color-bg-light);
+    --color-text: var(--color-text-light);
+    --color-border: var(--color-border-light);
+    --color-link: inherit;
+  }
+  
+  [data-theme="dark"] {
+    --color-bg: var(--color-bg-dark);
+    --color-text: var(--color-text-dark);
+    --color-border: var(--color-border-dark);
+    --color-link: #66b3ff;
+  }
+  
+  /* Base Styles */
+  html {
+    scroll-behavior: smooth;
+    -webkit-print-color-adjust: exact;
+  }
+  
+  body {
+    margin: var(--spacing-lg);
+    padding: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.5;
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  }
+  
+  @media screen {
+    body {
+      margin: var(--spacing-lg) auto;
+      max-width: var(--max-width);
+    }
+  }
+  
+  /* Typography */
+  h1, h2, h3 {
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  
+  h1 { font-size: var(--font-size-2xl); margin-top: var(--spacing-lg); }
+  h2 { font-size: var(--font-size-xl); margin-top: var(--spacing-md); }
+  h3 { font-size: var(--font-size-lg); margin-top: var(--spacing-sm); }
+  
+  /* Links */
+  a {
+    color: var(--color-link);
+    text-decoration: underline;
+    transition: color var(--transition-base);
+  }
+  
+  a:hover {
+    color: var(--color-primary);
+  }
+  
+  /* Navigation */
+  nav {
+    background: var(--color-bg);
+    padding: var(--spacing-sm);
+    z-index: 1000;
+    border-bottom: 1px solid var(--color-border);
+    backdrop-filter: blur(10px);
+  }
+  
+  nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color var(--transition-base);
+    font-size: var(--font-size-sm);
+  }
+  
+  nav a:hover {
+    background-color: rgba(74, 144, 226, 0.1);
+  }
+  
+  /* Tooltips */
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .menu-icon {
+      display: block;
+    }
+    
+    .menu-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    .menu-links.active {
+      display: flex;
+    }
+    
+    nav {
+      padding: var(--spacing-xs);
+    }
+    
+    .myPhoto {
+      margin-right: 0;
+    }
+  }
+  
+  /* Print Styles */
+  @media print {
+    img {
+      max-height: 100vh;
+      object-fit: contain;
+    }
+    
+    @page {
+      margin: 1in;
+    }
+  }
+  
+  /* Utility Classes */
+  .disabled-link {
+    color: #999;
+    cursor: not-allowed;
+    text-decoration: none;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Remove redundant highlight classes and keep only what you use */
+  .highlight-blue {
+    color: rgba(51, 126, 169, 1);
+  }
+  
+  [data-theme="dark"] .highlight-blue {
+    color: #8cc7ff;
+    background-color: rgba(74, 144, 226, 0.2);
+  }
