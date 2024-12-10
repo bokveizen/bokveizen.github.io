@@ -1,0 +1,38 @@
+<!-- Template for Conference Paper [C] -->
+<p class="">[C{NUMBER}] <strong>{PAPER_TITLE}</strong></p>
+<ul class="bulleted-list">
+    <li style="list-style-type:disc">{AUTHORS}</li>
+</ul>
+<ul class="bulleted-list">
+    <li style="list-style-type:disc"><mark class="highlight-blue"><strong>{VENUE} {YEAR} [ </strong></mark><a
+            href="{PAPER_URL}"><mark class="highlight-blue"><strong>paper</strong></mark></a><mark
+            class="highlight-blue"><strong> | </strong></mark><a href="{CODE_URL}"><mark
+                class="highlight-blue"><strong>code</strong></mark></a><mark class="highlight-blue"><strong> |
+            </strong></mark><a href="{BIB_URL}"><mark class="highlight-blue"><strong>bib</strong></mark></a><mark
+            class="highlight-blue"><strong> ]</strong></mark></li>
+</ul>
+
+<!-- Template for Journal Paper [J] -->
+<p class="">[J{NUMBER}] <strong>{PAPER_TITLE}</strong></p>
+<ul class="bulleted-list">
+    <li style="list-style-type:disc">{AUTHORS}</li>
+</ul>
+<ul class="bulleted-list">
+    <li style="list-style-type:disc"><mark class="highlight-blue"><strong>{JOURNAL_NAME} [ </strong></mark><a
+            href="{PAPER_URL}"><mark class="highlight-blue"><strong>paper</strong></mark></a><mark
+            class="highlight-blue"><strong> | </strong></mark><a href="{CODE_URL}"><mark
+                class="highlight-blue"><strong>code</strong></mark></a><mark class="highlight-blue"><strong> |
+            </strong></mark><a href="{BIB_URL}"><mark class="highlight-blue"><strong>bib</strong></mark></a><mark
+            class="highlight-blue"><strong> ]</strong></mark></li>
+</ul>
+
+<!-- Optional: For papers with many authors -->
+<li style="list-style-type:disc">
+    {FIRST_FEW_AUTHORS},
+    <button class="show-more-button" onclick="showMoreLess(this)">and {NUMBER} other authors</button>
+    <span class="hidden-authors" style="display: none;">
+        {REMAINING_AUTHORS}
+    </span>
+</li>
+
+<span style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>

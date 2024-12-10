@@ -1,4 +1,5 @@
 <html>
+
 <head>
 	<meta name="description" content="Personal homepage of Fanchen Bu">
 	<link rel="preload" as="image" href="figs/me_2024b_smaller.jpg">
@@ -26,12 +27,12 @@
 
 	<title>BU, Fanchen卜凡辰</title>
 	<style>
-		#header h1{
-			margin:0px;
+		#header h1 {
+			margin: 0px;
 		}
 
-		body{
-			margin:0;
+		body {
+			margin: 0;
 		}
 
 		/* Dark mode styles */
@@ -80,7 +81,7 @@
 			padding: 15px;
 			z-index: 1000;
 			border-bottom: 1px solid var(--border-color);
-			backdrop-filter: blur(10px);			
+			backdrop-filter: blur(10px);
 		}
 
 		nav a {
@@ -113,7 +114,7 @@
 		}
 
 		@media screen and (max-width: 600px) {
-			 nav {
+			nav {
 				justify-content: space-between;
 			}
 
@@ -137,9 +138,9 @@
 			.navbar {
 				height: 30px;
 				/* Set the desired height */
-				padding: 0;				
+				padding: 0;
 			}
-		}		
+		}
 
 		nav a:hover {
 			background-color: rgba(74, 144, 226, 0.1);
@@ -364,6 +365,40 @@
 			text-decoration: none;
 			opacity: 0.7;
 			border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+		}
+
+		.disabled-link {
+			color: #999;
+			cursor: not-allowed;
+			text-decoration: none;
+		}
+
+		.tooltip {
+			position: relative;
+			display: inline-block;
+		}
+
+		.tooltip .tooltiptext {
+			visibility: hidden;
+			width: 120px;
+			background-color: #555;
+			color: #fff;
+			text-align: center;
+			border-radius: 6px;
+			padding: 5px;
+			position: absolute;
+			z-index: 1;
+			bottom: 125%;
+			left: 50%;
+			margin-left: -60px;
+			opacity: 0;
+			transition: opacity 0.3s;
+			font-weight: normal;
+		}
+
+		.tooltip:hover .tooltiptext {
+			visibility: visible;
+			opacity: 1;
 		}
 
 		table,
@@ -1024,25 +1059,25 @@
 </nav>
 <!-- JavaScript to Toggle Menu -->
 <script>
-    function toggleMenu() {
-        const menuLinks = document.getElementById('menuLinks');
-        if (menuLinks.style.display === 'flex') {
-            menuLinks.style.display = 'none';
-        } else {
-            menuLinks.style.display = 'flex';
-        }
-    }
+	function toggleMenu() {
+		const menuLinks = document.getElementById('menuLinks');
+		if (menuLinks.style.display === 'flex') {
+			menuLinks.style.display = 'none';
+		} else {
+			menuLinks.style.display = 'flex';
+		}
+	}
 
-    // Collapse the menu after clicking a link on mobile devices
-    const menuItems = document.querySelectorAll('#menuLinks a');
-    menuItems.forEach(item => {
-        item.addEventListener('click', () => {
-            if (window.innerWidth <= 768) { // Adjust the breakpoint as needed
-                const menuLinks = document.getElementById('menuLinks');
-                menuLinks.style.display = 'none';
-            }
-        });
-    });
+	// Collapse the menu after clicking a link on mobile devices
+	const menuItems = document.querySelectorAll('#menuLinks a');
+	menuItems.forEach(item => {
+		item.addEventListener('click', () => {
+			if (window.innerWidth <= 768) { // Adjust the breakpoint as needed
+				const menuLinks = document.getElementById('menuLinks');
+				menuLinks.style.display = 'none';
+			}
+		});
+	});
 </script>
 
 <!-- Add theme toggle button -->
@@ -1207,6 +1242,25 @@
 						preprint</strong></blockquote>
 				<blockquote id="1ec6f3fc-05f2-4d18-a2b7-5fcd2e18accb" class=""><strong>*: equal contribution</strong>
 				</blockquote>
+				<p class="">[C13] <strong>DiffIM: Differentiable Influence Minimization with Surrogate Modeling and
+						Continuous Relaxation</strong></p>
+				<ul class="bulleted-list">
+					<li style="list-style-type:disc">Junghun Lee, Hyunju Kim, <span
+							style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Jihoon Ko, Kijung
+						Shin</li>
+				</ul>
+				<ul class="bulleted-list">
+					<li style="list-style-type:disc"><mark class="highlight-blue"><strong>AAAI 2025 [ </strong></mark><a
+							href="https://openreview.net/pdf?id=RxUA7GjnTC"><mark
+								class="highlight-blue"><strong>paper</strong></mark></a><mark
+							class="highlight-blue"><strong> | </strong></mark><span class="disabled-link tooltip">
+							<mark class="highlight-blue"><strong>code</strong></mark>
+							<span class="tooltiptext">Coming soon</span>
+						</span><mark class="highlight-blue"><strong> |
+							</strong></mark><a href="https://bokveizen.github.io/bib/DiffIM_aaai25.txt"><mark
+								class="highlight-blue"><strong>bib</strong></mark></a><mark
+							class="highlight-blue"><strong> ]</strong></mark></li>
+				</ul>
 				<p class="">[C12] <strong>On Measuring Unnoticeability of Graph Adversarial Attacks: Observations, New
 						Measure, and Applications</strong></p>
 				<ul class="bulleted-list">
@@ -1219,13 +1273,13 @@
 					<li style="list-style-type:disc"><mark class="highlight-blue"><strong>KDD 2025
 								[ </strong></mark><a href=""><mark
 								class="highlight-blue"><strong>paper</strong></mark></a><mark
-							class="highlight-blue"><strong> | </strong></mark><a href=""><mark
-								class="highlight-blue"><strong>code</strong></mark></a><mark
-							class="highlight-blue"><strong>
-								| </strong></mark><a href="https://bokveizen.github.io/bib/hidenseek_kdd25.txt"><mark
+							class="highlight-blue"><strong> | </strong></mark><span class="disabled-link tooltip">
+							<mark class="highlight-blue"><strong>code</strong></mark>
+							<span class="tooltiptext">Coming soon</span>
+						</span><mark class="highlight-blue"><strong> | </strong></mark><a
+							href="https://bokveizen.github.io/bib/hidenseek_kdd25.txt"><mark
 								class="highlight-blue"><strong>bib</strong></mark></a><mark
-							class="highlight-blue"><strong>
-								]</strong></mark></li>
+							class="highlight-blue"><strong> ]</strong></mark></li>
 				</ul>
 				<p class="">[C11] <strong>Rethinking Reconstruction-based Graph-Level Anomaly Detection: Limitations and
 						a
@@ -1373,8 +1427,7 @@
 							</mark></strong><a href="https://arxiv.org/abs/2401.08878"><strong><mark
 									class="highlight-blue">paper</mark></strong></a><strong><mark
 								class="highlight-blue"> |
-								code | </mark></strong><a
-							href="https://bokveizen.github.io/bib/HGsurvey_csur24.txt"><strong><mark
+							</mark></strong><a href="https://bokveizen.github.io/bib/HGsurvey_csur24.txt"><strong><mark
 									class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
 								]</mark></strong></li>
 				</ul>
