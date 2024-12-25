@@ -160,8 +160,9 @@ nav a:hover {
     color: #ffffff;
 }
 
-section {
-    scroll-margin-top: var(--nav-height);
+/* section { */
+html {
+    scroll-padding-top: var(--nav-height);
 }
 
 /* Light mode styles */
