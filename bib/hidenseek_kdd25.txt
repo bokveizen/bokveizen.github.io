@@ -1,6 +1,6 @@
 @inproceedings{Jo2025HIDENSEEK,
   title={On Measuring Unnoticeability of Graph Adversarial Attacks: Observations, New Measure, and Applications},
-  author={Jo, Hyeonsee and Hwang, Hyunjin and Bu, Fanchen and Lee, Soo Yong and Park, Chanyoung and Shin, Kijung},
+  author={Jo, Hyeonsoo and Hwang, Hyunjin and Bu, Fanchen and Lee, Soo Yong and Park, Chanyoung and Shin, Kijung},
   booktitle={KDD},
   year={2025}
 }
