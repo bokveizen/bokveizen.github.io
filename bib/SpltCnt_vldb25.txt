@@ -1,0 +1,10 @@
+@article{Kim2025SimpletCount,
+  title={Estimating simplet counts via sampling},
+  author={Kim, Hyunju and Moon, Heechan and Bu, Fanchen and Ko, Jihoon and Shin, Kijung},
+  journal={The VLDB Journal},
+  volume={34},
+  number={2},
+  pages={1 - 26},
+  year={2025},
+  publisher={Springer}
+}
