@@ -1,0 +1,6 @@
+@inproceedings{Jo2025Tiger,
+  title={TiGer: Self-Supervised Purification for Time-evolving Graphs},
+  author={Jo, Hyeonsoo and Lee, Jongha and Bu, Fanchen and Shin, Kijung},
+  booktitle={PAKDD},
+  year={2025}
+}
