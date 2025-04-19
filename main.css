@@ -147,6 +147,19 @@ nav a {
     }
 }
 
+/* compact publications on mobile */
+@media (max-width: 600px) {
+    section#publications {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+    section#publications p,
+    section#publications blockquote,
+    section#publications ul.bulleted-list li {
+      font-size: 0.85rem;
+    }
+}
+
 nav a:hover {
     background-color: rgba(74, 144, 226, 0.1);
 }
