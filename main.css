@@ -147,16 +147,10 @@ nav a {
     }
 }
 
-/* compact publications on mobile */
-@media (max-width: 600px) {
-    section#publications {
-      font-size: 0.9rem;
-      line-height: 1.4;
-    }
-    section#publications p,
-    section#publications blockquote,
-    section#publications ul.bulleted-list li {
-      font-size: 0.85rem;
+/* global font‐scale on small screens */
+@media only screen and (max-width: 600px) {
+    html {
+      font-size: 0.85rem; /* instead of the default 1rem – adjust to taste */    
     }
 }
 
