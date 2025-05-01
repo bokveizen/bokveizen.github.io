@@ -1,0 +1,6 @@
+@inproceedings{Liang2025GOKU,
+  title={Mitigating Over-Squashing in Graph Neural Networks by Spectrum-Preserving Sparsification}, 
+  author={Liang, Langzhang and Bu, Fanchen and Song, Zixing and Xu, Zenglin and Pan, Shirui and Shin, Kijung},
+  booktitle={ICML},
+  year={2025}
+}
