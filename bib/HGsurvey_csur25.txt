@@ -1,0 +1,9 @@
+@article{Lee2025HGsurvey,
+  title={A survey on hypergraph mining: Patterns, tools, and generators},
+  author={Lee, Geon and Bu, Fanchen and Eliassi-Rad, Tina and Shin, Kijung},
+  journal={ACM Computing Surveys},
+  volume={57},
+  number={8},
+  pages={1--36},
+  year={2025}  
+}
