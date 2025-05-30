@@ -1,0 +1,6 @@
+@inproceedings{Bu2025NIKGeoLearning,
+  title={PyTorch-based Geometric Learning with Non-CUDA Processing Units: Experiences from Intel Gaudi-v2 HPUs},
+  author={Bu, Fanchen and Shin, Kijung},
+  booktitle={KCC},
+  year={2025}
+}
