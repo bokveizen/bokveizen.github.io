@@ -1,0 +1,6 @@
+@inproceedings{Bu2025UCOAlign,
+  title={On Training-Test (Mis)alignment in Unsupervised Combinatorial Optimization: Observation, Empirical Exploration, and Analysis},
+  author={Bu, Fanchen and Shin, Kijung},
+  booktitle={ICML Workshop on Test-Time Adaptation},
+  year={2025}
+}
