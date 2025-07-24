@@ -1,0 +1,6 @@
+@article{Lee2025LightGCNpp,
+  title={Revisiting LightGCN: Unexpected Inflexibility, Inconsistency, and A Remedy Towards Improved Recommendation},
+  author={Lee, Geon and Kim, Kyungho and Bu, Fanchen and Liang, Langzhang and Shin, Kijung},
+  journal={ACM Transactions on Recommender Systems},
+  year={2025},
+}
