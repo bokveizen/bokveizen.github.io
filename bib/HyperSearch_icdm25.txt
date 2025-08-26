@@ -1,0 +1,6 @@
+@inproceedings{Choo2025HyperSearch,
+  title={HyperSearch: Prediction of New Hyperedges through Unconstrained yet Efficient Search}, 
+  author={Choo, Hyunjin and Bu, Fanchen and Hwang, Hyunjin and Yoon, Young-Gyu and Shin, Kijung},
+  booktitle={ICDM},
+  year={2025}
+}

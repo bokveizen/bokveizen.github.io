@@ -1,6 +1,0 @@
-@article{Bu2024EPGM,
-  title={Exploring Edge Probability Graph Models Beyond Edge Independency: Concepts, Analyses, and Algorithms}, 
-  author={Bu, Fanchen and Yang, Ruochen and Bogdan, Paul and Shin, Kijung},
-  journal={arXiv:2405.16726},
-  year={2024}
-}

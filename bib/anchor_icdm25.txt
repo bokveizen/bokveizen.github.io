@@ -1,0 +1,6 @@
+@inproceedings{Bu2025Anchor,
+  title={Identifying Group Anchors in Real-World Group Interactions Under Label Scarcity}, 
+  author={Bu, Fanchen and Lee, Geon and Choe, Minyoung and Shin, Kijung},
+  booktitle={ICDM},
+  year={2025}
+}

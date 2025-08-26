@@ -1,0 +1,6 @@
+@inproceedings{Bu2025EPGM,
+  title={Edge Probability Graph Models Beyond Edge Independency: Concepts, Analyses, and Algorithms}, 
+  author={Bu, Fanchen and Yang, Ruochen and Bogdan, Paul and Shin, Kijung},
+  booktitle={ICDM},
+  year={2025}
+}
