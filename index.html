@@ -27,6 +27,57 @@
 
 	<title>BU, Fanchen卜凡辰</title>
 	<link rel="stylesheet" href="main.css">
+	<style>
+		/* Blank link hover tooltips */
+		a[href=""],
+		a[href="#"],
+		a:not([href]) {
+			position: relative;
+			cursor: not-allowed;
+			color: #888;
+			text-decoration: underline dotted;
+		}
+
+		/* Tooltip styling */
+		a[href=""]:hover::after,
+		a[href="#"]:hover::after,
+		a:not([href]):hover::after {
+			content: "Coming Soon";
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			background: #333;
+			color: white;
+			padding: 8px 12px;
+			border-radius: 4px;
+			font-size: 12px;
+			white-space: nowrap;
+			z-index: 1000;
+			margin-bottom: 5px;
+			pointer-events: none;
+		}
+
+		/* Tooltip arrow */
+		a[href=""]:hover::before,
+		a[href="#"]:hover::before,
+		a:not([href]):hover::before {
+			content: "";
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			border: 5px solid transparent;
+			border-top-color: #333;
+			z-index: 1000;
+			pointer-events: none;
+		}
+
+		/* Custom messages using data attributes */
+		a[data-tooltip]:hover::after {
+			content: attr(data-tooltip);
+		}
+	</style>
 </head>
 
 <nav style="position: sticky;
@@ -165,7 +216,8 @@
 					<p id="70d47121-f9ce-434d-a08a-f9cdf93bf7e2" class=""><a
 							href="https://www.linkedin.com/in/fanchen-bu-1268a1255/">💼 LinkedIn</a></p>
 					<p id="5b0f9917-3da8-43a0-92ed-8720fdcd7cf6" class=""></p>
-					<p id="resume-cv-link" class=""><a href="https://bokveizen.github.io/files/CV_Fanchen_Bu_latest.pdf">📄 CV</a></p>
+					<p id="resume-cv-link" class=""><a
+							href="https://bokveizen.github.io/files/CV_Fanchen_Bu_latest.pdf">📄 CV</a></p>
 				</div>
 			</div>
 			</p>
@@ -240,12 +292,17 @@
 							Scholar</a></strong><strong> or </strong><strong><a
 							href="https://www.semanticscholar.org/author/Fanchen-Bu/2065674134">Semantic
 							Scholar</a></strong></blockquote>
-				<blockquote id="bf8debf1-3203-4990-893a-766d8ffeb97c" class=""><strong><span style="text-decoration: underline;">C</span>onference / <span style="text-decoration: underline;">J</span>ournal / <span style="text-decoration: underline;">P</span>reprint / <span style="text-decoration: underline;">W</span>orkshop / <span style="text-decoration: underline;">S</span>oftware</strong>
+				<blockquote id="bf8debf1-3203-4990-893a-766d8ffeb97c" class=""><strong><span
+							style="text-decoration: underline;">C</span>onference / <span
+							style="text-decoration: underline;">J</span>ournal / <span
+							style="text-decoration: underline;">P</span>reprint / <span
+							style="text-decoration: underline;">W</span>orkshop / <span
+							style="text-decoration: underline;">S</span>oftware</strong>
 				</blockquote>
 				<blockquote id="1ec6f3fc-05f2-4d18-a2b7-5fcd2e18accb" class=""><strong>*: equal contribution</strong>
 				</blockquote>
 				<p class="">[C20] <strong>Edge Probability Graph Models Beyond Edge
-					Independency: Concepts, Analyses, and Algorithms</strong></p>
+						Independency: Concepts, Analyses, and Algorithms</strong></p>
 				<ul class="bulleted-list">
 					<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen
 								Bu</strong></span>, Ruochen Yang, Paul Bogdan, and Kijung Shin</li>
@@ -255,7 +312,8 @@
 							</mark></strong><a href="https://arxiv.org/abs/2405.16726"><strong><mark
 									class="highlight-blue">paper</mark></strong></a><strong><mark
 								class="highlight-blue"> |
-							</mark></strong><a href="https://anonymous.4open.science/r/epgm-7EBE"><strong><mark
+							</mark></strong><a
+							href="https://github.com/bokveizen/edge-probability-graph-model"><strong><mark
 									class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue">
 								|
 							</mark></strong><a href="https://bokveizen.github.io/bib/epgm_icdm25.txt"><strong><mark
@@ -263,17 +321,19 @@
 								]</mark></strong></li>
 				</ul>
 
-				<p class="">[C19] <strong>Identifying Group Anchors in Real-World Group Interactions Under Label Scarcity</strong></p>
+				<p class="">[C19] <strong>Identifying Group Anchors in Real-World Group Interactions Under Label
+						Scarcity</strong></p>
 				<ul class="bulleted-list">
 					<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen
 								Bu</strong></span>, Geon Lee, Minyoung Choe, and Kijung Shin</li>
 				</ul>
 				<ul class="bulleted-list">
 					<li style="list-style-type:disc"><strong><mark class="highlight-blue">ICDM 2025 (Short) [
-							</mark></strong><a href=""><strong><mark
+							</mark></strong><a href=""
+							data-tooltip="Paper will be available after publication"><strong><mark
 									class="highlight-blue">paper</mark></strong></a><strong><mark
 								class="highlight-blue"> |
-							</mark></strong><a href=""><strong><mark
+							</mark></strong><a href="https://github.com/bokveizen/anchor_radar"><strong><mark
 									class="highlight-blue">code</mark></strong></a><strong><mark class="highlight-blue">
 								|
 							</mark></strong><a href="https://bokveizen.github.io/bib/anchor_icdm25.txt"><strong><mark
@@ -281,42 +341,56 @@
 								]</mark></strong></li>
 				</ul>
 
-				<p class="">[C18] <strong>HyperSearch: Prediction of New Hyperedges through Unconstrained yet Efficient Search</strong></p>
+				<p class="">[C18] <strong>HyperSearch: Prediction of New Hyperedges through Unconstrained yet Efficient
+						Search</strong></p>
 				<ul class="bulleted-list">
-					<li style="list-style-type:disc">Hyunjin Choo, <span style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Hyunjin Hwang, Young-Gyu Yoon, and Kijung Shin</li>
+					<li style="list-style-type:disc">Hyunjin Choo, <span
+							style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Hyunjin Hwang,
+						Young-Gyu Yoon, and Kijung Shin</li>
 				</ul>
 				<ul class="bulleted-list">
 					<li style="list-style-type:disc">
 						<mark class="highlight-blue"><strong>ICDM 2025 [ </strong></mark>
-						<a href=""><mark class="highlight-blue"><strong>paper</strong></mark></a>
+						<a href="" data-tooltip="Paper will be available after publication"><mark
+								class="highlight-blue"><strong>paper</strong></mark></a>
 						<mark class="highlight-blue"><strong> | </strong></mark>
-						<a href=""><mark class="highlight-blue"><strong>code</strong></mark></a>
+						<a href="" data-tooltip="Code repository coming soon"><mark
+								class="highlight-blue"><strong>code</strong></mark></a>
 						<mark class="highlight-blue"><strong> | </strong></mark>
-						<a href="https://bokveizen.github.io/bib/hyperSearch_icdm25.txt"><mark class="highlight-blue"><strong>bib</strong></mark></a>
+						<a href="https://bokveizen.github.io/bib/hyperSearch_icdm25.txt"><mark
+								class="highlight-blue"><strong>bib</strong></mark></a>
 						<mark class="highlight-blue"><strong> ]</strong></mark>
 					</li>
 				</ul>
 
-				<p class="">[J5] <strong>Revisiting LightGCN: Unexpected Inflexibility, Inconsistency, and A Remedy Towards Improved Recommendation</strong></p>
+				<p class="">[J5] <strong>Revisiting LightGCN: Unexpected Inflexibility, Inconsistency, and A Remedy
+						Towards Improved Recommendation</strong></p>
 				<ul class="bulleted-list">
-					<li style="list-style-type:disc">Geon Lee, Kyungho Kim, <span style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Langzhang Liang, and Kijung Shin</li>
+					<li style="list-style-type:disc">Geon Lee, Kyungho Kim, <span
+							style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Langzhang Liang, and
+						Kijung Shin</li>
 				</ul>
 				<ul class="bulleted-list">
 					<li style="list-style-type:disc">
-						<mark class="highlight-blue"><strong>ACM Transactions on Recommender Systems 2025 [ </strong></mark>
-						<a href=""><mark class="highlight-blue"><strong>paper</strong></mark></a>
+						<mark class="highlight-blue"><strong>ACM Transactions on Recommender Systems 2025 [
+							</strong></mark>
+						<a href="" data-tooltip="Paper will be available after publication"><mark
+								class="highlight-blue"><strong>paper</strong></mark></a>
 						<mark class="highlight-blue"><strong> | </strong></mark>
-						<a href="https://github.com/geon0325/LightGCNpp"><mark class="highlight-blue"><strong>code</strong></mark></a>
+						<a href="https://github.com/geon0325/LightGCNpp"><mark
+								class="highlight-blue"><strong>code</strong></mark></a>
 						<mark class="highlight-blue"><strong> | </strong></mark>
-						<a href="https://bokveizen.github.io/bib/LightGCNpp_tors25.txt"><mark class="highlight-blue"><strong>bib</strong></mark></a>
+						<a href="https://bokveizen.github.io/bib/LightGCNpp_tors25.txt"><mark
+								class="highlight-blue"><strong>bib</strong></mark></a>
 						<mark class="highlight-blue"><strong> ]</strong></mark>
 					</li>
 				</ul>
 
-				<p class="">[W1] <strong>On Training-Test (Mis)alignment in Unsupervised Combinatorial Optimization: Observation, Empirical Exploration, and Analysis</strong></p>
+				<p class="">[W1] <strong>On Training-Test (Mis)alignment in Unsupervised Combinatorial Optimization:
+						Observation, Empirical Exploration, and Analysis</strong></p>
 				<ul class="bulleted-list">
-					<li style="list-style-type:disc"><span
-							style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span> and Kijung
+					<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen
+								Bu</strong></span> and Kijung
 						Shin</li>
 				</ul>
 				<ul class="bulleted-list">
@@ -332,13 +406,15 @@
 							class="highlight-blue"><strong> ]</strong></mark></li>
 				</ul>
 				<ul id="c8877d62-266b-4e63-b8df-e34b34693df5" class="bulleted-list">
-					<li style="list-style-type:disc"><em><strong><mark class="highlight-blue">(Workshop on Test-Time Adaptation)</mark></strong></em></li>
+					<li style="list-style-type:disc"><em><strong><mark class="highlight-blue">(Workshop on Test-Time
+									Adaptation)</mark></strong></em></li>
 				</ul>
 
-				<p class="">[C17] <strong>PyTorch-based Geometric Learning with Non-CUDA Processing Units: Experiences from Intel Gaudi-v2 HPUs</strong></p>
+				<p class="">[C17] <strong>PyTorch-based Geometric Learning with Non-CUDA Processing Units: Experiences
+						from Intel Gaudi-v2 HPUs</strong></p>
 				<ul class="bulleted-list">
-					<li style="list-style-type:disc"><span
-							style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span> and Kijung
+					<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>Fanchen
+								Bu</strong></span> and Kijung
 						Shin</li>
 				</ul>
 				<ul class="bulleted-list">
@@ -353,9 +429,9 @@
 								class="highlight-blue"><strong>bib</strong></mark></a><mark
 							class="highlight-blue"><strong> ]</strong></mark></li>
 				</ul>
-				
+
 				<p class="">[C16] <strong>RL4CO: an Extensive Reinforcement
-					Learning for Combinatorial Optimization Benchmark</strong></p>
+						Learning for Combinatorial Optimization Benchmark</strong></p>
 				<ul class="bulleted-list">
 					<!-- <li style="list-style-type:disc">Federico Berto*, Chuanbo Hua*, Junyoung Park*, Laurin Luttmann*, Yining
 					Ma, <span style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Jiarui Wang, Haoran
@@ -408,13 +484,16 @@
 								]</strong></mark></li>
 				</ul>
 				<ul id="" class="bulleted-list">
-					<li style="list-style-type:disc"><em><strong><mark class="highlight-blue">(Datasets and Benchmarks Track)</mark></strong></em></li>
+					<li style="list-style-type:disc"><em><strong><mark class="highlight-blue">(Datasets and Benchmarks
+									Track)</mark></strong></em></li>
 				</ul>
 
-				<p class="">[C15] <strong>Mitigating Over-Squashing in Graph Neural Networks by Spectrum-Preserving Sparsification</strong></p>
+				<p class="">[C15] <strong>Mitigating Over-Squashing in Graph Neural Networks by Spectrum-Preserving
+						Sparsification</strong></p>
 				<ul class="bulleted-list">
 					<li style="list-style-type:disc">Langzhang Liang, <span
-							style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Zixing Song, Zenglin Xu, Shirui Pan, and Kijung
+							style="border-bottom:0.05em solid"><strong>Fanchen Bu</strong></span>, Zixing Song, Zenglin
+						Xu, Shirui Pan, and Kijung
 						Shin</li>
 				</ul>
 				<ul class="bulleted-list">
@@ -439,7 +518,8 @@
 					<li style="list-style-type:disc"><mark class="highlight-blue"><strong>PAKDD 2025
 								[ </strong></mark><a href="https://arxiv.org/abs/2503.06990"><mark
 								class="highlight-blue"><strong>paper</strong></mark></a><mark
-							class="highlight-blue"><strong> | </strong></mark><a href="https://github.com/HyeonsooJo/TiGer"><mark
+							class="highlight-blue"><strong> | </strong></mark><a
+							href="https://github.com/HyeonsooJo/TiGer"><mark
 								class="highlight-blue"><strong>code</strong></mark></a><mark
 							class="highlight-blue"><strong> | </strong></mark><a
 							href="https://bokveizen.github.io/bib/tiger_pakdd25.txt"><mark
@@ -547,7 +627,7 @@
 								class="highlight-blue"><strong>bib</strong></mark></a><mark
 							class="highlight-blue"><strong>
 								]</strong></mark></li>
-				</ul>				
+				</ul>
 				<p id="b9cd8371-62c5-4c27-bc4d-ec668a37cb07" class="">[C10] <strong>Tackling Prevalent Conditions in
 						Unsupervised Combinatorial Optimization: Cardinality, Minimum, Covering, and More</strong></p>
 				<ul id="db944478-c4aa-481f-960a-3183dec8c9b2" class="bulleted-list">
@@ -684,7 +764,7 @@
 							href="https://bokveizen.github.io/bib/transitivity_kdd23.txt"><strong><mark
 									class="highlight-blue">bib</mark></strong></a><strong><mark class="highlight-blue">
 								]</mark></strong></li>
-				</ul>				
+				</ul>
 				<p id="e964dbc3-33de-41f3-9c8d-40c333ce1bef" class="">[J2] <strong>Interplay between Topology and Edge
 						Weights in Real-World Graphs: Concepts, Patterns, and an Algorithm</strong></p>
 				<ul id="8d100989-a91f-4827-87fb-e1d05656a3df" class="bulleted-list">
@@ -800,13 +880,16 @@
 				</ul>
 				<ul id="ff405283-ee3b-4865-8986-71f9d23a01c2" class="bulleted-list">
 					<li style="list-style-type:disc"><strong><mark class="highlight-blue">AAAI 2022 [
-							</mark></strong><strong><mark class="highlight-blue"><a
-									href="https://arxiv.org/abs/2205.08385">paper</a></mark></strong><strong><mark
-								class="highlight-blue"> | </mark></strong><strong><mark class="highlight-blue"><a
-									href="https://github.com/bokveizen/Feedback-Gradient-Descent">code</a></mark></strong><strong><mark
-								class="highlight-blue"> | </mark></strong><strong><mark class="highlight-blue"><a
-									href="https://bokveizen.github.io/bib/FGD_aaai22.txt">bib</a></mark></strong><strong><mark
-								class="highlight-blue"> ]</mark></strong></li>
+							</mark></strong><strong><a href="https://arxiv.org/abs/2205.08385"><mark
+									class="highlight-blue">paper</mark></a></strong><strong><mark
+								class="highlight-blue"> |
+							</mark></strong><strong><a
+								href="https://github.com/bokveizen/Feedback-Gradient-Descent"><mark
+									class="highlight-blue">code</mark></a></strong><strong><mark class="highlight-blue">
+								|
+							</mark></strong><strong><a href="https://bokveizen.github.io/bib/FGD_aaai22.txt"><mark
+									class="highlight-blue">bib</mark></a></strong><strong><mark class="highlight-blue">
+								]</mark></strong></li>
 				</ul>
 				<p id="634b5f37-7ed0-4298-8dd3-731a896949d2" class="">[C1] <strong>Double Prioritized State Recycled
 						Experience Replay</strong></p>
@@ -867,12 +950,12 @@
 			<section id="academic-services">
 				<h1 id="" class="">Academic Services</h1>
 				<p id="" class="">[C10] <strong>AAAI Conference on Artificial Intelligence
-					(AAAI)</strong></p>
+						(AAAI)</strong></p>
 				<ul id="" class="bulleted-list">
 					<li style="list-style-type:disc">Reviewer: 2026</li>
 				</ul>
-				<p id="" class="">[C9] <strong>ACM International Conference on Information and Knowledge Management 
-					(CIKM)</strong></p>
+				<p id="" class="">[C9] <strong>ACM International Conference on Information and Knowledge Management
+						(CIKM)</strong></p>
 				<ul id="" class="bulleted-list">
 					<li style="list-style-type:disc">Reviewer: 2025</li>
 				</ul>
@@ -1013,7 +1096,8 @@
 							[성시경]</a> / <a
 							href="https://music.youtube.com/playlist?list=OLAK5uy_kdDEJh4IXvrGIVrWxoIxIR1wtwkymcjeQ">Kwang-Seok
 							Kim [김광석]</a> / <a
-							href="https://music.youtube.com/channel/UCazoNZzjhpe0-Pg8Z5HTxvw?si=JiuECxhoUsGf0y4l">Bum-Soo Kim[김범수]</a>
+							href="https://music.youtube.com/channel/UCazoNZzjhpe0-Pg8Z5HTxvw?si=JiuECxhoUsGf0y4l">Bum-Soo
+							Kim[김범수]</a>
 					</li>
 				</ol>
 				<ol type="1" id="bc61d16a-b942-41e8-81b9-22174c746874" class="numbered-list" start="7">
