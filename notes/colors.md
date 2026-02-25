@@ -67,7 +67,7 @@ colors_9 = [
     '#a65628',
     '#f781bf',
     '#999999',
-		'#ffff33', # yellow
+	'#ffff33', # yellow
 ]
 
 color_11 = [
