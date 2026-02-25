@@ -54,7 +54,7 @@ plt.close()
 
 # 9 colors
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1f076c33-04ce-430a-a661-2871b3830f8d/Untitled.png)
+![color1](color1.jpg)
 
 ```python
 colors_9 = [
@@ -97,7 +97,7 @@ color_11 = [
 153,153,153
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7fa015ae-f57a-4464-af1f-b027bcc6a368/Untitled.png)
+![color1](color2.jpg)
 
 ```python
 ax.set_xticks(x, labels, rotation='vertical', family='monospace')
@@ -192,7 +192,7 @@ lgd_wt = axes[wt, i].legend(loc='lower right',
                                  labelspacing=0.2,
                                  handlelength=0.5,
                                  handletextpad=0.2,
-			                           borderaxespad=0.2)
+			                     borderaxespad=0.2)
 for lh in lgd_wt.legendHandles:
     lh.set_alpha(1)
     lh.set_sizes((100, 100))
