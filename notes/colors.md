@@ -85,6 +85,7 @@ color_11 = [
 ]
 ```
 
+```text
 228,26,28
 55,126,184
 77,175,74
@@ -94,6 +95,7 @@ color_11 = [
 166,86,40
 247,129,191
 153,153,153
+```
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7fa015ae-f57a-4464-af1f-b027bcc6a368/Untitled.png)
 
