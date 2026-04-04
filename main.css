@@ -483,6 +483,10 @@ ol>li {
     padding-left: 0.2em;
 }
 
+.numbered-list>li+li {
+    margin-top: 0.6em;
+}
+
 .mono ol {
     padding-inline-start: 2em;
 }
