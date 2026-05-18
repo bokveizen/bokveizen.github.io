@@ -1,6 +1,7 @@
-@article{lee2026toward,
+@inproceedings{lee2026toward,
   title={Toward a Science of AI Agent Societies},
   author={Lee, Geon and Bu, Fanchen and Lee, Soo Yong and Kim, Sunwoo and Shin, Kijung},
-  journal={SSRN 6508022},
-  year={2026}
+  booktitle={KDD},
+  year={2026},
+  note={Blue Sky Ideas Track}
 }
