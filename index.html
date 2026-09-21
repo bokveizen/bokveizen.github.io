@@ -80,19 +80,12 @@
 	</style>
 </head>
 
-<nav style="position: sticky;
-            top: 0;
-            background: var(--bg-color);
-            padding: 10px;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;">
-	<div class="menu-icon" onclick="toggleMenu()">☰</div>
+<body>
+<nav aria-label="Main navigation">
+	<button type="button" class="menu-icon" onclick="toggleMenu()" aria-label="Toggle navigation" aria-controls="menuLinks" aria-expanded="false">☰</button>
 	<div class="menu-links" id="menuLinks">
-		<a href="#education">Education & Experience</a>
+		<a href="#education">Education</a>
+		<a href="#research-experience">Research Experience</a>
 		<a href="#publications">Publications</a>
 		<a href="#languages">Languages</a>
 		<a href="#academic-services">Academic Services</a>
@@ -101,33 +94,29 @@
 </nav>
 <!-- JavaScript to Toggle Menu -->
 <script>
-	function toggleMenu() {
-		const menuLinks = document.getElementById('menuLinks');
-		if (menuLinks.style.display === 'flex') {
-			menuLinks.style.display = 'none';
-		} else {
-			menuLinks.style.display = 'flex';
-		}
+	const mobileMenu = window.matchMedia('(max-width: 900px)');
+	function setMenuOpen(open) {
+		document.getElementById('menuLinks').classList.toggle('is-open', open);
+		document.querySelector('.menu-icon').setAttribute('aria-expanded', String(open));
 	}
+	function toggleMenu() {
+		setMenuOpen(!document.getElementById('menuLinks').classList.contains('is-open'));
+	}
+	mobileMenu.addEventListener('change', () => setMenuOpen(false));
 
 	// Collapse the menu after clicking a link on mobile devices
 	const menuItems = document.querySelectorAll('#menuLinks a');
 	menuItems.forEach(item => {
 		item.addEventListener('click', () => {
-			if (window.innerWidth <= 768) { // Adjust the breakpoint as needed
-				const menuLinks = document.getElementById('menuLinks');
-				menuLinks.style.display = 'none';
-			}
+			if (mobileMenu.matches) setMenuOpen(false);
 		});
 	});
 </script>
 
 <!-- Add theme toggle button -->
-<div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-	<button onclick="toggleTheme()" class="theme-button" style="padding: 8px; border-radius: 5px; cursor: pointer;">
+	<button type="button" onclick="toggleTheme()" class="theme-button">
 		🌓 Theme
 	</button>
-</div>
 
 <script>
 	function toggleTheme() {
@@ -173,7 +162,6 @@
 	}
 </script>
 
-<body>
 	<article id="34c8c9d9-b57d-46f3-a886-54a83c0be014" class="page sans">
 		<header>
 			<h1 class="page-title">BU, Fanchen 卜凡辰</h1>
@@ -206,13 +194,12 @@
 					<p id="ac78c8a3-bc80-4977-9d75-83c30a3fc0dc" class=""><strong>過則勿憚改 When you make a mistake, don't
 							be afraid to correct yourself<span style="float: right;"><br>——《論語·學而》</span></strong></p>
 					<p id="5aa1cf00-c079-43e2-9355-d454a1ec408d" class=""></p>
-					</p>
 					<br>
 					<h3 id="01be90ee-d7ca-4185-b8d6-61ab3eb657af" class=""><strong>Contact</strong></h3>
 					<p id="fa80fa9a-dc32-4686-b9e4-62cfda4478c5" class=""><a href="mailto:boqvezen97@kaist.ac.kr">✉️
 							Email: boqvezen97@kaist.ac.kr</a></p>
 					<p id="ced4dee6-eb4c-42a4-a047-64bfdfc4e0cb" class=""><a href="https://github.com/bokveizen">👾
-							Github</a></p>
+							GitHub</a></p>
 					<p id="70d47121-f9ce-434d-a08a-f9cdf93bf7e2" class=""><a
 							href="https://www.linkedin.com/in/fanchen-bu-1268a1255/">💼 LinkedIn</a></p>
 					<p id="5b0f9917-3da8-43a0-92ed-8720fdcd7cf6" class=""></p>
@@ -220,11 +207,10 @@
 							href="https://bokveizen.github.io/files/CV/CV_Fanchen_Bu_latest.pdf">📄 CV</a></p>
 				</div>
 			</div>
-			</p>
 			<section id="education">
-				<h1 id="6d1ef24c-d8d9-4d97-a8e0-d5005e923f0f" class="">Education & Experience</h1>
-				<h3 id="1c023fc0-869f-49df-a8a3-c71ede717d22" class="">Doctor</h3>
-				<p id="09c7a5da-d106-401c-8081-d29e67bb91aa" class=""><em>2022.03 - </em> | <strong>Korea Advanced
+				<h1 id="6d1ef24c-d8d9-4d97-a8e0-d5005e923f0f" class="">Education</h1>
+				<h3 id="1c023fc0-869f-49df-a8a3-c71ede717d22" class="">Ph.D. Student</h3>
+				<p id="09c7a5da-d106-401c-8081-d29e67bb91aa" class=""><em>2022.03 – Present</em> | <strong>Korea Advanced
 						Institute
 						of Science and Technology (KAIST)</strong></p>
 				<ul id="ae1aa2b3-06f4-4156-866d-8c4f73b609cc" class="bulleted-list">
@@ -234,6 +220,41 @@
 				<ul id="120e56e6-91e7-4396-abac-47b0783c028d" class="bulleted-list">
 					<li style="list-style-type:disc">Electrical Engineering</li>
 				</ul>
+				<h3 id="04676e6e-c9af-4adf-bc65-7fbbd5853246" class="">M.S.</h3>
+				<p id="f3e6d6bd-4779-461b-986b-23a2ade0f9b2" class=""><em>2019.09 - 2021.08</em> | <strong>Korea
+						Advanced
+						Institute of Science and Technology (KAIST)</strong></p>
+				<ul id="6d67194d-1e14-4352-9d25-3d305cbac94e" class="bulleted-list">
+					<li style="list-style-type:disc"><a href="https://control.kaist.ac.kr/home">Control Lab</a>
+						(Supervisor:
+						<a href="https://scholar.google.com/citations?user=1SrVSfMAAAAJ">Prof. Chang, Dong Eui [장동의]</a>)
+					</li>
+				</ul>
+				<ul id="b70337f9-f020-4da8-b1e3-5784b73173d0" class="bulleted-list">
+					<li style="list-style-type:disc">Electrical Engineering, GPA: 4.21/4.3</li>
+				</ul>
+				<ul id="1f995fb0-b3cf-4e26-9933-6db0089c914f" class="bulleted-list">
+					<li style="list-style-type:disc">Thesis: A Novel Optimization Algorithm with Orthogonality for Deep
+						Neural Networks Inspired by Feedback Integrators</li>
+				</ul>
+				<h3 id="521f304b-d5ac-4a95-9ea0-6ab1a65cc484" class="">B.Eng.</h3>
+				<p id="6af1b3b6-ef43-4c55-8ba6-711e761d1e41" class=""><em>2015.09 - 2019.08</em> | <strong>University of
+						Chinese Academy of Sciences (UCAS)</strong></p>
+				<ul id="46c6c777-a6c4-49be-8dc8-b6aae8799a6c" class="bulleted-list">
+					<li style="list-style-type:disc">Computer Science and Technology, GPA: 3.71/4</li>
+				</ul>
+				<ul id="b47d71fb-c3b7-44a8-b31a-15254462af88" class="bulleted-list">
+					<li style="list-style-type:disc">Thesis: Vehicle Trajectory Prediction Based on Deep Learning
+						(Supervisor: <a href="https://scholar.google.com/citations?user=RxvYlNQAAAAJ">Prof. Zhao, Dongbin
+							[趙冬斌]</a>)
+					</li>
+				</ul>
+				<p id="16f98da5-9ab6-43cb-b111-9e23d4c6d09a" class="">
+				</p>
+				<hr id="bfd5d596-7025-44d9-b336-0754218d6281" />
+			</section>
+			<section id="research-experience">
+				<h1>Research Experience</h1>
 				<h3 class="">Visiting Researcher</h3>
 				<p class=""><em>2026.09 - 2026.11</em> | <strong>KTH Royal Institute of Technology</strong></p>
 				<ul class="bulleted-list">
@@ -257,38 +278,7 @@
 					<li style="list-style-type:disc"><a href="https://sites.google.com/view/kaistdata/home">Data Mining
 							Lab</a> (Supervisor: <a href="https://scholar.google.com/citations?user=Yp3Cz5AAAAAJ">Prof. Shin, Kijung [신기정]</a>)</li>
 				</ul>
-				<h3 id="04676e6e-c9af-4adf-bc65-7fbbd5853246" class="">Master</h3>
-				<p id="f3e6d6bd-4779-461b-986b-23a2ade0f9b2" class=""><em>2019.09 - 2021.08</em> | <strong>Korea
-						Advanced
-						Institute of Science and Technology (KAIST)</strong></p>
-				<ul id="6d67194d-1e14-4352-9d25-3d305cbac94e" class="bulleted-list">
-					<li style="list-style-type:disc"><a href="https://control.kaist.ac.kr/home">Control Lab</a>
-						(Supervisor:
-						<a href="https://scholar.google.com/citations?user=1SrVSfMAAAAJ">Prof. Chang, Dong Eui [장동의]</a>)
-					</li>
-				</ul>
-				<ul id="b70337f9-f020-4da8-b1e3-5784b73173d0" class="bulleted-list">
-					<li style="list-style-type:disc">Electrical Engineering, GPA: 4.21/4.3</li>
-				</ul>
-				<ul id="1f995fb0-b3cf-4e26-9933-6db0089c914f" class="bulleted-list">
-					<li style="list-style-type:disc">Thesis: A Novel Optimization Algorithm with Orthogonality for Deep
-						Neural Networks Inspired by Feedback Integrators</li>
-				</ul>
-				<h3 id="521f304b-d5ac-4a95-9ea0-6ab1a65cc484" class="">Bachelor</h3>
-				<p id="6af1b3b6-ef43-4c55-8ba6-711e761d1e41" class=""><em>2015.09 - 2019.08</em> | <strong>University of
-						Chinese Academy of Sciences (UCAS)</strong></p>
-				<ul id="46c6c777-a6c4-49be-8dc8-b6aae8799a6c" class="bulleted-list">
-					<li style="list-style-type:disc">Computer Science and Technology, GPA: 3.71/4</li>
-				</ul>
-				<ul id="b47d71fb-c3b7-44a8-b31a-15254462af88" class="bulleted-list">
-					<li style="list-style-type:disc">Thesis: Vehicle Trajectory Prediction Based on Deep Learning
-						(Supervisor: <a href="https://scholar.google.com/citations?user=RxvYlNQAAAAJ">Prof. Zhao, Dongbin
-							[趙冬斌]</a>)
-					</li>
-				</ul>
-				<p id="16f98da5-9ab6-43cb-b111-9e23d4c6d09a" class="">
-				</p>
-				<hr id="bfd5d596-7025-44d9-b336-0754218d6281" />
+				<hr />
 			</section>
 			<section id="publications">
 				<h1 id="7e43ded4-f3ad-41da-a8b3-71d4f932e7f1" class="">Publications</h1>
