@@ -1,0 +1,8 @@
+@misc{bu2026higherorder,
+  title={Do Higher-Order Models Win for Higher-Order Reasons? Rethinking Performance Gains in Hypergraph Learning},
+  author={Bu, Fanchen and Li, Fan and Lee, Geon and Kim, Sunwoo and Wang, Xiaoyang and Lambiotte, Renaud and Shin, Kijung},
+  year={2026},
+  eprint={2610.07981},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG}
+}
