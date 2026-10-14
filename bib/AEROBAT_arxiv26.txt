@@ -1,6 +1,6 @@
 @misc{lee2026automating,
-  title={Automating and Scaling Behavioral Scientific Research on AI Agents},
-  author={Lee, Soo Yong and Lee, Jongha and Chun, Jaewan and Hwang, Hyunjin and Bu, Fanchen and Ben-Zion, Ziv and Kim, Taekwan and Borsboom, Denny and Yoo, Jaemin and Shin, Kijung},
+  title={Causal Behavioral Evaluation of AI Agents at Scale via Automated Behavioral Science},
+  author={Lee, Soo Yong and Lee, Jongha and Chun, Jaewan and Hwang, Hyunjin and Bu, Fanchen and Hwang, Dongyeong and Ben-Zion, Ziv and Kim, Taekwan and Borsboom, Denny and Yoo, Jaemin and Shin, Kijung},
   year={2026},
   eprint={2608.10030},
   archivePrefix={arXiv},
