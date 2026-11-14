@@ -1,0 +1,6 @@
+@inproceedings{bu2027distance,
+  title={Distance-Decaying Core Decomposition},
+  author={Bu, Fanchen and Miyauchi, Atsushi and Kim, Yeongho and Chun, Jaewan and Shin, Kijung and Bonchi, Francesco},
+  booktitle={KDD},
+  year={2027}
+}
